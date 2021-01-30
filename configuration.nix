@@ -85,6 +85,9 @@ in
   services.xserver.layout = "us";
   services.xserver.xkbOptions = "eurosign:e";
 
+  # File system for windons
+  boot.supportedFilesystems = [ "ntfs" ];
+ 
   #services.shadowsocks.enable = true;
   #services.v2ray.enable = true;
 
