@@ -84,12 +84,12 @@ in
   # Configure keymap in X11
   services.xserver.layout = "us";
   services.xserver.xkbOptions = "eurosign:e";
+  
+  #  a proprietary driver for NVIDIA 
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   # File system for windons
   boot.supportedFilesystems = [ "ntfs" ];
- 
-  #services.shadowsocks.enable = true;
-  #services.v2ray.enable = true;
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
