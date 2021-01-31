@@ -31,7 +31,7 @@ in
   #   "*" "except:type:wwan" "except:type:gsm"
   # ];
 
-  #   nmtui
+  # use nmtui
   # programs.nm-applet.enable = true;
 
   # Set your time zone.
@@ -85,8 +85,24 @@ in
   services.xserver.layout = "us";
   services.xserver.xkbOptions = "eurosign:e";
   
-  #  a proprietary driver for NVIDIA 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # Proprietary driver for NVIDIA 
+  services.xserver.videoDrivers = [ "modesetting" "vesa" "nv" ];
+  services.xserver.useGlamor = true;
+  # hardware.bumblebee.enable = true;
+
+  # Enable OpenCL support for Intel Gen8 and later GPUs
+  #nixpkgs.config.packageOverrides = pkgs: {
+  #  vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  #};
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+      vaapiVdpau
+      libvdpau-va-gl
+    ];
+  };
 
   # File system for windons
   boot.supportedFilesystems = [ "ntfs" ];
@@ -110,9 +126,10 @@ in
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: {
-    unstable = import unstableTarball {
+      unstable = import unstableTarball {
         config = config.nixpkgs.config;
       };
+      vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
     };
     nixpkgs.config.vivaldi = {
       proprietaryCodecs = true;
