@@ -107,7 +107,7 @@ in
   # enable Flatpak
   services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-  # enable 
+   
   # File system for windons
   boot.supportedFilesystems = [ "ntfs" ];
 
@@ -176,7 +176,12 @@ in
     unstable.v2ray unstable.qv2ray
     # Browser
     firefox vivaldi vivaldi-ffmpeg-codecs #vivaldi-widevine
+    # AppImage
+    appimage-run
+    # kvm
+    qemu_kvm virt-manager
   ];
+  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
