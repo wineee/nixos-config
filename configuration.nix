@@ -104,6 +104,10 @@ in
     ];
   };
 
+  # enable Flatpak
+  services.flatpak.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+  # enable 
   # File system for windons
   boot.supportedFilesystems = [ "ntfs" ];
 
