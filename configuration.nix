@@ -45,7 +45,8 @@ in
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.proxy.allProxy = "http://127.0.0.1:8889";
+  networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
   i18n = {
@@ -179,10 +180,21 @@ in
     # AppImage
     appimage-run
     # kvm
-    qemu_kvm virt-manager
+    qemu qemu_kvm virt-manager iproute
   ];
   
+  
+  # this is needed to get a bridge with DHCP enabled
+  virtualisation.libvirtd.enable = true;
+  # Replace <youruser> with your actual username.
+  users.extraUsers.rewine.extraGroups = [ "libvirtd" ];
 
+  # reboot your computer after adding those lines
+  boot.extraModprobeConfig = ''
+    options kvm_intel nested=1
+    options kvm_intel emulate_invalid_guest_state=0
+    options kvm ignore_msrs=1
+  '';
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   programs.mtr.enable = true;
