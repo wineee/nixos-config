@@ -26,7 +26,7 @@ in
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
-  users.users.alice.extraGroups = [ "networkmanager" ];
+  # users.users..extraGroups = [ "networkmanager" ];
   # networking.networkmanager.unmanaged = [
   #   "*" "except:type:wwan" "except:type:gsm"
   # ];
@@ -125,7 +125,7 @@ in
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.rewine = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
   nixpkgs.config = {
