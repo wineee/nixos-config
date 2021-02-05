@@ -3,11 +3,13 @@ let
   #import = ../nix/default.nix{ config, pkgs };
 
   packages = with pkgs; [
-    wget git zsh fzf
+    dmenu picom nitrogen xmobar
+   
+    wget git zsh tmux fzf
  
     neofetch htop  
     lazygit  ranger
-     
+    unstable.netease-music-tui 
     vlc obs-studio
 
     kdeApplications.kdenlive

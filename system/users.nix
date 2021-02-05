@@ -5,5 +5,4 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "libvirtd"]; # Enable ‘sudo’ for the u>
   };
-
 }
