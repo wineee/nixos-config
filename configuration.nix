@@ -28,6 +28,7 @@ in
       ./system/network.nix
       ./system/users.nix
       ./system/virtualisation.nix
+      ./system/auto.nix
     ];
 
   console = {
