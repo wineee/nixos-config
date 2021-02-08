@@ -20,6 +20,11 @@
   # Enabling Bluetooth support
   hardware.bluetooth.enable = true;
 
+  # set console font
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "us";
+  };
 
   # enable Flatpak
   services.flatpak.enable = true;

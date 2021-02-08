@@ -8,7 +8,7 @@ let
    fetchTarball
     https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz; 
     # https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz;
-  packages = pkgs.callPackage ./packages { };
+  #packages = pkgs.callPackage ./packages { };
 
 in
 {
@@ -16,7 +16,7 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       
-      # ./nix      
+      # ./nix     
       
       ./system
       ./system/boot.nix
@@ -31,16 +31,16 @@ in
       ./system/auto.nix
     ];
 
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "us";
-  };
+  nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
   nixpkgs.config = {
     allowUnfree = true;
     packageOverrides = pkgs: {
       unstable = import unstableTarball {
         config = config.nixpkgs.config;
+      };
+      nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+        inherit pkgs;
       };
       vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
     };
@@ -52,7 +52,44 @@ in
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = packages; 
+  environment.systemPackages = with pkgs; [
+    dmenu picom nitrogen xmobar
+   
+    wget git zsh tmux fzf
+ 
+    neofetch htop  
+    lazygit  ranger
+    unstable.netease-music-tui 
+    vlc obs-studio
+
+    kdeApplications.kdenlive
+    kdeApplications.gwenview
+    kdeApplications.ark
+
+    okular libreoffice typora
+    
+    # text 
+    neovim  nodePackages.coc-git
+    emacs 
+    # code
+    gcc gdb clang cmake 
+    qt5.full #qt5.qmake qt5.qtdoc qt5.qtsvg qt5.qtbase 
+    # qt5.qtscxml qt5.qttools qt5.qtcharts qt5.qtwebkit qt5.qtspeech
+    python3 lua5_3 ghc 
+    qtcreator
+    jdk jetbrains.idea-community
+
+    vscode postman
+    
+    # network    
+    unstable.v2ray unstable.qv2ray
+    # Browser
+    firefox vivaldi vivaldi-ffmpeg-codecs #vivaldi-widevine
+    # AppImage  
+    appimage-run
+    # kvm
+    qemu qemu_kvm virt-manager iproute
+  ];
   
   # List services that you want to enable:
 }
