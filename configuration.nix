@@ -8,15 +8,11 @@ let
    fetchTarball
     https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz; 
     # https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz;
-  #packages = pkgs.callPackage ./packages { };
-
 in
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      
-      # ./nix     
       
       ./system
       ./system/boot.nix
@@ -29,6 +25,8 @@ in
       ./system/users.nix
       ./system/virtualisation.nix
       ./system/auto.nix
+
+      ./etc/zsh.nix
     ];
 
   nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
@@ -55,7 +53,7 @@ in
   environment.systemPackages = with pkgs; [
     dmenu picom nitrogen xmobar
    
-    wget git zsh tmux fzf
+    wget git tmux fzf
  
     neofetch htop  
     lazygit  ranger
@@ -66,17 +64,17 @@ in
     kdeApplications.gwenview
     kdeApplications.ark
 
-    okular libreoffice typora
+    okular libreoffice typora #nur.picgo
     
     # text 
     neovim  nodePackages.coc-git
     emacs 
     # code
-    gcc gdb clang cmake 
+    gcc gdb clang clang-tools cmake ninja 
     qt5.full #qt5.qmake qt5.qtdoc qt5.qtsvg qt5.qtbase 
-    # qt5.qtscxml qt5.qttools qt5.qtcharts qt5.qtwebkit qt5.qtspeech
-    python3 lua5_3 ghc 
+    #qt5.qtscxml qt5.qttools qt5.qtcharts qt5.qtwebkit qt5.qtspeech
     qtcreator
+    python3 lua5_3 ghc 
     jdk jetbrains.idea-community
 
     vscode postman
