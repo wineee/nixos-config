@@ -57,7 +57,7 @@ in
  
     neofetch htop  
     lazygit  ranger
-    unstable.netease-music-tui 
+    # unstable.netease-music-tui 
     vlc obs-studio
 
     kdeApplications.kdenlive
@@ -74,7 +74,8 @@ in
     qt5.full #qt5.qmake qt5.qtdoc qt5.qtsvg qt5.qtbase 
     #qt5.qtscxml qt5.qttools qt5.qtcharts qt5.qtwebkit qt5.qtspeech
     qtcreator
-    python3 lua5_3 ghc 
+    python3Full # python38Packages.pip
+    lua5_3 ghc nodejs
     jdk jetbrains.idea-community
 
     vscode postman
