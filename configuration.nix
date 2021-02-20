@@ -53,8 +53,8 @@ in
   environment.systemPackages = with pkgs; [
     dmenu picom nitrogen xmobar
    
-    wget git tmux fzf
- 
+    wget git tmux fzf man
+    bpytop
     neofetch htop  
     lazygit  ranger
     # unstable.netease-music-tui 
