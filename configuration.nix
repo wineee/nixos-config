@@ -8,6 +8,23 @@ let
    fetchTarball
     https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz; 
     # https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz;
+  extensions = (with pkgs.vscode-extensions; [
+      bbenoist.Nix
+      ms-python.python
+      ms-azuretools.vscode-docker
+    ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    {
+      name = "remote-ssh-edit";
+      publisher = "ms-vscode-remote";
+      version = "0.47.2";
+      sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
+    }
+  ];
+  vscodium-with-extensions = pkgs.vscode-with-extensions.override {
+    vscode = pkgs.vscodium;
+    vscodeExtensions = extensions;
+  };
+
 in
 {
   imports =
@@ -58,7 +75,7 @@ in
     neofetch htop  
     lazygit  ranger
     # unstable.netease-music-tui 
-    vlc obs-studio
+    vlc obs-studio 
 
     kdeApplications.kdenlive
     kdeApplications.gwenview
@@ -78,7 +95,7 @@ in
     lua5_3 ghc nodejs
     jdk jetbrains.idea-community
 
-    vscode postman
+    vscode postman vscodium-with-extensions
     
     # network    
     unstable.v2ray unstable.qv2ray
