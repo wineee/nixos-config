@@ -8,7 +8,7 @@
     #};
     ohMyZsh = {
       enable = true;
-      theme = "random";
+      theme = "peepcode";
       plugins = [ "git" "python" "man" "fzf"];
     };
   };
