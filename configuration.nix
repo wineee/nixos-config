@@ -69,7 +69,7 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     dmenu picom nitrogen xmobar
-   
+    libxfs 
     wget git tmux fzf man
     bpytop
     neofetch htop  
