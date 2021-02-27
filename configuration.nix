@@ -68,8 +68,8 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    dmenu picom nitrogen xmobar
-    libxfs 
+    dmenu picom nitrogen xmobar betterlockscreen
+    libxfs xfsprogs 
     wget git tmux fzf man
     bpytop
     neofetch htop  
