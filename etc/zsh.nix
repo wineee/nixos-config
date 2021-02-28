@@ -13,4 +13,5 @@
     };
   };
   environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
+  programs.thefuck.enable = true;
 }
