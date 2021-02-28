@@ -42,7 +42,8 @@ in
       ./system/users.nix
       ./system/virtualisation.nix
       ./system/auto.nix
-
+      
+      ./etc/alias.nix
       ./etc/zsh.nix
     ];
 
@@ -68,7 +69,7 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    dmenu picom nitrogen xmobar betterlockscreen
+    dmenu picom nitrogen xmobar betterlockscreen i3status 
     libxfs xfsprogs 
     wget git tmux fzf man
     bpytop
