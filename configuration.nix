@@ -31,17 +31,17 @@ in
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       
-      ./system
-      ./system/boot.nix
-      ./system/fonts.nix
-      ./system/gpu.nix
-      ./system/keyboard.nix
-      ./system/i18n.nix
-      ./system/desktop.nix
-      ./system/network.nix
-      ./system/users.nix
-      ./system/virtualisation.nix
-      ./system/auto.nix
+      ./sys
+      ./sys/boot.nix
+      ./sys/fonts.nix
+      ./sys/gpu.nix
+      ./sys/keyboard.nix
+      ./sys/i18n.nix
+      ./sys/desktop.nix
+      ./sys/network.nix
+      ./sys/users.nix
+      ./sys/virtualisation.nix
+      ./sys/auto.nix
       
       ./etc/alias.nix
       ./etc/zsh.nix
