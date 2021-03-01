@@ -85,15 +85,16 @@ in
     okular libreoffice typora #nur.picgo
     
     # text 
-    neovim  nodePackages.coc-git
+    neovim  
     emacs 
+    zeal
     # code
     gcc gdb clang clang-tools cmake ninja 
     qt5.full #qt5.qmake qt5.qtdoc qt5.qtsvg qt5.qtbase 
     #qt5.qtscxml qt5.qttools qt5.qtcharts qt5.qtwebkit qt5.qtspeech
     qtcreator
     python3Full # python38Packages.pip
-    lua5_3 ghc nodejs
+    lua5_3 ghc nodejs go 
     jdk jetbrains.idea-community
 
     vscode postman vscodium-with-extensions
