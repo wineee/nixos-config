@@ -20,12 +20,12 @@ let
     vscode = pkgs.vscodium;
     vscodeExtensions = extensions;
   };
-  #vivaldi-with-ffmpeg = pkgs.vivaldi.override {
-  #  proprietaryCodecs = true;
-  #  vivaldi-ffmpeg-codecs = pkgs.vivaldi-ffmpeg-codecs;
-  #  enableWidevine = true;
-  #  vivaldi-widevine = pkgs.vivaldi-widevine;
-  #};
+  vivaldi-with-ffmpeg = pkgs.vivaldi.override {
+    proprietaryCodecs = true;
+    vivaldi-ffmpeg-codecs = pkgs.vivaldi-ffmpeg-codecs;
+    enableWidevine = true;
+    vivaldi-widevine = pkgs.vivaldi-widevine;
+  };
 in
 {
   imports =
@@ -60,10 +60,8 @@ in
     };
   };  
 
-  nixpkgs.config.vivaldi.proprietaryCodecs = true;
-
   environment.systemPackages = with pkgs; [
-    alacritty dmenu picom nitrogen xmobar betterlockscreen albert
+    alacritty dmenu picom nitrogen xmobar betterlockscreen 
     libxfs xfsprogs 
     wget git tmux fzf man
     bpytop
@@ -94,12 +92,12 @@ in
     # network    
     v2ray qv2ray
     # Browser
-    firefox 
-    vivaldi-ffmpeg-codecs vivaldi-widevine
-    vivaldi
+    firefox vivaldi-with-ffmpeg 
     # AppImage  
     appimage-run
     # kvm
     qemu qemu_kvm virt-manager iproute
-  ];  
+  ];
+  
+  # List services that you want to enable:
 }
