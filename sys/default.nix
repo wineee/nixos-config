@@ -4,8 +4,7 @@
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
-  # Enable File system for windons
-  boot.supportedFilesystems = [ "ntfs" ];
+  boot.supportedFilesystems = [ "ntfs" "xfs" "btrfs"];
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;

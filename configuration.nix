@@ -46,7 +46,6 @@ in
 
   environment.systemPackages = with pkgs; [
     alacritty dmenu picom nitrogen xmobar betterlockscreen albert xclip
-    libxfs xfsprogs 
     wget tmux fzf man
     bpytop
     neofetch htop  
