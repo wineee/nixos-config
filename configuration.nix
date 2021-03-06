@@ -46,6 +46,8 @@ in
 
   environment.systemPackages = with pkgs; [
     alacritty dmenu picom nitrogen xmobar betterlockscreen albert xclip
+    pamixer # 音量控制
+
     wget tmux fzf man
     bpytop
     neofetch htop  
@@ -53,7 +55,6 @@ in
     netease-music-tui 
     vlc obs-studio 
 
-    kdenlive
     gwenview
     ark latte-dock
 
@@ -62,14 +63,14 @@ in
     # text 
     neovim  
     emacs 
-    zeal
+    # zeal
     # for eaf
     git nodejs wmctrl aria xdotool
     nodePackages.npm 
     
     # code
     gcc gdb clang clang-tools cmake ninja 
-    qtcreator libsForQt5.qt5.qtdoc libsForQt5.qt5.qtbase libsForQt5.qt5.qttools
+    qtcreator 
     python-with-my-packages
     lua5_3 ghc  go 
     jdk jetbrains.idea-community
@@ -80,7 +81,6 @@ in
     v2ray qv2ray
     # Browser
     firefox 
-    vivaldi-ffmpeg-codecs vivaldi-widevine
     vivaldi
     # AppImage  
     appimage-run
