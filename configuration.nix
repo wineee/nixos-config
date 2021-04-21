@@ -45,15 +45,18 @@ in
   nixpkgs.config.vivaldi.proprietaryCodecs = true;
 
   environment.systemPackages = with pkgs; [
-    alacritty dmenu picom nitrogen xmobar betterlockscreen albert xclip
+    alacritty dmenu picom nitrogen xmobar
+    betterlockscreen albert xclip
     pamixer # 音量控制
-
+    brightnessctl # 屏幕亮度 
+    scrot
+  
     wget tmux fzf man
-    bpytop
+    # bpytop
     neofetch htop  
-    lazygit  ranger
+    ranger
     netease-music-tui 
-    vlc obs-studio 
+    vlc # obs-studio 
 
     gwenview
     ark latte-dock
@@ -63,10 +66,9 @@ in
     # text 
     neovim  
     emacs 
-    # zeal
+    
     # for eaf
     git nodejs wmctrl aria xdotool
-    nodePackages.npm 
     
     # code
     gcc gdb clang clang-tools cmake ninja 
