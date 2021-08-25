@@ -26,13 +26,9 @@
   };
 
   # enable Flatpak
-<<<<<<< HEAD
-  #services.flatpak.enable = true;
-  #xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-=======
+  xdg.portal.enable = true;
   services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
->>>>>>> 7f5db9b7f084e2873c5b077b77e4a2677f8c6e9a
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
