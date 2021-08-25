@@ -34,10 +34,13 @@ in
 
   nixpkgs.config = {
     allowUnfree = true;
+<<<<<<< HEAD
     vivaldi = {
       proprietaryCodecs = true;
       enableWideVine = true;
     };
+=======
+>>>>>>> 7f5db9b7f084e2873c5b077b77e4a2677f8c6e9a
     packageOverrides = pkgs: {
       nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
         inherit pkgs;
@@ -46,7 +49,11 @@ in
     };
   };  
 
+<<<<<<< HEAD
   #nixpkgs.config.vivaldi.proprietaryCodecs = true;
+=======
+  nixpkgs.config.vivaldi.proprietaryCodecs = true;
+>>>>>>> 7f5db9b7f084e2873c5b077b77e4a2677f8c6e9a
 
   environment.systemPackages = with pkgs; [
     alacritty dmenu picom nitrogen xmobar
@@ -66,27 +73,45 @@ in
     ark latte-dock
 
     okular libreoffice typora 
+<<<<<<< HEAD
     # modern unix
     tldr exa fd  
     # text 
     neovim  
     emacs 
     yi
+=======
+    
+    # text 
+    neovim  
+    emacs 
+    
+>>>>>>> 7f5db9b7f084e2873c5b077b77e4a2677f8c6e9a
     # for eaf
     git nodejs wmctrl aria xdotool
     
     # code
     gcc gdb clang clang-tools cmake ninja 
+<<<<<<< HEAD
     #qtcreator 
     python-with-my-packages
     #lua5_3 ghc  go 
     #jdk jetbrains.idea-community
+=======
+    qtcreator 
+    python-with-my-packages
+    lua5_3 ghc  go 
+    jdk jetbrains.idea-community
+>>>>>>> 7f5db9b7f084e2873c5b077b77e4a2677f8c6e9a
 
     vscode postman
     
     # network    
     v2ray qv2ray
+<<<<<<< HEAD
     clash 
+=======
+>>>>>>> 7f5db9b7f084e2873c5b077b77e4a2677f8c6e9a
     # Browser
     firefox 
     vivaldi
