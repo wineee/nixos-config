@@ -35,7 +35,15 @@ in
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
   };  
 
+  services.emacs.package = pkgs.emacsPgtkGcc;
 
+  nixpkgs.overlays = [
+    (import (builtins.fetchGit {
+      url = "https://github.com/nix-community/emacs-overlay.git";
+      ref = "master";
+      rev = "bfc8f6edcb7bcf3cf24e4a7199b3f6fed96aaecf"; # change the revision
+    }))
+  ];
   environment.systemPackages = with pkgs; [
     alacritty dmenu picom nitrogen xmobar
     betterlockscreen albert xclip
@@ -43,7 +51,7 @@ in
     brightnessctl # 屏幕亮度 
     scrot
   
-    wget tmux fzf man
+    wget tmux fzf man stow
     # bpytop
     neofetch htop  
     ranger
@@ -58,12 +66,9 @@ in
     tldr exa fd  
     # text 
     neovim  
-    emacs 
     yi
-    
-    # text 
-    neovim  
-    emacs 
+    vscodium-with-extensions
+    emacsPgtkGcc
     
     # for eaf
     git nodejs wmctrl aria xdotool
@@ -87,7 +92,11 @@ in
     appimage-run
     # kvm
     qemu qemu_kvm virt-manager iproute
-    vscodium-with-extensions
-  ]; 
+  ];
+
+
+  #programs.tmux.keyMode = emacs;
+  #services.emacs.enable = true;
+  #services.emacs.defaultEditor = true; 
 }
 
