@@ -3,7 +3,13 @@
 {
   fonts = {
         enableDefaultFonts = true;
-        fontconfig.enable = true;
+        fontconfig = {
+ 		enable = true;
+		defaultFonts.emoji = [
+ 			 "Noto Color Emoji"
+		];
+                
+	};
         #enableFontDir = true;
         fontDir.enable = true;
         enableGhostscriptFonts = true;
@@ -14,7 +20,7 @@
             noto-fonts-emoji
             wqy_microhei
             wqy_zenhei
-
+	    nerdfonts
         ];
   };
 }
