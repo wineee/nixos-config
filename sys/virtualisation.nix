@@ -7,4 +7,8 @@
   nixpkgs.config.packageOverrides  = pkgs: {
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
   };
+
+  # 
+  virtualisation.podman.enable = true;
+  virtualisation.podman.dockerCompat = true;
 }
