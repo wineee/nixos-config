@@ -45,12 +45,16 @@ in
     }))
   ];
   environment.systemPackages = with pkgs; [
+    mailspring libsecret
+    
+    rofi rofi-calc rofi-emoji rofi-systemd
+    trayer #https://www.youtube.com/watch?v=MyJjiYVggBs
     alacritty dmenu picom nitrogen xmobar
     betterlockscreen albert xclip
     pamixer # 音量控制
     brightnessctl # 屏幕亮度 
-    scrot
-  
+    scrot colorpicker
+    nyxt
     wget tmux fzf man stow
     # bpytop
     neofetch htop  
@@ -62,8 +66,13 @@ in
     ark latte-dock
 
     okular libreoffice typora 
+    tdesktop
+
     # modern unix
-    tldr exa fd  
+    tldr exa fd ripgrep ncdu pstree file
+    coreutils # basic GNU utilities
+
+
     # text 
     neovim  
     yi

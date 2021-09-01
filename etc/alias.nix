@@ -2,9 +2,9 @@
 
 {
   environment.shellAliases = {
-    v = "vi";
     vi = "nvim";
-    vim = "emacs -nw";
+    emo = "emacs -nw";
     nix-zsh = "nix-shell --run zsh";
+    buildos = "sudo nixos-rebuild switch";
   };
 }

@@ -9,7 +9,7 @@
     ohMyZsh = {
       enable = true;
       theme = "peepcode";
-      plugins = [ "git" "python" "man" "fzf"];
+      plugins = [ "git" "python" "man" ];
     };
   };
   environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
