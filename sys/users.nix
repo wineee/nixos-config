@@ -6,6 +6,18 @@
   };
   users.defaultUserShell = pkgs.zsh;
 
+  security.sudo.extraRules = [
+    {
+      users = [ "rewine" ];
+      commands = [
+        {
+          command = "ALL";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
+
   security.polkit = {
     enable = true;
     extraConfig = ''
