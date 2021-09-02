@@ -12,7 +12,7 @@
         serviceConfig = {
 	    Type = "simple";
             User = "%I";
-            #Environment = "DISPLAY=:0";
+            WorkingDirectory="/home/rewine/";
             ExecStart = "${pkgs.betterlockscreen}/bin/betterlockscreen --lock";
             TimeoutSec = "infinity";
             ExecStartPost = "${pkgs.coreutils}/bin/sleep 1";
