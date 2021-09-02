@@ -19,6 +19,7 @@ in
       ./sys/users.nix
       ./sys/virtualisation.nix
       ./sys/auto.nix
+      ./sys/systemd.nix
       
       ./etc/alias.nix
       ./etc/zsh.nix

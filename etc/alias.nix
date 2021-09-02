@@ -2,8 +2,14 @@
 
 {
   environment.shellAliases = {
+    l = "exa";
+    ll = "exa -l";
+    la = "exa -a";
+    tree = "exa --tree";
+    c = "clear";
+    r = "ranger";
     vi = "nvim";
-    emo = "emacs -nw";
+    ems = "emacs -nw";
     nix-zsh = "nix-shell --run zsh";
     buildos = "sudo nixos-rebuild switch";
   };
