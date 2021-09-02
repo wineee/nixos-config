@@ -5,9 +5,9 @@
   # hardware.bumblebee.enable = true;
 
   # Enable OpenCL support for Intel Gen8 and later GPUs
-  # nixpkgs.config.packageOverrides = pkgs: {
-  #  vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
-  # };
+  nixpkgs.config.packageOverrides = pkgs: {
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
+  };
 
   hardware.opengl = {
     enable = true;  
