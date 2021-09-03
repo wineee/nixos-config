@@ -48,6 +48,7 @@ in
   ];
   environment.systemPackages = with pkgs; [
     mailspring libsecret
+    dunst
     
     rofi rofi-calc rofi-emoji rofi-systemd
     trayer #https://www.youtube.com/watch?v=MyJjiYVggBs
