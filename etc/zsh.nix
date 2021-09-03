@@ -27,16 +27,12 @@
          "sudo" # 按两下ESC加上sudo
          "tmux" # aliases for tmux
       ];
-
+     # after add p10k zsh is too slow
       customPkgs = [ pkgs.zsh-powerlevel10k ];
-     
     };
-
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
   };
   
-  #initExtraBeforeCompInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-  #initExtra = "[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh";
-
   environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
 
   programs.thefuck.enable = true;
