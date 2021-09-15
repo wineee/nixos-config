@@ -4,7 +4,7 @@ let
   my-python-packages = python39Packages: with python39Packages; [
       pip
       pyqt5 
-      # pyqtwebengine
+      #pyqtwebengine
       qtconsole
       sip qrcode
   ]; 

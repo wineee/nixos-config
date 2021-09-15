@@ -10,7 +10,6 @@
 
     c = "clear";
     r = "ranger";
-    vi = "nvim";
     ems = "emacs -nw";
     
     nix-zsh = "nix-shell --run zsh";

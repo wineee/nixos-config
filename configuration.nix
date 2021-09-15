@@ -39,6 +39,25 @@ in
 
   services.emacs.package = pkgs.emacsPgtkGcc;
 
+  programs = {
+    neovim = {
+      enable = true;
+      viAlias = true;
+      vimAlias = true;
+      defaultEditor = true;
+      configure = {
+        packages.myVimPackage = with pkgs.vimPlugins; {
+          # loaded on launch
+          start = [ fugitive vim-nix ];
+          # manually loadable by calling `:packadd $plugin-name`
+          opt = [  ];
+        };
+  };
+
+
+    };
+  };
+
   nixpkgs.overlays = [
     (import (builtins.fetchGit {
       url = "https://github.com/nix-community/emacs-overlay.git";
@@ -72,7 +91,7 @@ in
     tdesktop
 
     # modern unix
-    tldr exa fd ripgrep ncdu pstree file
+    duf tldr exa fd ripgrep ncdu pstree file
     coreutils # basic GNU utilities
 
 

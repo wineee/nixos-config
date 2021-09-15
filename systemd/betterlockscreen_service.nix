@@ -12,9 +12,9 @@
         serviceConfig = {
 	    Type = "simple";
             User = "%I";
-            WorkingDirectory="/home/rewine/";
+            WorkingDirectory="/home/rewine";
             ExecStart = "${pkgs.betterlockscreen}/bin/betterlockscreen --lock";
-            TimeoutSec = "infinity";
+            TimeoutSec = "infinity"; # 0
             ExecStartPost = "${pkgs.coreutils}/bin/sleep 1";
         };
     };
