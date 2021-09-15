@@ -65,8 +65,11 @@ in
       rev = "bfc8f6edcb7bcf3cf24e4a7199b3f6fed96aaecf"; # change the revision
     }))
   ];
+
+  services.gnome.gnome-keyring.enable = true;
+
   environment.systemPackages = with pkgs; [
-    mailspring libsecret
+    mailspring libsecret 
     dunst
     
     rofi rofi-calc rofi-emoji rofi-systemd
