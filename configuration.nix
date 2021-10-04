@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 let
+  unstableTarball =
+    fetchTarball
+       https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz;
   python-with-my-packages = pkgs.callPackage ./etc/python.nix {};
   vscodium-with-extensions = pkgs.callPackage ./etc/vscodium.nix {};
 in
@@ -24,12 +27,20 @@ in
       
       ./etc/alias.nix
       ./etc/zsh.nix
+      ./etc/haskell.nix
     ];
 
   nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
 
   nixpkgs.config = {
     allowUnfree = true;
+
+    packageOverrides = pkgs: {
+      unstable = import unstableTarball {
+        config = config.nixpkgs.config;
+      };
+    };
+
     vivaldi = {
       proprietaryCodecs = true;
       enableWideVine = true;
@@ -75,11 +86,11 @@ in
     rofi rofi-calc rofi-emoji rofi-systemd
     trayer #https://www.youtube.com/watch?v=MyJjiYVggBs
     alacritty dmenu picom nitrogen xmobar
-    betterlockscreen albert xclip
+    betterlockscreen xclip copyq #albert
     pamixer # 音量控制
     brightnessctl # 屏幕亮度 
-    scrot colorpicker
-    nyxt
+    scrot colorpicker xorg.xmodmap
+    #nyxt
     wget tmux fzf man stow
     # bpytop
     neofetch htop  
@@ -88,7 +99,7 @@ in
     vlc # obs-studio 
 
     gwenview
-    ark latte-dock
+    ark #latte-dock
 
     okular libreoffice typora 
     tdesktop
@@ -111,7 +122,8 @@ in
     gcc gdb clang clang-tools cmake ninja 
     #qtcreator 
     python-with-my-packages
-    #lua5_3 ghc  go 
+    #lua5_3  go
+    ghc
     #jdk jetbrains.idea-community
 
     vscode postman
@@ -130,7 +142,7 @@ in
 
 
   #programs.tmux.keyMode = emacs;
-  #services.emacs.enable = true;
+  services.emacs.enable = true;
   #services.emacs.defaultEditor = true; 
 }
 

@@ -16,7 +16,7 @@
 
     ohMyZsh = {
       enable = true;
-      theme = "peepcode";
+      # theme = "peepcode";
       plugins = [ 
          "git" # many aliases 
          "python" "pip" "pipenv"
