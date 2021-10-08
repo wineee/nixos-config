@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 let
-  unstableTarball =
-    fetchTarball
-       https://nixos.org/channels/nixpkgs-unstable/nixexprs.tar.xz;
   python-with-my-packages = pkgs.callPackage ./etc/python.nix {};
   vscodium-with-extensions = pkgs.callPackage ./etc/vscodium.nix {};
 in
@@ -35,18 +32,16 @@ in
   nixpkgs.config = {
     allowUnfree = true;
 
-    packageOverrides = pkgs: {
-      unstable = import unstableTarball {
-        config = config.nixpkgs.config;
-      };
-    };
-
     vivaldi = {
       proprietaryCodecs = true;
       enableWideVine = true;
     };
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
-  };  
+  };
+ 
+  environment.variables = {
+    QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
+  };
 
   services.emacs.package = pkgs.emacsPgtkGcc;
 
@@ -95,14 +90,14 @@ in
     # bpytop
     neofetch htop  
     ranger
-    netease-music-tui 
+    # netease-music-tui 
     vlc # obs-studio 
 
     gwenview
     ark #latte-dock
 
-    okular libreoffice typora 
-    tdesktop
+    okular libreoffice #typora 
+    tdesktop mu
 
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
@@ -111,13 +106,13 @@ in
 
     # text 
     neovim  
-    yi
-    vscodium-with-extensions
+    #vscodium-with-extensions
     emacsPgtkGcc
     
-    # for eaf
+    # for emacs
     git nodejs wmctrl aria xdotool
-    
+    tdlib
+
     # code
     gcc gdb clang clang-tools cmake ninja 
     #qtcreator 

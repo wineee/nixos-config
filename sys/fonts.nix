@@ -5,7 +5,6 @@
         enableDefaultFonts = true;
         fontconfig = {
           enable = true;
-          dpi = 0;
           hinting = {
             enable = true;
             autohint = false;
