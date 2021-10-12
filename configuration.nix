@@ -110,12 +110,12 @@ in
     emacsPgtkGcc
     
     # for emacs
-    git nodejs wmctrl aria xdotool
+    git nodejs wmctrl aria xdotool libudev0-shim
     tdlib
 
     # code
     gcc gdb clang clang-tools cmake ninja 
-    #qtcreator 
+    qt5Full qtcreator 
     python-with-my-packages
     #lua5_3  go
     ghc

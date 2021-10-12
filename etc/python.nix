@@ -1,12 +1,12 @@
 { pkgs, ... }:
 with pkgs;
 let  
-  my-python-packages = python39Packages: with python39Packages; [
-      # eaf
+  my-python-packages = python3Packages: with python3Packages; [
+      # for eaf
       pyqt5 
       pyqtwebengine
-      qtconsole
-      sip qrcode
+      #qtconsole
+      #sip qrcode
       epc
       retry
 
@@ -17,8 +17,9 @@ let
       psutil
 
       # other
+      qtawesome
       percol
   ]; 
-  python-with-my-packages = python39.withPackages my-python-packages;
+  python-with-my-packages = python3.withPackages my-python-packages;
 in
 python-with-my-packages
