@@ -82,6 +82,7 @@ in
     trayer #https://www.youtube.com/watch?v=MyJjiYVggBs
     alacritty dmenu picom nitrogen xmobar
     betterlockscreen xclip copyq #albert
+    unrar
     pamixer # 音量控制
     brightnessctl # 屏幕亮度 
     scrot colorpicker xorg.xmodmap
@@ -92,6 +93,7 @@ in
     ranger
     # netease-music-tui 
     vlc # obs-studio 
+    simplescreenrecorder
 
     gwenview
     ark #latte-dock
