@@ -6,8 +6,8 @@ let
       pyqt5 
       pyqtwebengine
       #qtconsole
-      #sip qrcode
-      epc
+      sip qrcode
+      #epc
       retry
 
       # eaf-filemanger
@@ -17,6 +17,7 @@ let
       psutil
 
       # other
+      pip
       qtawesome
       percol
   ]; 

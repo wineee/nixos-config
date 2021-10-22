@@ -1,6 +1,6 @@
 { lib, config, pkgs, ... }:
 { 
-  services.xserver.videoDrivers = [ "vesa" "modesetting" "nv" ];
+  services.xserver.videoDrivers = [ "vesa" "modesetting" ]; #"nvidia"
   services.xserver.useGlamor = true;
   # hardware.bumblebee.enable = true;
 

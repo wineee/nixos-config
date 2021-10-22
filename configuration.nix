@@ -75,6 +75,7 @@ in
   services.gnome.gnome-keyring.enable = true;
 
   environment.systemPackages = with pkgs; [
+    proxychains # 给不听话的应用上代理
     mailspring libsecret 
     dunst
     
@@ -123,7 +124,7 @@ in
     ghc
     #jdk jetbrains.idea-community
 
-    vscode postman
+    vscode #postman
     
     # network    
     v2ray qv2ray
@@ -135,11 +136,17 @@ in
     appimage-run
     # kvm
     qemu qemu_kvm virt-manager iproute
+    # tpm2 emultar for win 11
+    swtpm-tpm2
+    # wine game helper
+    #lutris
+    winePackages.unstable 
+    winetricks
+    alsa-firmware
   ];
 
 
   #programs.tmux.keyMode = emacs;
   services.emacs.enable = true;
-  #services.emacs.defaultEditor = true; 
 }
 
