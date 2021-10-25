@@ -95,7 +95,7 @@ in
     # netease-music-tui 
     vlc # obs-studio 
     simplescreenrecorder
-
+    
     gwenview
     ark #latte-dock
 
@@ -143,6 +143,10 @@ in
     winePackages.unstable 
     winetricks
     alsa-firmware
+    # blog
+    hugo
+    # Markdown Editor
+    zettlr
   ];
 
 
