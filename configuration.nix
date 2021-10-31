@@ -39,9 +39,9 @@ in
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
   };
  
-  environment.variables = {
-    QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
-  };
+  #environment.variables = {
+  #  QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
+  #};
 
   services.emacs.package = pkgs.emacsPgtkGcc;
 
@@ -90,7 +90,8 @@ in
     #nyxt
     wget tmux fzf man stow
     # bpytop
-    neofetch htop  
+    neofetch onefetch 
+    htop  
     ranger
     # netease-music-tui 
     vlc # obs-studio 
@@ -104,27 +105,29 @@ in
 
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
-    coreutils # basic GNU utilities
+    
 
+    coreutils # basic GNU utilities
+    glib
 
     # text 
     neovim  
-    #vscodium-with-extensions
     emacsPgtkGcc
     
     # for emacs
     git nodejs wmctrl aria xdotool libudev0-shim
     tdlib
-
+    vscode 
+    
     # code
     gcc gdb clang clang-tools cmake ninja 
     qt5Full qtcreator 
     python-with-my-packages
     #lua5_3  go
     ghc
+    cargo
     #jdk jetbrains.idea-community
 
-    vscode #postman
     
     # network    
     v2ray qv2ray

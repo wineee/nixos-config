@@ -1,6 +1,13 @@
 { pkgs, lib, ... }:
 
 {
+  qt5 = {
+    enable = true;
+    style = "adwaita";
+    platformTheme = "gnome";
+  };
+  #programs.qt5ct.enable = true;
+
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
 

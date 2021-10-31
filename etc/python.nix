@@ -7,7 +7,7 @@ let
       pyqtwebengine
       #qtconsole
       sip qrcode
-      #epc
+      epc
       retry
 
       # eaf-filemanger
