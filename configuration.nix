@@ -101,12 +101,11 @@ in
     ark #latte-dock
 
     okular libreoffice #typora 
-    tdesktop mu
+    tdesktop logseq
 
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
     
-
     coreutils # basic GNU utilities
     glib
 
@@ -125,10 +124,9 @@ in
     python-with-my-packages
     #lua5_3  go
     ghc
-    cargo
+    cargo rustup
     #jdk jetbrains.idea-community
 
-    
     # network    
     v2ray qv2ray
     clash 
@@ -148,8 +146,6 @@ in
     alsa-firmware
     # blog
     hugo
-    # Markdown Editor
-    zettlr
   ];
 
 
