@@ -107,7 +107,6 @@ in
     duf tldr exa fd ripgrep ncdu pstree file
     
     coreutils # basic GNU utilities
-    glib
 
     # text 
     neovim  
@@ -124,7 +123,6 @@ in
     python-with-my-packages
     #lua5_3  go
     ghc
-    cargo rustup
     #jdk jetbrains.idea-community
 
     # network    
