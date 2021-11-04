@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   # Do not Use the systemd-boot EFI boot loader.
@@ -16,7 +16,9 @@
     };
   };
   
-  # boot.plymouth.enable = true;
+  boot.plymouth.enable = true;
+
+  boot.kernelPackages = pkgs.linuxPackages_xanmod;
 
   boot.extraModprobeConfig = ''
     options kvm_intel nested=1
