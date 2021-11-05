@@ -78,7 +78,7 @@ in
     proxychains # 给不听话的应用上代理
     mailspring libsecret 
     dunst
-    
+    # busybox     
     rofi rofi-calc rofi-emoji rofi-systemd
     trayer #https://www.youtube.com/watch?v=MyJjiYVggBs
     alacritty dmenu picom nitrogen xmobar

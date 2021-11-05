@@ -16,7 +16,7 @@
     };
   };
   
-  boot.plymouth.enable = true;
+  # boot.plymouth.enable = true;
 
   boot.kernelPackages = pkgs.linuxPackages_xanmod;
 
