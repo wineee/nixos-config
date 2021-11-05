@@ -58,7 +58,10 @@ in
           # manually loadable by calling `:packadd $plugin-name`
           opt = [  ];
         };
-  };
+        customRC = ''
+          set whichwrap+=<,>,[,],h,l
+        '';
+      };
 
 
     };
