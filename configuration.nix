@@ -27,7 +27,14 @@ in
       ./etc/haskell.nix
     ];
 
+  nix = {
+    package = pkgs.nixUnstable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+   };
   nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+  nix.trustedUsers = [ "root" "rewine" ];
 
   nixpkgs.config = {
     allowUnfree = true;
@@ -124,7 +131,9 @@ in
     gcc gdb clang clang-tools cmake ninja 
     qt5Full qtcreator 
     python-with-my-packages
-    #lua5_3  go
+    #lua5_3 
+    go
+    cargo
     ghc
     #jdk jetbrains.idea-community
 
@@ -147,6 +156,8 @@ in
     alsa-firmware
     # blog
     hugo
+
+    cachix
   ];
 
 
