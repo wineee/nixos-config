@@ -125,6 +125,7 @@ in
     # for emacs
     git nodejs wmctrl aria xdotool libudev0-shim
     tdlib
+   
     vscode 
     
     # code
@@ -143,20 +144,20 @@ in
     # Browser
     firefox 
     vivaldi
+    
     # AppImage  
     appimage-run
+    
     # kvm
     qemu qemu_kvm virt-manager iproute
-    # tpm2 emultar for win 11
-    swtpm-tpm2
-    # wine game helper
+  
     #lutris
     winePackages.unstable 
     winetricks
-    alsa-firmware
+        
     # blog
     hugo
-
+  
     cachix
   ];
 
