@@ -70,7 +70,6 @@ in
         '';
       };
 
-
     };
   };
 
@@ -151,14 +150,14 @@ in
     # kvm
     qemu qemu_kvm virt-manager iproute
   
-    #lutris
-    winePackages.unstable 
-    winetricks
+    #lutris 
+    winePackages.unstable winetricks
         
     # blog
     hugo
   
     cachix
+    xbps
   ];
 
 
