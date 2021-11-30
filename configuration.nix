@@ -77,7 +77,7 @@ in
     (import (builtins.fetchGit {
       url = "https://github.com/nix-community/emacs-overlay.git";
       ref = "master";
-      rev = "15ecda897ac72e1d3812306847beb5b7b981fdd6"; # change the revision
+      rev = "9f253c38bbebed95dcdc3d0dcb548d344c5eb0b6"; # change the revision
     }))
   ];
 
@@ -110,7 +110,8 @@ in
     ark #latte-dock
 
     okular libreoffice #typora 
-    tdesktop logseq
+    tdesktop 
+    logseq ghostwriter
 
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
