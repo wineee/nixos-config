@@ -128,14 +128,9 @@ in
    
     vscode 
     
-    # code
-    gcc gdb clang clang-tools cmake ninja 
-    qt5Full qtcreator 
+    # code gcc gdb clang clang-tools cmake ninja qt5Full qtcreator 
     python-with-my-packages
-    #lua5_3 
-    go
-    cargo
-    ghc
+    #lua5_3  go cargo ghc
     #jdk jetbrains.idea-community
 
     # network    
@@ -151,8 +146,7 @@ in
     # kvm
     qemu qemu_kvm virt-manager iproute
   
-    #lutris 
-    winePackages.unstable winetricks
+    #lutris winePackages.unstable winetricks
         
     # blog
     hugo
