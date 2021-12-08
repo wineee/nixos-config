@@ -15,16 +15,4 @@
       enable = true;
       wantedBy = [ "machines.target" ];
     };
-
-    systemd.nspawn."archlinux" = {
-      enable = true;
-      execConfig = {
-        Boot = true;
-      };
-    };
-    systemd.services."systemd-nspawn@archlinux" = {
-      enable = true;
-      wantedBy = [ "machines.target" ];
-    };
-
 }
