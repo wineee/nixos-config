@@ -45,10 +45,10 @@ in
     };
     vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
   };
- 
-  #environment.variables = {
-  #  QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
-  #};
+
+  environment.variables = {
+    QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
+  };
 
   services.emacs.package = pkgs.emacsPgtkGcc;
 
