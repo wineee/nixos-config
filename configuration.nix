@@ -102,7 +102,6 @@ in
     neofetch onefetch 
     htop  
     ranger
-    # netease-music-tui 
     vlc # obs-studio 
     simplescreenrecorder
     
@@ -112,6 +111,8 @@ in
     okular libreoffice #typora 
     tdesktop 
     logseq ghostwriter
+    netease-cloud-music-gtk
+
 
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
@@ -123,8 +124,7 @@ in
     emacsPgtkGcc
     
     # for emacs
-    git nodejs wmctrl aria xdotool libudev0-shim
-    tdlib
+    git nodejs wmctrl aria xdotool
    
     vscode 
     
