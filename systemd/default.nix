@@ -1,18 +1,7 @@
 { config, lib, pkgs, ... }:
 {
     imports = [
-        ./betterlockscreen_service.nix
+      ./betterlockscreen_service.nix
+      ./systemd_nspawn_archriscv.nix
     ];
-
-    systemd.targets.machines.enable = true;
-    systemd.nspawn."archriscv" = {
-      enable = true;
-      execConfig = {
-        Boot = true;
-      };
-    };
-    systemd.services."systemd-nspawn@archriscv" = {
-      enable = true;
-      wantedBy = [ "machines.target" ];
-    };
 }
