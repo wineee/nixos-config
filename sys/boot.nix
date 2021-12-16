@@ -26,4 +26,8 @@
     options kvm ignore_msrs=1
   '';
 
+  fileSystems."/data" = {
+    device = "/dev/disk/by-uuid/536c0423-2436-415f-90a2-eebf828b501b";
+    fsType = "xfs";
+  };
 }
