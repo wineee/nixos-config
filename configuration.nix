@@ -113,10 +113,8 @@ in
     logseq ghostwriter
     netease-cloud-music-gtk
 
-
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
-    
     coreutils # basic GNU utilities
 
     # text 
@@ -152,9 +150,10 @@ in
     hugo
   
     cachix
-    xbps
-  ];
-
+  ] ++ (with libsForQt5;
+  [
+    kdeconnect-kde
+  ]);
 
   #programs.tmux.keyMode = emacs;
   services.emacs.enable = true;
