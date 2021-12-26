@@ -2,7 +2,7 @@
 {
   users.users.rewine = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "libvirtd" "docker" "audio" "sound" "video" "input" "tty" "camera"]; 
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "docker" "audio" "sound" "video" "input" "tty" "camera" "ssh"]; 
   };
   users.defaultUserShell = pkgs.zsh;
 

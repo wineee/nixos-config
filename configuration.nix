@@ -50,7 +50,6 @@ in
     QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
   };
 
-  services.emacs.package = pkgs.emacsPgtkGcc;
 
   programs = {
     neovim = {
@@ -118,8 +117,9 @@ in
     coreutils # basic GNU utilities
 
     # text 
-    neovim  
-    emacsPgtkGcc
+    # neovim
+    emacs
+    # emacsPgtkGcc
     
     # for emacs
     git nodejs wmctrl aria xdotool
@@ -157,5 +157,6 @@ in
 
   #programs.tmux.keyMode = emacs;
   services.emacs.enable = true;
+  # services.emacs.package = pkgs.emacsPgtkGcc;
 }
 
