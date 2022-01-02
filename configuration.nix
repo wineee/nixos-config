@@ -80,8 +80,16 @@ in
     }))
   ];
 
-  services.gnome.gnome-keyring.enable = true;
+  services.emacs = {
+    install = true;
+    enable = true;
+    package = pkgs.emacs;
+    # defaultEditor = true;
+  };
 
+  services.gnome.gnome-keyring.enable = true;
+  #programs.tmux.keyMode = emacs;
+  
   environment.systemPackages = with pkgs; [
     proxychains # 给不听话的应用上代理
     mailspring libsecret 
@@ -95,6 +103,8 @@ in
     pamixer # 音量控制
     brightnessctl # 屏幕亮度 
     scrot colorpicker xorg.xmodmap
+    termonad
+
     #nyxt
     wget tmux fzf man stow
     # bpytop
@@ -115,11 +125,12 @@ in
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
     coreutils # basic GNU utilities
+    bat cloc
+    pick
 
     # text 
     # neovim
-    emacs
-    # emacsPgtkGcc
+    #emacs emacsPgtkGcc
     
     # for emacs
     git nodejs wmctrl aria xdotool
@@ -155,8 +166,7 @@ in
     kdeconnect-kde
   ]);
 
-  #programs.tmux.keyMode = emacs;
-  services.emacs.enable = true;
-  # services.emacs.package = pkgs.emacsPgtkGcc;
 }
+
+
 
