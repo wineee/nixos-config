@@ -125,7 +125,7 @@ in
     # modern unix
     duf tldr exa fd ripgrep ncdu pstree file
     coreutils # basic GNU utilities
-    bat cloc
+    bat cloc libtree
     pick
 
     
