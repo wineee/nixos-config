@@ -128,14 +128,12 @@ in
     bat cloc
     pick
 
-    # text 
-    # neovim
-    #emacs emacsPgtkGcc
     
     # for emacs
     git nodejs wmctrl aria xdotool
    
     vscode 
+    miller
     
     # code gcc gdb clang clang-tools cmake ninja qt5Full qtcreator 
     python-with-my-packages
