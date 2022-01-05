@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs,  lib, modulesPath, inputs, ... }:
 let
   python-with-my-packages = pkgs.callPackage ./etc/python.nix {};
   vscodium-with-extensions = pkgs.callPackage ./etc/vscodium.nix {};
