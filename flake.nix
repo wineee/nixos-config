@@ -2,9 +2,8 @@
   description = "nixos-config";     
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";                
-
   inputs.nixos-cn = {
-    url = "github:nixos-cn/flakes";
+    url = "github:wineee/flakes";
     # 强制 nixos-cn 和该 flake 使用相同版本的 nixpkgs
     inputs.nixpkgs.follows = "nixpkgs";
   };

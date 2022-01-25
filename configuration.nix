@@ -134,7 +134,8 @@ in
    
     vscode 
     miller
-    
+    delta
+
     # code gcc gdb clang clang-tools cmake ninja qt5Full qtcreator 
     python-with-my-packages
     #lua5_3  go cargo ghc
