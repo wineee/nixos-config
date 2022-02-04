@@ -3,7 +3,7 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";                
   inputs.nixos-cn = {
-    url = "github:wineee/flakes";
+    url = "github:nixos-cn/flakes";
     # 强制 nixos-cn 和该 flake 使用相同版本的 nixpkgs
     inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -20,10 +20,14 @@
             environment.systemPackages =
               [ nixos-cn.legacyPackages.${system}.netease-cloud-music ];
             # 使用 nixos-cn 的 binary cache
-            nix.binaryCaches = [
-              "https://nixos-cn.cachix.org"
-            ];
-            nix.trusted-public-keys = [ "nixos-cn.cachix.org-1:L0jEaL6w7kwQOPlLoCR3ADx+E3Q8SEFEcB9Jaibl0Xg=" ];
+            nix.settings = {
+              substituters = [
+                "https://nixos-cn.cachix.org"
+                "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+              ];
+              trusted-public-keys = [ "nixos-cn.cachix.org-1:L0jEaL6w7kwQOPlLoCR3ADx+E3Q8SEFEcB9Jaibl0Xg=" ];
+              trusted-users = [ "root" "rewine" ];
+            };
 
             imports = [
               # 将nixos-cn flake提供的registry添加到全局registry列表中

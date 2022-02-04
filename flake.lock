@@ -23,15 +23,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1643017961,
-        "narHash": "sha256-gN+Y4Mjp8Gi3gVnupthdem9UMkBmHZpTkzetZKKlHLU=",
-        "owner": "wineee",
+        "lastModified": 1643939404,
+        "narHash": "sha256-WqiHZse111m8+g8IBklH24nT/eb45RSIUKHZAZSyw9o=",
+        "owner": "nixos-cn",
         "repo": "flakes",
-        "rev": "56838f4c9bbede28fc1b01af104ea8216de80011",
+        "rev": "b8d0193bcc5c56897b1756f053423d93e60d2563",
         "type": "github"
       },
       "original": {
-        "owner": "wineee",
+        "owner": "nixos-cn",
         "repo": "flakes",
         "type": "github"
       }
