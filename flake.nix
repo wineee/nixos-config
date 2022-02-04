@@ -23,7 +23,7 @@
             nix.binaryCaches = [
               "https://nixos-cn.cachix.org"
             ];
-            nix.binaryCachePublicKeys = [ "nixos-cn.cachix.org-1:L0jEaL6w7kwQOPlLoCR3ADx+E3Q8SEFEcB9Jaibl0Xg=" ];
+            nix.trusted-public-keys = [ "nixos-cn.cachix.org-1:L0jEaL6w7kwQOPlLoCR3ADx+E3Q8SEFEcB9Jaibl0Xg=" ];
 
             imports = [
               # 将nixos-cn flake提供的registry添加到全局registry列表中

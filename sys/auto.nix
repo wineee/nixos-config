@@ -10,5 +10,5 @@
      dates = "05:15";
    };
 
-   nix.autoOptimiseStore = true;
+   nix.settings.auto-optimise-store = true;
 }

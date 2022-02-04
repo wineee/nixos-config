@@ -32,9 +32,11 @@ in
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
-   };
-  nix.binaryCaches = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
-  nix.trustedUsers = [ "root" "rewine" ];
+    settings = {
+      substituters = [ "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store" ];
+      trusted-users = [ "root" "rewine" ];
+    };
+  };
 
   nixpkgs.config = {
     allowUnfree = true;
