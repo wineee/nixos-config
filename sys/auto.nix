@@ -5,10 +5,10 @@
    # system.autoUpgrade.channel = https://nixos.org/channels/nixos-21.05;
   
    nix.gc = {
-     automatic = true;
+     automatic = false;
      options = "--delete-older-than 5d";
      dates = "05:15";
    };
 
-   nix.settings.auto-optimise-store = true;
+   nix.settings.auto-optimise-store = false;
 }
