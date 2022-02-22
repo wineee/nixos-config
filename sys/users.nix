@@ -4,7 +4,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "libvirtd" "docker" "audio" "sound" "video" "input" "tty" "camera" "ssh"]; 
   };
-  users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.fish;
 
   security.sudo.extraRules = [
     {

@@ -17,14 +17,14 @@ in
       ./sys/desktop.nix
       ./sys/network.nix
       ./sys/users.nix
-      ./sys/virtualisation.nix
-      ./sys/auto.nix
+      #./sys/virtualisation.nix
+      #./sys/auto.nix
       
-      ./systemd
+      #./systemd
       
       ./etc/alias.nix
       ./etc/zsh.nix
-      ./etc/haskell.nix
+      #./etc/haskell.nix
     ];
 
   nix = {
@@ -70,13 +70,13 @@ in
     };
   };
 
-  nixpkgs.overlays = [
-    (import (builtins.fetchGit {
-      url = "https://github.com/nix-community/emacs-overlay.git";
-      ref = "master";
-      rev = "043268ac469364214a02918717d74d9a0cc1af3d"; # change the revision
-    }))
-  ];
+  #nixpkgs.overlays = [
+  #  (import (builtins.fetchGit {
+  #    url = "https://github.com/nix-community/emacs-overlay.git";
+  #    ref = "master";
+  #    rev = "043268ac469364214a02918717d74d9a0cc1af3d"; # change the revision
+  #  }))
+  #];
 
   services.emacs = {
     install = true;
@@ -150,7 +150,7 @@ in
     appimage-run
     
     # kvm
-    qemu qemu_kvm virt-manager iproute
+    qemu qemu_kvm #virt-manager iproute
   
     #lutris winePackages.unstable winetricks
         

@@ -34,7 +34,7 @@
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
   };
   
-  environment.shells = [ pkgs.bashInteractive pkgs.zsh ];
+  environment.shells = [ pkgs.bashInteractive pkgs.zsh pkgs.fish ];
 
   programs.thefuck.enable = true;
   # TODO  
