@@ -9,7 +9,7 @@
   };
 
   outputs = { self, nixpkgs, nixos-cn, ...}@inputs:
-    let  system = "x86_64-linux";
+    let system = "x86_64-linux";
     in {
       nixosConfigurations.nixos =  nixpkgs.lib.nixosSystem {
         inherit system;
