@@ -78,6 +78,16 @@ in
   #  }))
   #];
 
+  programs.git = {
+    enable = true;
+    config = {
+      init.defaultBranch = "master";
+      core.compression = 0;
+      http.postBuffer = 1048576000;
+      protocol."https".allow = "always";
+    };
+  };
+
   services.emacs = {
     install = true;
     enable = true;
@@ -103,9 +113,7 @@ in
     scrot colorpicker xorg.xmodmap
     termonad
 
-    #nyxt
     wget tmux fzf man stow
-    # bpytop
     neofetch onefetch 
     htop  
     ranger
@@ -115,7 +123,7 @@ in
     gwenview
     ark #latte-dock
 
-    okular libreoffice #typora 
+    okular libreoffice 
     tdesktop 
     logseq ghostwriter
     netease-cloud-music-gtk
@@ -128,7 +136,7 @@ in
 
     
     # for emacs
-    git nodejs wmctrl aria xdotool
+    nodejs wmctrl aria xdotool
    
     vscode 
     miller

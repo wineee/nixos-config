@@ -2,9 +2,9 @@
 
 {
   qt5 = {
-    enable = true;
-    style = "adwaita";
-    platformTheme = "gnome";
+  #  enable = true;
+  #  style = "adwaita";
+  #  platformTheme = "gnome";
   };
   #programs.qt5ct.enable = true;
 
