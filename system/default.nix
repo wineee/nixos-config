@@ -1,6 +1,19 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports =
+    [
+      ./boot.nix
+      ./fonts.nix
+      ./gpu.nix
+      ./keyboard.nix
+      ./i18n.nix
+      ./desktop.nix
+      ./network.nix
+      ./users.nix
+      #./virtualisation.nix
+      #./auto.nix
+    ];
   # Set your time zone.
   time.timeZone = "Asia/Shanghai";
 
