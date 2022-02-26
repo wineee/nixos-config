@@ -1,13 +1,11 @@
 { config, lib, pkgs, ... }:
 let
-  python-with-my-packages = pkgs.callPackage ./etc/python.nix {};
-  vscodium-with-extensions = pkgs.callPackage ./etc/vscodium.nix {};
+  python-with-my-packages = pkgs.callPackage ./python.nix {};
+  vscodium-with-extensions = pkgs.callPackage ./vscodium.nix {};
 in
 
 {
     imports = [
-      #./betterlockscreen_service.nix
-      #./systemd_nspawn_archriscv.nix
     ];
     environment.systemPackages = with pkgs; [
       proxychains # 给不听话的应用上代理
@@ -64,7 +62,7 @@ in
       appimage-run
     
       # kvm
-      qemu qemu_kvm virt-manager iproute
+      qemu qemu_kvm #virt-manager iproute
   
       #lutris winePackages.unstable winetricks
         
