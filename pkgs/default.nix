@@ -3,10 +3,7 @@ let
   python-with-my-packages = pkgs.callPackage ./python.nix {};
   vscodium-with-extensions = pkgs.callPackage ./vscodium.nix {};
 in
-
 {
-    imports = [
-    ];
     environment.systemPackages = with pkgs; [
       proxychains 
       dunst
