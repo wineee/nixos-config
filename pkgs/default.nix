@@ -8,8 +8,7 @@ in
     imports = [
     ];
     environment.systemPackages = with pkgs; [
-      proxychains # 给不听话的应用上代理
-      mailspring 
+      proxychains 
       dunst
       
       rofi rofi-calc rofi-emoji rofi-systemd

@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
       ./system
       
-      #./systemd
+      ./modules/systemd
 
       ./pkgs
       ./programs
@@ -32,7 +32,6 @@
     QT_QPA_PLATFORM_PLUGIN_PATH = "${pkgs.qt5.qtbase.bin.outPath}/lib/qt-${pkgs.qt5.qtbase.version}/plugins";
   };
 
-  services.gnome.gnome-keyring.enable = true;
   #programs.tmux.keyMode = emacs;
 }
 
