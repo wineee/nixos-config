@@ -2,7 +2,7 @@
 {
     systemd.targets.machines.enable = true;
     systemd.nspawn."archriscv" = {
-      enable = false;
+      enable = true;
       execConfig = {
         Boot = true;
       };

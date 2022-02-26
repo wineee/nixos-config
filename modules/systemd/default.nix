@@ -2,6 +2,6 @@
 {
     imports = [
       ./betterlockscreen_service.nix
-      ./systemd_nspawn_archriscv.nix
+      #./systemd_nspawn_archriscv.nix
     ];
 }
