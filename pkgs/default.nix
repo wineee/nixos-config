@@ -2,9 +2,29 @@
 let
   python-with-my-packages = pkgs.callPackage ./python.nix {};
   vscodium-with-extensions = pkgs.callPackage ./vscodium.nix {};
+  
+  nixpkgs-tools = with pkgs; [
+    nixpkgs-fmt
+    nixpkgs-lint
+    nixpkgs-review
+    nixpkgs-pytools
+    nix-index
+  ];
+
+  qt5-libs = with pkgs.libsForQt5; [
+    ark
+    yakuake
+    # kdenlive
+    gwenview
+    kdeconnect-kde
+  ];
+
 in
 {
-    environment.systemPackages = with pkgs; [
+  environment.systemPackages = 
+    nixpkgs-tools
+    ++ qt5-libs
+    ++ (with pkgs; [
       proxychains 
       dunst
       
@@ -66,8 +86,5 @@ in
       hugo
   
       cachix
-    ] ++ (with libsForQt5;
-    [
-      kdeconnect-kde
     ]);
 }
