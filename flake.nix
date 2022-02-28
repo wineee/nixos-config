@@ -7,7 +7,7 @@
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur.url = github:nix-community/NUR;
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = { self, nixpkgs, nixos-cn, nur, ...}@inputs:
@@ -17,11 +17,17 @@
         inherit system;
         modules = [ 
           { nixpkgs.overlays = [ nur.overlay ]; }
-        
+          
+          ({ pkgs, ... }: {
+            environment.systemPackages = pkgs.nur.repos; [ 
+              mic92.hello-nur
+              0x4A6F.nixpkgs-check
+            ];
+          }) 
+
           ({ ... }: {
             environment.systemPackages = [
               nixos-cn.legacyPackages.${system}.netease-cloud-music 
-            #  nur.repos.0x4A6F.nixpkgs-check
             ];
               
             imports = [
