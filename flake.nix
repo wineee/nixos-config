@@ -19,9 +19,10 @@
           { nixpkgs.overlays = [ nur.overlay ]; }
           
           ({ pkgs, ... }: {
-            environment.systemPackages = pkgs.nur.repos; [ 
+            environment.systemPackages = with pkgs.nur.repos; [ 
               mic92.hello-nur
-              0x4A6F.nixpkgs-check
+              hujw77.colorize_lines
+              # 0x4A6F.nixpkgs-check
             ];
           }) 
 
