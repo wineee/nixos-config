@@ -1,10 +1,10 @@
 { pkgs, ... }:
 let
   extensions = (with pkgs.vscode-extensions; [
-      #  bbenoist.Nix
-      # ms-python.python
-      # ms-azuretools.vscode-docker
-    ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    #  bbenoist.Nix
+    # ms-python.python
+    # ms-azuretools.vscode-docker
+  ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
     {
       name = "remote-ssh-edit";
       publisher = "ms-vscode-remote";

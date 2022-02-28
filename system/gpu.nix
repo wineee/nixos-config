@@ -1,5 +1,5 @@
 { lib, config, pkgs, ... }:
-{ 
+{
   services.xserver.videoDrivers = [ "nvidia" "vesa" "modesetting" ]; #"nvidia"
   services.xserver.useGlamor = true;
   # hardware.bumblebee.enable = true;
@@ -25,13 +25,13 @@
   };
 
   hardware.opengl = {
-    enable = true;  
+    enable = true;
     extraPackages = with pkgs; [
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
-      vaapiIntel         # LIBVA_DRIVER_NAME=i965 (older but works better for Firef>
-      vaapiVdpau    
+      vaapiIntel # LIBVA_DRIVER_NAME=i965 (older but works better for Firef>
+      vaapiVdpau
       libvdpau-va-gl
     ];
-  };  
+  };
 
 }

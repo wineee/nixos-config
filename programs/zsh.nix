@@ -1,6 +1,6 @@
-{pkgs, config, ...}:
+{ pkgs, config, ... }:
 {
-  #programs.fish.enable = true;	
+  #programs.fish.enable = true;  
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -18,22 +18,25 @@
     ohMyZsh = {
       enable = true;
       # theme = "peepcode";
-      plugins = [ 
-         "git" # many aliases 
-         "python" "pip" "pipenv"
-         "cp"
-         "fd" # adds completion for the file search tool fd
-         "man" "colored-man-pages"
-         "z" # jump around
-         "sudo" # 按两下ESC加上sudo
-         "tmux" # aliases for tmux
+      plugins = [
+        "git" # many aliases 
+        "python"
+        "pip"
+        "pipenv"
+        "cp"
+        "fd" # adds completion for the file search tool fd
+        "man"
+        "colored-man-pages"
+        "z" # jump around
+        "sudo" # 按两下ESC加上sudo
+        "tmux" # aliases for tmux
       ];
-     # after add p10k zsh is too slow
+      # after add p10k zsh is too slow
       customPkgs = [ pkgs.zsh-powerlevel10k ];
     };
     promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
   };
-  
+
   environment.shells = [ pkgs.bashInteractive pkgs.zsh pkgs.fish ];
 
   programs.thefuck.enable = true;

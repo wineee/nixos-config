@@ -2,7 +2,7 @@
 {
   nix = {
     package = pkgs.nixUnstable;
-    
+
     settings = {
       experimental-features = [
         "nix-command"
@@ -28,7 +28,7 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; }; 
+    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
 
     vivaldi = {
       proprietaryCodecs = true;

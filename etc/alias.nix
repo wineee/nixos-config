@@ -1,4 +1,4 @@
-{ config, ...}:
+{ config, ... }:
 
 {
   environment.shellAliases = {
@@ -12,7 +12,7 @@
     c = "clear";
     r = "ranger";
     ems = "emacs -nw";
-  
+
     nix-zsh = "nix-shell --run zsh";
     buildos = "sudo nixos-rebuild switch";
 

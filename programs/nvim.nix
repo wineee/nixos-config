@@ -12,7 +12,7 @@
           # loaded on launch
           start = [ fugitive vim-nix ];
           # manually loadable by calling `:packadd $plugin-name`
-          opt = [  ];
+          opt = [ ];
         };
         customRC = ''
           set whichwrap+=<,>,[,],h,l
