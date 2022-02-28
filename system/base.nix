@@ -5,7 +5,7 @@
   time.timeZone = "Asia/Shanghai";
 
   #networking.hostId = "71452b6e"; # for zfs pool
-  boot.supportedFilesystems = ["xfs" "btrfs" ];
+  boot.supportedFilesystems = ["xfs" "btrfs" "ntfs" ];
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
