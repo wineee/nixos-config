@@ -5,7 +5,10 @@
     defaultLocale = "zh_CN.UTF-8";
     supportedLocales = [ "zh_CN.UTF-8/UTF-8" "en_US.UTF-8/UTF-8" ];
     inputMethod = {
-      enabled = "fcitx5";
+      enabled = "ibus";  #"fcitx5";
+
+      ibus.engines = with pkgs.ibus-engines; [ rime uniemoji libpinyin ];
+
       fcitx5.addons = with pkgs; [
         fcitx5-rime
         fcitx5-configtool
