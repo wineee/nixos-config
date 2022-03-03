@@ -23,11 +23,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1645149673,
-        "narHash": "sha256-Vxavh/vOfDDfSi+Vp5o74BA8n0zmYxFba8bUOh0g8Nc=",
+        "lastModified": 1646273801,
+        "narHash": "sha256-TlGC3equD+kOa6DX+gl051v9uP6JuSlOyahtdQ+iUvE=",
         "owner": "nixos-cn",
         "repo": "flakes",
-        "rev": "73f19210aed8efb2e5a74f1843cfdcdeec043475",
+        "rev": "10440d17a2f850083250b657da6445927c74df71",
         "type": "github"
       },
       "original": {
@@ -38,11 +38,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1644525281,
-        "narHash": "sha256-D3VuWLdnLmAXIkooWAtbTGSQI9Fc1lkvAr94wTxhnTU=",
+        "lastModified": 1646159311,
+        "narHash": "sha256-ILKckkiG074t3a0pwaPLjio8zVWgowpEp7AUwI5HjHE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "48d63e924a2666baf37f4f14a18f19347fbd54a2",
+        "rev": "18bd82edcc752d6a0e6cce1401ba0c81353a03ca",
         "type": "github"
       },
       "original": {
@@ -52,13 +52,28 @@
         "type": "github"
       }
     },
+    "nixpkgs-master": {
+      "locked": {
+        "lastModified": 1646284582,
+        "narHash": "sha256-F1wbhVAXXaw9IMEaDzwJHUxbMdVlm73NGeXokxGh9T0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ea27b2243bfacde2ed3fa05efdcc2bc842995119",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "master",
+        "type": "indirect"
+      }
+    },
     "nur": {
       "locked": {
-        "lastModified": 1646051576,
-        "narHash": "sha256-BYztvHhZLnyM6ZzcCutJO+qHJV/O8hMtW12hxz85R+Q=",
+        "lastModified": 1646280459,
+        "narHash": "sha256-1cGOtHTcughBTA7d1o25yQuUaXJNQ757CRlqgW4+2dM=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "aa08f16299a51b6b971459a82f13f7455d0a0035",
+        "rev": "85e1183ae72422e883cb57c10ed677be29a80d4e",
         "type": "github"
       },
       "original": {
@@ -71,6 +86,7 @@
       "inputs": {
         "nixos-cn": "nixos-cn",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-master": "nixpkgs-master",
         "nur": "nur"
       }
     }

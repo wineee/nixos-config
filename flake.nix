@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-master.url = "nixpkgs/master";
     nixos-cn = {
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,8 +12,9 @@
   };
 
   outputs = { self, nixpkgs, nixos-cn, nur, ... }@inputs:
-    let system = "x86_64-linux";
-    in
+  let 
+    system = "x86_64-linux";
+  in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -22,8 +24,7 @@
           ({ pkgs, ... }: {
             environment.systemPackages = with pkgs.nur.repos; [
               mic92.hello-nur
-              # hujw77.colorize_lines
-              # 0x4A6F.nixpkgs-check
+              #0x4A6F.nixpkgs-check
             ];
           })
 
@@ -38,7 +39,7 @@
             ];
           })
 
-          ./configuration.nix
+          ./configuration.nix 
         ];
         specialArgs = { inherit inputs; };
       };
