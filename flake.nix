@@ -2,19 +2,28 @@
   description = "nixos-config";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     nixpkgs-master.url = "nixpkgs/master";
     nixos-cn = {
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur.url = "github:nix-community/NUR";
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-cn, nur, ... }@inputs:
-  let 
-    system = "x86_64-linux";
-  in
+  outputs = { self, nixpkgs, nixos-cn, nur, nixpkgs-master, ... }@inputs:
+    let
+      system = "x86_64-linux";
+
+      pkgs' = import nixpkgs-master {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+    in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
@@ -22,15 +31,10 @@
           { nixpkgs.overlays = [ nur.overlay ]; }
 
           ({ pkgs, ... }: {
-            environment.systemPackages = with pkgs.nur.repos; [
-              mic92.hello-nur
-              #0x4A6F.nixpkgs-check
-            ];
-          })
-
-          ({ ... }: {
             environment.systemPackages = [
               nixos-cn.legacyPackages.${system}.netease-cloud-music
+              pkgs'.sl
+              #pkgs.nur.repos."0x4A6F".nixpkgs-check
             ];
 
             imports = [
@@ -39,7 +43,7 @@
             ];
           })
 
-          ./configuration.nix 
+          ./configuration.nix
         ];
         specialArgs = { inherit inputs; };
       };
