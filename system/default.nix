@@ -12,7 +12,7 @@
       ./desktop.nix
       ./network.nix
       ./users.nix
-      #./virtualisation.nix
+      ./virtualisation.nix
       #./auto.nix
     ];
 }

@@ -82,7 +82,7 @@ in
       coreutils
       bat
       cloc
-      libtree
+      # libtree
       miller
       delta
 
@@ -111,7 +111,9 @@ in
 
       # kvm
       qemu
-      qemu_kvm #virt-manager iproute
+      qemu_kvm 
+      virt-manager
+      iproute
 
       #lutris winePackages.unstable winetricks
 
