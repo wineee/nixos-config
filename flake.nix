@@ -43,6 +43,7 @@
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               pkgs'.sl
               #pkgs.nur.repos."0x4A6F".nixpkgs-check
+              berberman.packages.x86_64-linux.fcitx5-pinyin-moegirl
 
             ];
 
