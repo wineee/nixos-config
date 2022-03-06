@@ -12,9 +12,13 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    berberman = {
+      url = "github:berberman/flakes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-cn, nur, nixpkgs-master, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-cn, nur, berberman, nixpkgs-master, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -25,6 +29,10 @@
 
     in
     {
+      overlays = [
+        berberman.overlay
+      ];
+
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
@@ -35,6 +43,7 @@
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               pkgs'.sl
               #pkgs.nur.repos."0x4A6F".nixpkgs-check
+
             ];
 
             imports = [
