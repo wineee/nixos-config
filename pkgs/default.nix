@@ -111,7 +111,7 @@ in
 
       # kvm
       qemu
-      qemu_kvm 
+      qemu_kvm
       virt-manager
       iproute
 
