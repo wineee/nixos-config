@@ -63,6 +63,7 @@ in
 
       gwenview
       ark #latte-dock
+      nheko
 
       okular
       libreoffice
@@ -93,7 +94,8 @@ in
       xdotool
 
       vscode
-      # code gcc gdb clang clang-tools cmake ninja qt5Full qtcreator 
+      # code gcc gdb clang clang-tools cmake ninja 
+      qt5Full qtcreator 
       python-with-my-packages
       #lua5_3  go cargo ghc
       #jdk jetbrains.idea-community
