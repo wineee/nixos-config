@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     berberman = {
-      url = "github:wineee/flakes-1";
+      url = "github:berberman/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
