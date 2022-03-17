@@ -9,4 +9,9 @@
       ./npm.nix
       ./zsh.nix
     ];
+
+  programs.kdeconnect = {
+    enable = true;
+    package = pkgs.kdeconnect; #pkgs.gnomeExtensions.gsconnect
+  };
 }

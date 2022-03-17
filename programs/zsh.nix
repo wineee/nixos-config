@@ -6,7 +6,7 @@
     enableCompletion = true;
     autosuggestions = {
       enable = true;
-      strategy = "match_prev_cmd"; # one of "history", "match_prev_cmd"
+      strategy = [ "match_prev_cmd" ]; # one of "history", "match_prev_cmd"
     };
 
     #programs.zsh.shellAliases =  {
