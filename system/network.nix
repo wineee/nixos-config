@@ -13,7 +13,7 @@
 
   networking.interfaces.wlp2s0.useDHCP = true;
 
-  # Configure network proxy if necessary
+  # Configure network proxy
   # networking.proxy.default = "http://user:password@proxy:port/";
   networking.proxy.allProxy = "http://127.0.0.1:8889";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
