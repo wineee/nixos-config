@@ -32,7 +32,6 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    vaapiIntel = pkgs.vaapiIntel.override { enableHybridCodec = true; };
 
     vivaldi = {
       proprietaryCodecs = true;

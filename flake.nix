@@ -27,18 +27,22 @@
         config.allowUnfree = true;
       };
 
+      #mypkgs = import mynix {
+      #  crossSystem = "alpha-unknown-linux-gnu";
+      #};
+
     in
     {
-      overlays = [
-        berberman.overlay
-      ];
+      #overlays = [
+      #  berberman.overlay
+      #];
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          { nixpkgs.overlays = [ nur.overlay ]; }
+          { nixpkgs.overlays = [ nur.overlay berberman.overlay ]; }
 
-          ({ pkgs, pkgs', ... }: {
+          ({ pkgs, ... }: {
             environment.systemPackages = [
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               # pkgs'.sl
