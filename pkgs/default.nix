@@ -96,6 +96,9 @@ in
       vscode
       gcc gdb 
       pkgsCross.riscv64-embedded.stdenv.cc
+      pkgsCross.aarch64-embedded.stdenv.cc
+      #pkgsCross.riscv64-embedded.binutils
+      #pkgsCross.aarch64-embedded.binutils
       #clang clang-tools cmake ninja 
       qt5Full qtcreator 
       python-with-my-packages
