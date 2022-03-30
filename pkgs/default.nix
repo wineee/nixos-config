@@ -19,11 +19,40 @@ let
     kdeconnect-kde
   ];
 
+  gui-tools = with pkgs; [
+    okular
+    libreoffice
+    tdesktop
+    logseq
+    ghostwriter
+    vlc # obs-studio 
+    simplescreenrecorder
+    flameshot
+  ];
+
+  modern-unix = with pkgs; [
+    duf
+    tldr
+    exa
+    fd
+    ripgrep
+    ncdu
+    pstree
+    file
+    coreutils
+    bat
+    cloc
+    # libtree
+    miller
+    delta
+  ];
 in
 {
   environment.systemPackages =
     nixpkgs-tools
     ++ qt5-libs
+    ++ gui-tools
+    ++ modern-unix
     ++ (with pkgs; [
       proxychains
       dunst
@@ -58,34 +87,11 @@ in
       onefetch
       htop
       ranger
-      vlc # obs-studio 
-      simplescreenrecorder
 
       gwenview
       ark #latte-dock
       nheko
 
-      okular
-      libreoffice
-      tdesktop
-      logseq
-      ghostwriter
-
-      # modern unix
-      duf
-      tldr
-      exa
-      fd
-      ripgrep
-      ncdu
-      pstree
-      file
-      coreutils
-      bat
-      cloc
-      # libtree
-      miller
-      delta
 
       # for emacs
       nodejs
@@ -123,7 +129,7 @@ in
       iproute
 
       #lutris winePackages.unstable winetricks
-
+      
       # blog
       hugo
 
