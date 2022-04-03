@@ -14,4 +14,6 @@
     enable = true;
     package = pkgs.kdeconnect; #pkgs.gnomeExtensions.gsconnect
   };
+
+  programs.nix-ld.enable = true;
 }
