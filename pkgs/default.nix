@@ -104,7 +104,7 @@ in
       pkgsCross.riscv64-embedded.stdenv.cc
       pkgsCross.aarch64-embedded.stdenv.cc
       pkgsCross.riscv64.stdenv.cc
-      #pkgsCross.aarch64-embedded.binutils
+      pkgsCross.riscv64.binutils
       #clang clang-tools cmake ninja 
       qt5Full qtcreator 
       python-with-my-packages
