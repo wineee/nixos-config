@@ -33,6 +33,7 @@
   nixpkgs.config = {
     allowUnfree = true;
     allowUnsupportedSystem = true;
+    allowBroken = true;
 
     vivaldi = {
       proprietaryCodecs = true;

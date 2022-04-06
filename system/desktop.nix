@@ -31,7 +31,7 @@
           haskellPackages.xmonad-contrib
           haskellPackages.monad-logger
           haskellPackages.xmonad-extras
-          haskellPackages.xmonad-wallpaper
+          #haskellPackages.xmonad-wallpaper
         ];
       };
     };
