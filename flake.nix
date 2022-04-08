@@ -37,9 +37,6 @@
 
     in
     {
-      #overlays = [
-      #  berberman.overlay
-      #];
 
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
