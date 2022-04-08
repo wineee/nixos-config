@@ -16,9 +16,13 @@
       url = "github:berberman/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rew = {
+      url = "github:wineee/rew-flakes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-cn, nur, berberman, nixpkgs-master, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-cn, nur, rew, berberman, nixpkgs-master, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -46,9 +50,10 @@
             environment.systemPackages = [
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               nixos-cn.legacyPackages.${system}.wechat-uos
+              rew.packages.${system}.LANDrop
               # pkgs'.sl
               # pkgs.nur.repos."0x4A6F".nixpkgs-check
-              berberman.packages.x86_64-linux.feeluown
+              berberman.packages.${system}.feeluown
             ];
 
             imports = [
