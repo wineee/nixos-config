@@ -13,7 +13,7 @@
       ./network.nix
       ./users.nix
       ./virtualisation.nix
-      ./extrahosts.nix
+      #./extrahosts.nix
       #./auto.nix
     ];
 }
