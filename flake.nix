@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-    nixpkgs-master.url = "nixpkgs/master";
+    #nixpkgs-master.url = "nixpkgs/master";
     nixos-cn = {
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,14 +22,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cn, nur, rew, berberman, nixpkgs-master, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-cn, nur, rew, berberman, ... }@inputs:
     let
       system = "x86_64-linux";
 
-      pkgs' = import nixpkgs-master {
-        inherit system;
-        config.allowUnfree = true;
-      };
+      #pkgs' = import nixpkgs-master {
+      #  inherit system;
+      #  config.allowUnfree = true;
+      #};
 
       #mypkgs = import mynix {
       #  crossSystem = "alpha-unknown-linux-gnu";
@@ -37,7 +37,6 @@
 
     in
     {
-
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
