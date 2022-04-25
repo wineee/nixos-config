@@ -46,7 +46,7 @@
             environment.systemPackages = [
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               nixos-cn.legacyPackages.${system}.wechat-uos
-              rew.packages.${system}.LANDrop
+              # rew.packages.${system}.LANDrop
               # pkgs'.sl
               # pkgs.nur.repos."0x4A6F".nixpkgs-check
               berberman.packages.${system}.feeluown

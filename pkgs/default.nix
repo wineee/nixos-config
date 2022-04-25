@@ -3,6 +3,18 @@ let
   python-with-my-packages = pkgs.callPackage ./python.nix { };
   vscodium-with-extensions = pkgs.callPackage ./vscodium.nix { };
 
+  build-tools = with pkgs; [
+    scons
+    kconfig-frontends
+    cmake
+    gcc gdb 
+    pkgsCross.riscv64-embedded.stdenv.cc
+    pkgsCross.aarch64-embedded.stdenv.cc
+    pkgsCross.riscv64.stdenv.cc
+    #pkgsCross.riscv64.binutils
+    #clang clang-tools ninja 
+  ];
+
   nixpkgs-tools = with pkgs; [
     nixpkgs-fmt
     nixpkgs-lint
@@ -92,7 +104,6 @@ in
       ark #latte-dock
       nheko
 
-
       # for emacs
       nodejs
       wmctrl
@@ -100,12 +111,6 @@ in
       xdotool
 
       vscode
-      gcc gdb 
-      pkgsCross.riscv64-embedded.stdenv.cc
-      pkgsCross.aarch64-embedded.stdenv.cc
-      pkgsCross.riscv64.stdenv.cc
-      #pkgsCross.riscv64.binutils
-      #clang clang-tools cmake ninja 
       qt5Full qtcreator 
       python-with-my-packages
       #lua5_3  go cargo ghc
