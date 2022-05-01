@@ -6,13 +6,16 @@ let
   build-tools = with pkgs; [
     scons
     kconfig-frontends
-    cmake
-    gcc gdb 
-    pkgsCross.riscv64-embedded.stdenv.cc
+    ncurses5
+    #cmake
+    #gcc gdb 
+    #pkgsCross.riscv64-embedded.stdenv.cc
     pkgsCross.aarch64-embedded.stdenv.cc
     pkgsCross.riscv64.stdenv.cc
     #pkgsCross.riscv64.binutils
     #clang clang-tools ninja 
+    qt5Full qtcreator 
+    #python-with-my-packages
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -65,6 +68,7 @@ in
     ++ qt5-libs
     ++ gui-tools
     ++ modern-unix
+    ++ build-tools
     ++ (with pkgs; [
       proxychains
       dunst
@@ -111,8 +115,6 @@ in
       xdotool
 
       vscode
-      qt5Full qtcreator 
-      python-with-my-packages
       #lua5_3  go cargo ghc
       #jdk jetbrains.idea-community
 

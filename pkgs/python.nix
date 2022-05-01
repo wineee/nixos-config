@@ -2,6 +2,7 @@
 with pkgs;
 let
   my-python-packages = python3Packages: with python3Packages; [
+    tkinter
     # for eaf
     pyqt5
     pyqtwebengine
