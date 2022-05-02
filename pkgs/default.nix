@@ -10,12 +10,11 @@ let
     #cmake
     #gcc gdb 
     #pkgsCross.riscv64-embedded.stdenv.cc
-    pkgsCross.aarch64-embedded.stdenv.cc
+    #pkgsCross.aarch64-embedded.stdenv.cc
     pkgsCross.riscv64.stdenv.cc
     #pkgsCross.riscv64.binutils
     #clang clang-tools ninja 
     qt5Full qtcreator 
-    #python-with-my-packages
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -117,6 +116,7 @@ in
       vscode
       #lua5_3  go cargo ghc
       #jdk jetbrains.idea-community
+      python-with-my-packages
 
       # network    
       v2ray
@@ -134,7 +134,6 @@ in
       qemu_kvm
       virt-manager
       iproute
-
       #lutris winePackages.unstable winetricks
       
       # blog
