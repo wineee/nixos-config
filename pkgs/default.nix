@@ -35,13 +35,16 @@ let
 
   gui-tools = with pkgs; [
     okular
-    libreoffice
+    wpsoffice
     tdesktop
     logseq
     ghostwriter
     vlc # obs-studio 
     simplescreenrecorder
     flameshot
+    # Browser
+    firefox
+    vivaldi
   ];
 
   modern-unix = with pkgs; [
@@ -122,9 +125,6 @@ in
       v2ray
       qv2ray
       clash
-      # Browser
-      firefox
-      vivaldi
 
       # AppImage  
       appimage-run
