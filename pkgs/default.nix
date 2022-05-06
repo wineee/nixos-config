@@ -7,14 +7,13 @@ let
     scons
     kconfig-frontends
     ncurses5
-    #cmake
-    #gcc gdb 
-    #pkgsCross.riscv64-embedded.stdenv.cc
+    cmake
+    gcc gdb
     #pkgsCross.aarch64-embedded.stdenv.cc
     pkgsCross.riscv64.stdenv.cc
     #pkgsCross.riscv64.binutils
     #clang clang-tools ninja 
-    qt5Full qtcreator 
+    #qt5Full qtcreator 
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -31,6 +30,8 @@ let
     # kdenlive
     gwenview
     kdeconnect-kde
+    gwenview
+    ark #latte-dock
   ];
 
   gui-tools = with pkgs; [
@@ -45,6 +46,7 @@ let
     # Browser
     firefox
     vivaldi
+    fractal
   ];
 
   modern-unix = with pkgs; [
@@ -105,10 +107,6 @@ in
       onefetch
       htop
       ranger
-
-      gwenview
-      ark #latte-dock
-      nheko
 
       # for emacs
       nodejs
