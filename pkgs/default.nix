@@ -25,10 +25,8 @@ let
   ];
 
   qt5-libs = with pkgs.libsForQt5; [
-    ark
     yakuake
     # kdenlive
-    gwenview
     kdeconnect-kde
     gwenview
     ark #latte-dock
@@ -47,6 +45,7 @@ let
     firefox
     vivaldi
     fractal
+    gotktrix
   ];
 
   modern-unix = with pkgs; [
