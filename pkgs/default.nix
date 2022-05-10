@@ -22,6 +22,7 @@ let
     nixpkgs-review
     nixpkgs-pytools
     nix-index
+    nix-du
   ];
 
   qt5-libs = with pkgs.libsForQt5; [
