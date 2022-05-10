@@ -42,5 +42,7 @@
     enableSSHSupport = true;
   };
 
+  services.gnome.gnome-keyring.enable = true;
+  
   system.stateVersion = "22.05";
 }
