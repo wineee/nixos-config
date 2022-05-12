@@ -9,6 +9,7 @@ let
     ncurses5
     cmake
     gcc gdb
+    binutils
     #pkgsCross.aarch64-embedded.stdenv.cc
     pkgsCross.riscv64.stdenv.cc
     #pkgsCross.riscv64.binutils
