@@ -24,6 +24,7 @@ let
     nixpkgs-pytools
     nix-index
     nix-du
+    manix
   ];
 
   qt5-libs = with pkgs.libsForQt5; [
