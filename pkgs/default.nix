@@ -47,8 +47,8 @@ let
     # Browser
     firefox
     vivaldi
-    fractal
-    gotktrix
+    element-desktop #fractal
+    viper4linux
   ];
 
   modern-unix = with pkgs; [
