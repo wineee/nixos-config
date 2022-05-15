@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     #nixpkgs-master.url = "nixpkgs/master";
+    flake-utils.url = "github:numtide/flake-utils";
     nixos-cn = {
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,9 +21,14 @@
       url = "github:wineee/rew-flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-dram = {
+      url = "github:dramforever/nix-dram";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.flake-utils.follows = "flake-utils";
+    };
   };
 
-  outputs = { self, nixpkgs, nixos-cn, nur, rew, berberman, ... }@inputs:
+  outputs = { self, nixpkgs, nixos-cn, nur, rew, berberman, nix-dram, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -30,17 +36,12 @@
       #  inherit system;
       #  config.allowUnfree = true;
       #};
-
-      #mypkgs = import mynix {
-      #  crossSystem = "alpha-unknown-linux-gnu";
-      #};
-
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          { nixpkgs.overlays = [ nur.overlay berberman.overlay ]; }
+          { nixpkgs.overlays = [ nur.overlay berberman.overlay nix-dram.overlay ]; }
 
           ({ pkgs, ... }: {
             environment.systemPackages = [

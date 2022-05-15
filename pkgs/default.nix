@@ -33,6 +33,7 @@ let
     kdeconnect-kde
     gwenview
     ark #latte-dock
+    lightly
   ];
 
   gui-tools = with pkgs; [
