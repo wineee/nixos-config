@@ -16,5 +16,10 @@
       dockerCompat = true;
     };
 
+    virtualbox = {
+      host.enable = true;
+      #host.enableExtensionPack = true;
+    };
+
   };
 }

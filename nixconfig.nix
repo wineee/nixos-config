@@ -34,7 +34,7 @@
     allowUnfree = true;
     allowUnsupportedSystem = true;
     allowBroken = true;
-
+    permittedInsecurePackages = [ "electron-9.4.4" ]; #typora
     vivaldi = {
       proprietaryCodecs = true;
       enableWideVine = true;

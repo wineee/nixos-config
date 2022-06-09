@@ -19,7 +19,6 @@
     };
     rew = {
       url = "github:wineee/rew-flakes";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-dram = {
       url = "github:dramforever/nix-dram";
@@ -43,14 +42,18 @@
         modules = [
           { nixpkgs.overlays = [ nur.overlay berberman.overlay nix-dram.overlay ]; }
 
+          { nixpkgs.config.permittedInsecurePackages = [ "electron-9.4.4" ]; }
+
           ({ pkgs, ... }: {
+
             environment.systemPackages = [
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               nixos-cn.legacyPackages.${system}.wechat-uos
-              # rew.packages.${system}.LANDrop
-              # pkgs'.sl
+              rew.packages.${system}.typora-legacy
               # pkgs.nur.repos."0x4A6F".nixpkgs-check
               berberman.packages.${system}.feeluown
+              #nix-dram.packages.${system}.nix-dram
+              pkgs.nur.repos.linyinfeng.wemeet
             ];
 
             imports = [

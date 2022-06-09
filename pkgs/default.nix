@@ -39,6 +39,7 @@ let
   gui-tools = with pkgs; [
     okular
     wpsoffice
+    libreoffice
     tdesktop
     logseq
     ghostwriter
@@ -50,6 +51,8 @@ let
     vivaldi
     element-desktop #fractal
     viper4linux
+    kooha
+    ripes
   ];
 
   modern-unix = with pkgs; [
@@ -77,6 +80,8 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
+      virtualbox
+
       proxychains
       dunst
 
