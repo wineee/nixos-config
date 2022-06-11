@@ -4,15 +4,13 @@ let
   vscodium-with-extensions = pkgs.callPackage ./vscodium.nix { };
 
   build-tools = with pkgs; [
-    scons
-    kconfig-frontends
-    ncurses5
-    cmake
-    gcc gdb
+    cmake gcc gdb
     binutils
+    
     #pkgsCross.aarch64-embedded.stdenv.cc
-    pkgsCross.riscv64.stdenv.cc
+    #pkgsCross.riscv64.stdenv.cc
     #pkgsCross.riscv64.binutils
+   
     #clang clang-tools ninja 
     #qt5Full qtcreator 
   ];
@@ -80,8 +78,6 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
-      virtualbox
-
       proxychains
       dunst
 
