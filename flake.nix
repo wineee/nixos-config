@@ -53,8 +53,12 @@
               # pkgs.nur.repos."0x4A6F".nixpkgs-check
               berberman.packages.${system}.feeluown
               #nix-dram.packages.${system}.nix-dram
-              pkgs.nur.repos.linyinfeng.wemeet
-            ];
+            ] ++ (with pkgs.nur.repos; [
+              linyinfeng.wemeet
+              linyinfeng.clash-for-windows
+              linyinfeng.icalingua-plus-plus
+              xddxdd.bilibili
+            ]);
 
             imports = [
               nixos-cn.nixosModules.nixos-cn-registries

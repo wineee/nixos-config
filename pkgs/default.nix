@@ -47,9 +47,10 @@ let
     # Browser
     firefox
     vivaldi
-    element-desktop #fractal
+    microsoft-edge-dev
+
+    element-desktop
     viper4linux
-    kooha
     ripes
   ];
 
