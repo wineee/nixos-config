@@ -34,8 +34,8 @@
     binfmt.emulatedSystems = [ "riscv64-linux" "aarch64-linux" ];
   };
 
-  fileSystems."/data" = {
-    device = "/dev/disk/by-uuid/536c0423-2436-415f-90a2-eebf828b501b";
-    fsType = "xfs";
-  };
+  #fileSystems."/data" = {
+  #  device = "/dev/disk/by-uuid/536c0423-2436-415f-90a2-eebf828b501b";
+  #  fsType = "xfs";
+  #};
 }
