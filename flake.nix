@@ -50,7 +50,7 @@
               nixos-cn.legacyPackages.${system}.netease-cloud-music
               nixos-cn.legacyPackages.${system}.wechat-uos
               rew.packages.${system}.typora-legacy
-              # pkgs.nur.repos."0x4A6F".nixpkgs-check
+              rew.packages.${system}.cmdmarkdown
               berberman.packages.${system}.feeluown
               #nix-dram.packages.${system}.nix-dram
             ] ++ (with pkgs.nur.repos; [
