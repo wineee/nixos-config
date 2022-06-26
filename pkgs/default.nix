@@ -12,7 +12,7 @@ let
     #pkgsCross.riscv64.binutils
    
     #clang clang-tools ninja 
-    #qt5Full qtcreator 
+    qt5Full qtcreator 
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -23,6 +23,8 @@ let
     nix-index
     nix-du
     manix
+    nix-direnv
+    direnv
   ];
 
   qt5-libs = with pkgs.libsForQt5; [
@@ -50,8 +52,8 @@ let
     microsoft-edge-dev
 
     element-desktop
-    viper4linux
     ripes
+    #rustdesk
   ];
 
   modern-unix = with pkgs; [
@@ -66,6 +68,7 @@ let
     coreutils
     bat
     cloc
+    topgrade
     # libtree
     miller
     delta
