@@ -47,12 +47,12 @@
           ({ pkgs, ... }: {
 
             environment.systemPackages = [
-              nixos-cn.legacyPackages.${system}.netease-cloud-music
+              #nixos-cn.legacyPackages.${system}.netease-cloud-music
               nixos-cn.legacyPackages.${system}.wechat-uos
               rew.packages.${system}.typora-legacy
-              rew.packages.${system}.cmd-markdown
+              #rew.packages.${system}.cmd-markdown
               rew.packages.${system}.electron-netease-cloud-music
-              berberman.packages.${system}.feeluown
+              #berberman.packages.${system}.feeluown
               #nix-dram.packages.${system}.nix-dram
             ] ++ (with pkgs.nur.repos; [
               linyinfeng.wemeet
