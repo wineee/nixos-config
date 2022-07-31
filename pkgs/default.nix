@@ -82,6 +82,8 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
+      home-manager
+
       proxychains
       dunst
 
@@ -97,6 +99,7 @@ in
       xmobar
       betterlockscreen
       xclip
+      pineapple-pictures
       copyq #albert
       unrar
       pamixer # 音量控制
@@ -130,7 +133,6 @@ in
       # network    
       v2ray
       qv2ray
-      clash
 
       # AppImage  
       appimage-run
