@@ -20,10 +20,15 @@
     };
 
     gc = {
-      # automatic = true;
-      options = "--delete-older-than 5d";
-      dates = "05:15";
+      automatic = false;
+      #options = "--delete-older-than 5d";
+      #dates = "05:15";
     };
+
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+    '';
   };
 
   nixpkgs.config = {
