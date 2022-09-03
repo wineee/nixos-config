@@ -38,7 +38,7 @@ let
 
   gui-tools = with pkgs; [
     okular
-    wpsoffice
+    wpsoffice-cn
     libreoffice
     tdesktop
     logseq
@@ -66,7 +66,7 @@ let
     pstree
     file
     coreutils
-    bat
+    #bat
     cloc
     topgrade
     # libtree
@@ -111,12 +111,12 @@ in
 
       wget
       tmux
-      fzf
+      # fzf
       man
       stow
       neofetch
       onefetch
-      htop
+      # htop
       ranger
 
       # for emacs
