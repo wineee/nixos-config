@@ -2,7 +2,7 @@
 {
   imports =
     [
-      ./emacs.nix
+      #./emacs.nix
       ./nvim.nix
       ./git.nix
       ./alias.nix
@@ -16,4 +16,6 @@
   };
 
   programs.nix-ld.enable = true;
+
+  programs.xonsh.enable = true;
 }
