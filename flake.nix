@@ -5,6 +5,10 @@
     nixpkgs.url = "nixpkgs/nixos-unstable";
     #nixpkgs-master.url = "nixpkgs/master";
     flake-utils.url = "github:numtide/flake-utils";
+    flake-utils-plus = {
+      url = "github:gytis-ivaskevicius/flake-utils-plus";
+      inputs.flake-utils.follows = "flake-utils";
+    };
     nixos-cn = {
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +31,8 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixos-cn, nur, rew, berberman, nix-dram, ... }@inputs:
+  outputs = { self, nixpkgs,  flake-utils, flake-utils-plus,
+              nixos-cn, nur, rew, berberman, nix-dram, ... }@inputs:
     let
       system = "x86_64-linux";
 
@@ -46,17 +51,17 @@
 
           ({ pkgs, ... }: {
 
-            environment.systemPackages = [
-              nixos-cn.legacyPackages.${system}.wechat-uos
-              rew.packages.${system}.typora-legacy
-              rew.packages.${system}.electron-netease-cloud-music
+            #environment.systemPackages = [
+            #  nixos-cn.legacyPackages.${system}.wechat-uos
+            #  rew.packages.${system}.typora-legacy
+            #  rew.packages.${system}.electron-netease-cloud-music
               #berberman.packages.${system}.feeluown
               #nix-dram.packages.${system}.nix-dram
-            ] ++ (with pkgs.nur.repos; [
-              linyinfeng.wemeet
-              linyinfeng.icalingua-plus-plus
-              xddxdd.bilibili
-            ]);
+           # ] ++ (with pkgs.nur.repos; [
+           #   linyinfeng.wemeet
+           #   linyinfeng.icalingua-plus-plus
+           #   xddxdd.bilibili
+           # ]);
 
             imports = [
               nixos-cn.nixosModules.nixos-cn-registries
