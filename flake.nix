@@ -51,18 +51,6 @@
 
           ({ pkgs, ... }: {
 
-            #environment.systemPackages = [
-            #  nixos-cn.legacyPackages.${system}.wechat-uos
-            #  rew.packages.${system}.typora-legacy
-            #  rew.packages.${system}.electron-netease-cloud-music
-              #berberman.packages.${system}.feeluown
-              #nix-dram.packages.${system}.nix-dram
-           # ] ++ (with pkgs.nur.repos; [
-           #   linyinfeng.wemeet
-           #   linyinfeng.icalingua-plus-plus
-           #   xddxdd.bilibili
-           # ]);
-
             imports = [
               nixos-cn.nixosModules.nixos-cn-registries
               nixos-cn.nixosModules.nixos-cn

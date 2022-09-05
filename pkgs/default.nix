@@ -2,6 +2,7 @@
 let
   python-with-my-packages = pkgs.callPackage ./python.nix { };
   vscodium-with-extensions = pkgs.callPackage ./vscodium.nix { };
+  mynurpkgs = import ./nurpkgs.nix  { inherit pkgs; };
 
   build-tools = with pkgs; [
     cmake gcc gdb
@@ -76,7 +77,8 @@ let
 in
 {
   environment.systemPackages =
-    nixpkgs-tools
+    mynurpkgs
+    ++ nixpkgs-tools
     ++ qt5-libs
     ++ gui-tools
     ++ modern-unix
