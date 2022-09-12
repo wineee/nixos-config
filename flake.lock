@@ -52,6 +52,26 @@
         "type": "github"
       }
     },
+    "flake-utils-plus": {
+      "inputs": {
+        "flake-utils": [
+          "flake-utils"
+        ]
+      },
+      "locked": {
+        "lastModified": 1657226504,
+        "narHash": "sha256-GIYNjuq4mJlFgqKsZ+YrgzWm0IpA4axA3MCrdKYj7gs=",
+        "owner": "gytis-ivaskevicius",
+        "repo": "flake-utils-plus",
+        "rev": "2bf0f91643c2e5ae38c1b26893ac2927ac9bd82a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gytis-ivaskevicius",
+        "repo": "flake-utils-plus",
+        "type": "github"
+      }
+    },
     "flake-utils_2": {
       "locked": {
         "lastModified": 1659877975,
@@ -217,6 +237,7 @@
       "inputs": {
         "berberman": "berberman",
         "flake-utils": "flake-utils_2",
+        "flake-utils-plus": "flake-utils-plus",
         "nix-dram": "nix-dram",
         "nixos-cn": "nixos-cn",
         "nixpkgs": "nixpkgs",
