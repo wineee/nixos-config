@@ -6,6 +6,7 @@ let
     linyinfeng.icalingua-plus-plus
     xddxdd.bilibili
     rewine.electron-netease-cloud-music
+    rewine.landrop
   ];
   nixcnpkgs = with nixos-cn; [
     wechat-uos
