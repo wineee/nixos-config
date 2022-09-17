@@ -132,10 +132,6 @@ in
       #jdk jetbrains.idea-community
       python-with-my-packages
 
-      # network    
-      v2ray
-      qv2ray
-
       # AppImage  
       appimage-run
 
