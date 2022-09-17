@@ -16,6 +16,10 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rew = {
+      url = "github:wineee/rew-flakes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nix-dram = {
       url = "github:dramforever/nix-dram";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -24,7 +28,7 @@
   };
 
   outputs = { self, nixpkgs,  flake-utils, flake-utils-plus,
-              nixos-cn, nur, nix-dram, ... }@inputs:
+              nixos-cn, nur, rew, nix-dram, ... }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -36,12 +40,15 @@
 
           { nixpkgs.config.permittedInsecurePackages = [ "electron-9.4.4" ]; }
 
-          ({ pkgs, ... }: {
+          ({ pkgs, config, ... }: {
 
             imports = [
               nixos-cn.nixosModules.nixos-cn-registries
               nixos-cn.nixosModules.nixos-cn
+              rew.nixosModules.v2raya
             ];
+
+            config.services.v2raya.enable = true;
           })
 
           ./configuration.nix
