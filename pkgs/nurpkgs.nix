@@ -7,6 +7,7 @@ let
     #xddxdd.bilibili
     rewine.electron-netease-cloud-music
     rewine.landrop
+    rewine.v2raya
   ];
   nixcnpkgs = with nixos-cn; [
     wechat-uos

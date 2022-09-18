@@ -53,8 +53,7 @@ let
     microsoft-edge-dev
 
     element-desktop
-    ripes
-    #rustdesk
+    rustdesk
   ];
 
   modern-unix = with pkgs; [

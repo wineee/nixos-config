@@ -20,6 +20,5 @@
       host.enable = true;
       #host.enableExtensionPack = true;
     };
-
   };
 }
