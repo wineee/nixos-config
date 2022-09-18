@@ -27,10 +27,10 @@
       #dates = "05:15";
     };
 
-    extraOptions = ''
-      keep-outputs = true
-      keep-derivations = true
-    '';
+    #extraOptions = ''
+    #  keep-outputs = true
+    #  keep-derivations = true
+    #'';
   };
 
   nixpkgs.config = {
