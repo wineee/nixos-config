@@ -50,29 +50,6 @@
         "type": "github"
       }
     },
-    "nix-dram": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1660180791,
-        "narHash": "sha256-oPO+keK4S9daL9ubU51hZ+QOWVSMbZ56F20iFI9Px3s=",
-        "owner": "dramforever",
-        "repo": "nix-dram",
-        "rev": "ae7f0b7c5d39eec5941fe21e9f202106bdea9ac2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dramforever",
-        "repo": "nix-dram",
-        "type": "github"
-      }
-    },
     "nixos-cn": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -148,7 +125,6 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "flake-utils-plus": "flake-utils-plus",
-        "nix-dram": "nix-dram",
         "nixos-cn": "nixos-cn",
         "nixpkgs": "nixpkgs",
         "nur": "nur",

@@ -17,15 +17,10 @@
       url = "github:wineee/rew-flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-dram = {
-      url = "github:dramforever/nix-dram";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
   };
 
   outputs = { self, nixpkgs,  flake-utils, flake-utils-plus,
-              nixos-cn, nur, rew, nix-dram, ... }@inputs:
+              nixos-cn, nur, rew, ... }@inputs:
     let
       system = "x86_64-linux";
     in
@@ -33,7 +28,7 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          { nixpkgs.overlays = [ nur.overlay nix-dram.overlay ]; }
+          { nixpkgs.overlays = [ nur.overlay ]; }
 
           { nixpkgs.config.permittedInsecurePackages = [ "electron-9.4.4" ]; }
 
