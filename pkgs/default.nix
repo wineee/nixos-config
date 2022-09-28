@@ -31,7 +31,6 @@ let
   qt5-libs = with pkgs.libsForQt5; [
     yakuake
     # kdenlive
-    kdeconnect-kde
     gwenview
     ark #latte-dock
     lightly
@@ -50,7 +49,7 @@ let
     # Browser
     firefox
     vivaldi
-    microsoft-edge-dev
+    # microsoft-edge-dev
 
     element-desktop
     rustdesk
@@ -138,7 +137,7 @@ in
       qemu
       qemu_kvm
       virt-manager
-      iproute
+      iproute2
       #lutris winePackages.unstable winetricks
       
       # blog

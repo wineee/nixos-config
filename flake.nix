@@ -12,10 +12,7 @@
       url = "github:nixos-cn/flakes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nur.url = "github:nix-community/NUR";
     rew = {
       url = "github:wineee/rew-flakes";
       inputs.nixpkgs.follows = "nixpkgs";

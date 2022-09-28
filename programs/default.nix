@@ -12,7 +12,7 @@
 
   programs.kdeconnect = {
     enable = true;
-    package = pkgs.kdeconnect; #pkgs.gnomeExtensions.gsconnect
+    package = pkgs.plasma5Packages.kdeconnect-kde; #pkgs.gnomeExtensions.gsconnect
   };
 
   programs.nix-ld.enable = true;
