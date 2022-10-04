@@ -41,6 +41,8 @@ let
     wpsoffice-cn
     libreoffice
     tdesktop
+    nheko
+
     logseq
     ghostwriter
     vlc # obs-studio 
@@ -49,9 +51,7 @@ let
     # Browser
     firefox
     vivaldi
-    # microsoft-edge-dev
 
-    element-desktop
     rustdesk
   ];
 
@@ -141,7 +141,7 @@ in
       #lutris winePackages.unstable winetricks
       
       # blog
-      hugo
+      #hugo
 
       cachix
     ]);
