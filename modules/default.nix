@@ -1,7 +1,3 @@
-{ config, pkgs, lib, ... }:
-{
-  imports =
-    [
-      ./systemd
-    ]
-    }
+[
+  ./betterlockscreen
+]
