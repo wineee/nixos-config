@@ -11,7 +11,6 @@
       ./i18n.nix
       ./desktop.nix
       ./network.nix
-      ./users.nix
       ./virtualisation.nix
       #./auto.nix
     ];

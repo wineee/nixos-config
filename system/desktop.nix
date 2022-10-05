@@ -7,6 +7,7 @@
     #  platformTheme = "gnome";
   };
   #programs.qt5ct.enable = true;
+  services.betterlockscreen.enable = true;
 
   services = {
     xserver = {

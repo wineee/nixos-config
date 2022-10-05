@@ -12,6 +12,7 @@
   programs.nm-applet.enable = true;
 
   networking.interfaces.wlp2s0.useDHCP = true;
+  networking.iproute2.enable = true;
 
   # Configure network proxy
   # networking.proxy.default = "http://127.0.0.1:8889";

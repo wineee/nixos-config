@@ -5,6 +5,7 @@ let
 
   sharedModules = [
     ../nixconfig.nix
+    ../users.nix
     {
       environment.systemPackages = [
         #inputs.alejandra.defaultPackage.${system}

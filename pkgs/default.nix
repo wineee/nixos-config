@@ -9,8 +9,7 @@ let
     binutils
     
     #pkgsCross.aarch64-embedded.stdenv.cc
-    #pkgsCross.riscv64.stdenv.cc
-    #pkgsCross.riscv64.binutils
+    #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
    
     #clang clang-tools ninja 
     qt5Full qtcreator 
@@ -132,12 +131,7 @@ in
 
       # AppImage  
       appimage-run
-
-      # kvm
-      qemu
-      qemu_kvm
-      virt-manager
-      iproute2
+      
       #lutris winePackages.unstable winetricks
       
       # blog

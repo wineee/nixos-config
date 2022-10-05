@@ -9,6 +9,7 @@
       qemu.ovmf.enable = true;
       qemu.swtpm.enable = true;
       qemu.runAsRoot = true;
+      qemu.package = pkgs.qemu;
     };
 
     podman = {
@@ -21,4 +22,9 @@
       #host.enableExtensionPack = true;
     };
   };
+
+
+   environment.systemPackages = with pkgs; [
+      virt-manager
+   ];
 }
