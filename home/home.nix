@@ -28,7 +28,7 @@
     delta.enable = true;
     lfs.enable = false;
     signing = {
-      key = "0xBBCE9E65F082649E";
+      key = "0xAABB329787290824";
       signByDefault = true;
     };
     aliases = {
