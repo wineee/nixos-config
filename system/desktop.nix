@@ -8,6 +8,7 @@
   };
   #programs.qt5ct.enable = true;
   services.betterlockscreen.enable = true;
+  services.notify-daemon.enable = true;
 
   services = {
     xserver = {

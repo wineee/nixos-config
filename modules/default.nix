@@ -1,3 +1,4 @@
 [
   ./betterlockscreen
+  ./notify
 ]

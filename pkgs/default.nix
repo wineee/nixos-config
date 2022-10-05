@@ -82,9 +82,7 @@ in
     ++ build-tools
     ++ (with pkgs; [
       home-manager
-
       proxychains
-      dunst
 
       rofi
       rofi-calc
