@@ -8,6 +8,7 @@
       ./alias.nix
       ./npm.nix
       ./zsh.nix
+      ./notify.nix
     ];
 
   programs.kdeconnect = {

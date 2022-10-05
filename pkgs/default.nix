@@ -85,7 +85,6 @@ in
       home-manager
 
       proxychains
-      dunst
 
       rofi
       rofi-calc

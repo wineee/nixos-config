@@ -14,17 +14,19 @@
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://mirror.sjtu.edu.cn/nix-channels/store"
         "https://rewine.cachix.org"
+        "https://nix-community.cachix.org"
       ];
       trusted-public-keys = [
         "rewine.cachix.org-1:aOIg9PvwuSefg59gVXXxGIInHQI9fMpskdyya2xO+7I="
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
       trusted-users = [ "root" "rewine" ];
     };
 
     gc = {
       automatic = false;
-      #options = "--delete-older-than 5d";
-      #dates = "05:15";
+      options = "--delete-older-than 5d";
+      dates = "05:15";
     };
 
     #extraOptions = ''
@@ -35,7 +37,7 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnsupportedSystem = true;
+    allowUnsupportedSystem = false;
     allowBroken = true;
     permittedInsecurePackages = [ "electron-9.4.4" ]; #typora
     vivaldi = {
