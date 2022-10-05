@@ -1,7 +1,0 @@
-{
-  self,
-  inputs,
-  ...
-}: {
-  NixOS = {};
-}
