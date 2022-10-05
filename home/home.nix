@@ -28,7 +28,7 @@
     delta.enable = true;
     lfs.enable = false;
     signing = {
-      key = null;
+      key = "0xBBCE9E65F082649E";
       signByDefault = true;
     };
     aliases = {
@@ -40,6 +40,7 @@
       b = "branch";
       p = "pull --rebase";
       pu = "push";
+      d = "diff";
     };
     extraConfig = {
       init.defaultBranch = "main";
