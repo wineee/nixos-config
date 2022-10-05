@@ -7,10 +7,8 @@ let
   build-tools = with pkgs; [
     cmake gcc gdb
     binutils
-    
     #pkgsCross.aarch64-embedded.stdenv.cc
     #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
-   
     #clang clang-tools ninja 
     qt5Full qtcreator 
   ];
@@ -20,11 +18,8 @@ let
     nixpkgs-lint
     nixpkgs-review
     nixpkgs-pytools
-    nix-index
     nix-du
     manix
-    nix-direnv
-    direnv
   ];
 
   qt5-libs = with pkgs.libsForQt5; [
@@ -57,14 +52,11 @@ let
   modern-unix = with pkgs; [
     duf
     tldr
-    exa
-    fd
     ripgrep
     ncdu
     pstree
     file
     coreutils
-    #bat
     cloc
     topgrade
     # libtree
@@ -81,7 +73,6 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
-      home-manager
       proxychains
 
       rofi
@@ -108,12 +99,10 @@ in
 
       wget
       tmux
-      # fzf
       man
       stow
       neofetch
       onefetch
-      # htop
       ranger
 
       # for emacs
@@ -131,10 +120,5 @@ in
       appimage-run
       
       #lutris winePackages.unstable winetricks
-      
-      # blog
-      #hugo
-
-      cachix
     ]);
 }
