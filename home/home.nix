@@ -52,6 +52,26 @@
     };
   };
 
+  programs = {
+    neovim = {
+      enable = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+      coc.enable = true;
+      plugins = with pkgs.vimPlugins; [
+        fugitive
+        vim-nix
+        { plugin = vim-startify;
+          config = "let g:startify_change_to_vcs_root = 0";
+        }
+      ];
+      extraConfig = ''
+        set whichwrap+=<,>,[,],h,l
+      '';
+    };
+  };
+
   programs.bat.enable = true;
 
   programs.fzf = {
