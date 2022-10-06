@@ -50,18 +50,10 @@ let
   ];
 
   modern-unix = with pkgs; [
-    duf
-    tldr
-    ripgrep
-    ncdu
-    pstree
     file
     coreutils
-    cloc
     topgrade
-    # libtree
     miller
-    delta
   ];
 in
 {

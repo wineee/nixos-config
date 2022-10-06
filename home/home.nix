@@ -7,12 +7,22 @@
   home.homeDirectory = "/home/rewine";
 
   home.packages = with pkgs; [
+    # unix tools
     htop
     ugrep
     ripgrep
     fd
+    libtree # ldd as a tree
+    tldr
+    duf
+    ncdu
+    pstree
+    cloc
+
+    # nix tools
     nix-index
     nix-update
+    # other apps
     nodejs
     nodePackages.npm
     yarn
@@ -79,7 +89,10 @@
     enableFishIntegration = true;
   };
 
-  programs.exa.enable = true;
+  programs.exa = {
+    enable = true;
+    enableAliases = true;
+  };
 
   nixpkgs.overlays = [ (import inputs.emacs-overlay) ];
   programs.emacs = {

@@ -2,7 +2,6 @@
 {
   imports =
     [
-      ./nvim.nix
       ./alias.nix
       ./npm.nix
       ./zsh.nix
