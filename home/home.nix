@@ -1,12 +1,21 @@
-{ inputs, config, pkgs, ... }:
-
+{ inputs, system, config, pkgs, ... }:
+let
+  polybarPkgs = with pkgs; [
+    font-awesome          # awesome fonts
+    material-design-icons # fonts with glyphs
+    xfce.orage            # lightweight calendar
+  ];
+in
 {
+  imports = [
+    ./polybar
+  ];
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "rewine";
   home.homeDirectory = "/home/rewine";
 
-  home.packages = with pkgs; [
+  home.packages =  polybarPkgs ++ (with pkgs; [
     # unix tools
     htop
     ugrep
@@ -18,6 +27,7 @@
     ncdu
     pstree
     cloc
+    colorpicker
 
     # nix tools
     nix-index
@@ -29,7 +39,13 @@
     hugo
     cachix
     (writeShellScriptBin "et" "${config.programs.emacs.package}/bin/emacs -nw $@")
-  ];
+    #inputs.taffybar.defaultPackage.${system}
+  ]);
+
+  #services.taffybar = {
+  #  enable = true;
+  #  package = inputs.taffybar.defaultPackage.${system};
+  #};
 
   programs.git = {
     enable = true;
@@ -72,7 +88,8 @@
       plugins = with pkgs.vimPlugins; [
         fugitive
         vim-nix
-        { plugin = vim-startify;
+        {
+          plugin = vim-startify;
           config = "let g:startify_change_to_vcs_root = 0";
         }
       ];
@@ -119,7 +136,7 @@
     g = "git";
     "..." = "cd ../..";
   };
-  
+
   home.stateVersion = "22.05";
 
   # Let Home Manager install and manage itself.

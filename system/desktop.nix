@@ -27,13 +27,14 @@
         enable = true;
         enableContribAndExtras = true;
         # config = ../.xmonad/xmonad.hs;
-        extraPackages = haskellPackages: [
-          #haskellPackages.dmenu
-          haskellPackages.xmonad
-          haskellPackages.xmonad-contrib
-          haskellPackages.monad-logger
-          haskellPackages.xmonad-extras
-          #haskellPackages.xmonad-wallpaper
+        extraPackages = hp: [
+          #hp.dmenu
+          hp.xmonad
+          hp.xmonad-contrib
+          hp.monad-logger
+          hp.xmonad-extras
+          hp.dbus
+          #hp.xmonad-wallpaper
         ];
       };
     };
@@ -41,4 +42,5 @@
 
   # a DBus service that provides power management support to applications
   services.upower.enable = true;
+  systemd.services.upower.enable = true;
 }

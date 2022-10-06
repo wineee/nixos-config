@@ -8,8 +8,8 @@ let
     ../users.nix
     {
       environment.systemPackages = [
-        #inputs.alejandra.defaultPackage.${system}
         #inputs.agenix.defaultPackage.x86_64-linux
+        #inputs.taffybar.defaultPackage.${system}
       ];
     }
     { nixpkgs.overlays = [ nur.overlay ]; }

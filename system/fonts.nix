@@ -28,6 +28,7 @@
       nerdfonts # 图标字体
       symbola # 特殊字符
       jetbrains-mono
+      material-design-icons font-awesome # polybar
     ] ++ ( with pkgs.nur.repos.rewine; [
       ttf-ms-win10
       ttf-wps-fonts

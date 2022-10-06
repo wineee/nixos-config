@@ -65,6 +65,7 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
+      home-manager
       proxychains
 
       rofi
@@ -76,7 +77,6 @@ in
       dmenu
       picom
       nitrogen
-      xmobar
       betterlockscreen
       xclip
       pineapple-pictures
@@ -85,7 +85,7 @@ in
       pamixer # 音量控制
       brightnessctl # 屏幕亮度 
       scrot
-      colorpicker
+      
       xorg.xmodmap
       termonad
 

@@ -3,7 +3,7 @@
   ../../system
   ../../pkgs
   ../../programs
-  ../../home
+  #../../home
 ]
 
 
