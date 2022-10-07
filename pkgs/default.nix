@@ -72,7 +72,6 @@ in
       rofi-calc
       rofi-emoji
       rofi-systemd
-      trayer #https://www.youtube.com/watch?v=MyJjiYVggBs
       alacritty
       dmenu
       picom
