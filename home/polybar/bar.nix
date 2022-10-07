@@ -51,21 +51,10 @@ let
     [bar/top]
     inherit = bar/main
 
-    tray-position = center
-    modules-left = right-end-top nixos xmonad left-end-bottom right-end-top left-end-top
-    modules-right = left-end-top clickable-keyboard clickable-github temperature clickable-date battery
-    enable-ipc = true
-  '';
-
-  bottom = ''
-    [bar/bottom]
-    inherit = bar/main
-    bottom = true
-
-    tray-position = none
-    modules-left = right-end-bottom mpris left-end-top cpu memory filesystem
-    modules-right = left-end-bottom wired-network wireless-network pulseaudio left-end-bottom powermenu
+    tray-position = right
+    modules-left = right-end-top nixos xmonad right-end-top  cpu memory filesystem
+    modules-right = left-end-top wired-network wireless-network pulseaudio clickable-date battery left-end-top powermenu
     enable-ipc = true
   '';
 in
-bar + top + bottom
+bar + top
