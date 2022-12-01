@@ -30,9 +30,13 @@
     #  url = "github:taffybar/taffybar";
     #  inputs.flake-utils.follows = "flake-utils";
     #};
+    dde-nixos = {
+      url = "github:linuxdeepin/dde-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = {self, nixpkgs, home-manager, dde-nixos, ... } @ inputs:
     let
       system = "x86_64-linux";
     in

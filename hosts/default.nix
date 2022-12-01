@@ -19,8 +19,10 @@ let
           nixos-cn.nixosModules.nixos-cn-registries
           nixos-cn.nixosModules.nixos-cn
           rew.nixosModules.v2raya
+          dde-nixos.nixosModules.${system}
         ];
         config.services.v2raya.enable = true;
+        config.services.xserver.desktopManager.deepin.enable = true;
     })
 
   ] ++ (with inputs;[
