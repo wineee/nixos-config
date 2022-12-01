@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   networking.hostName = "nixos"; # Define your hostname.
@@ -23,5 +23,20 @@
   #networking.firewall.enable = true;
   #networking.firewall.allowedTCPPorts = [ 22 80 ];
   #networking.firewall.allowedUDPPorts = [ ];
+
+  #services.zerotierone = {
+  #  enable = true;
+  #  joinNetworks = [ "3efa5cb78ac0f127" ];
+    #port = 9993;
+  #};
+
+  #services.resolved.fallbackDns = [ "10.20.0.10" ]; 
+  #networking.nameservers =  [ "10.20.0.11" ];
+  #networking.networkmanager.dns = "none";
+  #networking.resolvconf.enable = lib.mkForce false;
+
+  #networking.extraHosts = ''
+  #  10.20.0.10 10.20.63.25
+  #'';
 
 }
