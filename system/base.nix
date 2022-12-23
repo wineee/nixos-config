@@ -19,7 +19,7 @@
 
   # Enabling Bluetooth support
   hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
+  #services.blueman.enable = true;
 
   # set console font
   console = {
@@ -28,9 +28,7 @@
   };
 
   # Enable Flatpak
-  #xdg.portal.enable = true;
   services.flatpak.enable = true;
-  #xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

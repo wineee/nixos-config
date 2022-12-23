@@ -41,4 +41,7 @@
 
   # use nmcil/nmtui to manager network 
   programs.nm-applet.enable = true;
+
+  # enable blueman to manager bluetooth
+  services.blueman.enable = true;
 }
