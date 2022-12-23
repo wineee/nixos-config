@@ -9,22 +9,17 @@ let
     {
       environment.systemPackages = [
         #inputs.agenix.defaultPackage.x86_64-linux
-        #inputs.taffybar.defaultPackage.${system}
       ];
     }
     { nixpkgs.overlays = [ nur.overlay ]; }
-    ({ pkgs, config, ... }: {
-        imports = [
-          nixos-cn.nixosModules.nixos-cn-registries
-          nixos-cn.nixosModules.nixos-cn
-          dde-nixos.nixosModules.${system}
-        ];
-    })
 
-  ] ++ (with inputs;[
+  ] ++ (with inputs; [
     # agenix.nixosModule
     grub2-themes.nixosModule
     home-manager.nixosModules.home-manager
+    nixos-cn.nixosModules.nixos-cn-registries
+    nixos-cn.nixosModules.nixos-cn
+    dde-nixos.nixosModules.${system}
   ]) ++ (import ../modules );
 
 in

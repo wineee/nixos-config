@@ -26,10 +26,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
-    #taffybar = {
-    #  url = "github:taffybar/taffybar";
-    #  inputs.flake-utils.follows = "flake-utils";
-    #};
     dde-nixos = {
       url = "github:linuxdeepin/dde-nixos";
       inputs.nixpkgs.follows = "nixpkgs";
