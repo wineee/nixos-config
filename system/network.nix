@@ -8,9 +8,6 @@
 
   networking.networkmanager.enable = true;
 
-  # use nmcil/nmtui to manager network 
-  programs.nm-applet.enable = true;
-
   networking.interfaces.wlp2s0.useDHCP = true;
   networking.iproute2.enable = true;
 
