@@ -13,16 +13,12 @@ let
       ];
     }
     { nixpkgs.overlays = [ nur.overlay ]; }
-    { nixpkgs.config.permittedInsecurePackages = [ "electron-9.4.4" ]; }
     ({ pkgs, config, ... }: {
         imports = [
           nixos-cn.nixosModules.nixos-cn-registries
           nixos-cn.nixosModules.nixos-cn
-          rew.nixosModules.v2raya
           dde-nixos.nixosModules.${system}
         ];
-        config.services.v2raya.enable = true;
-        config.services.xserver.desktopManager.deepin.enable = true;
     })
 
   ] ++ (with inputs;[
