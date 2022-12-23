@@ -28,6 +28,7 @@ let
     gwenview
     ark #latte-dock
     lightly
+    qt5ct
   ];
 
   gui-tools = with pkgs; [
@@ -39,13 +40,12 @@ let
 
     logseq
     ghostwriter
-    vlc # obs-studio 
+    vlc  obs-studio 
     simplescreenrecorder
     flameshot
     # Browser
     firefox
     vivaldi
-
     rustdesk
   ];
 
@@ -74,7 +74,7 @@ in
       rofi-systemd
       alacritty
       dmenu
-      picom
+##      picom
       nitrogen
       betterlockscreen
       xclip
@@ -109,7 +109,8 @@ in
 
       # AppImage  
       appimage-run
-      
       #lutris winePackages.unstable winetricks
+
+      distrobox
     ]);
 }
