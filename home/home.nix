@@ -42,6 +42,10 @@ in
     cachix
     (writeShellScriptBin "et" "${config.programs.emacs.package}/bin/emacs -nw $@")
     #inputs.taffybar.defaultPackage.${system}
+
+    ffmpeg
+    gnome.dconf-editor
+    dfeet
   ]);
 
   #services.taffybar = {
