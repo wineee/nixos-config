@@ -3,6 +3,7 @@
   ../../system
   ../../pkgs
   ../../programs
+  ../../desktop/deepin.nix
   #../../home
 ]
 
