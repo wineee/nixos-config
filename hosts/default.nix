@@ -9,13 +9,14 @@ let
     {
       environment.systemPackages = [
         #inputs.agenix.defaultPackage.x86_64-linux
+        #inputs.dde-nixos.packages.${system}.qt5integration-styles
       ];
     }
     { nixpkgs.overlays = [ nur.overlay ]; }
 
   ] ++ (with inputs; [
     # agenix.nixosModule
-    grub2-themes.nixosModule
+    # grub2-themes.nixosModules
     home-manager.nixosModules.home-manager
     nixos-cn.nixosModules.nixos-cn-registries
     nixos-cn.nixosModules.nixos-cn
