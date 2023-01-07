@@ -11,6 +11,8 @@ let
     #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
     #clang clang-tools ninja 
     qt5Full qtcreator 
+    pantheon.elementary-gtk-theme
+    papirus-icon-theme
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -28,7 +30,6 @@ let
     gwenview
     ark #latte-dock
     lightly
-    qt5ct
   ];
 
   gui-tools = with pkgs; [
@@ -37,6 +38,7 @@ let
     libreoffice
     tdesktop
     nheko
+    qq
 
     logseq
     ghostwriter
@@ -109,7 +111,7 @@ in
 
       # AppImage  
       appimage-run
-      #lutris winePackages.unstable winetricks
+      lutris winePackages.unstable winetricks
 
       distrobox
     ]);
