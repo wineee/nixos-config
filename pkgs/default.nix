@@ -5,14 +5,14 @@ let
   mynurpkgs = import ./nurpkgs.nix  { inherit pkgs; };
 
   build-tools = with pkgs; [
+    xsettingsd
+    onboard
     cmake gcc gdb
     binutils
     #pkgsCross.aarch64-embedded.stdenv.cc
     #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
     #clang clang-tools ninja 
-    qt5Full qtcreator 
-    pantheon.elementary-gtk-theme
-    papirus-icon-theme
+    # qt5Full qtcreator 
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -37,7 +37,7 @@ let
     wpsoffice-cn
     libreoffice
     tdesktop
-    nheko
+    element-desktop
     qq
 
     logseq
@@ -76,7 +76,7 @@ in
       rofi-systemd
       alacritty
       dmenu
-##      picom
+##    picom
       nitrogen
       betterlockscreen
       xclip
@@ -111,7 +111,7 @@ in
 
       # AppImage  
       appimage-run
-      lutris winePackages.unstable winetricks
+      #lutris winePackages.unstable winetricks
 
       distrobox
     ]);

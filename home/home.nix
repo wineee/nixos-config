@@ -41,17 +41,11 @@ in
     hugo
     cachix
     (writeShellScriptBin "et" "${config.programs.emacs.package}/bin/emacs -nw $@")
-    #inputs.taffybar.defaultPackage.${system}
 
     ffmpeg
     gnome.dconf-editor
     dfeet
   ]);
-
-  #services.taffybar = {
-  #  enable = true;
-  #  package = inputs.taffybar.defaultPackage.${system};
-  #};
 
   programs.git = {
     enable = true;
@@ -117,10 +111,10 @@ in
     enableAliases = true;
   };
 
-  nixpkgs.overlays = [ (import inputs.emacs-overlay) ];
+  # nixpkgs.overlays = [ (import inputs.emacs-overlay) ];
   programs.emacs = {
     enable = true;
-    package = pkgs.emacsNativeComp;
+    #package = pkgs.emacsNativeComp;
   };
   home.sessionPath = [ "$HOME/.emacs.d/bin" ];
 

@@ -8,39 +8,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1673331925,
-        "narHash": "sha256-AKz+sLfN5rcKvjE0rIKj9iuOZf/rmtyC1T9rJmELxCk=",
+        "lastModified": 1675738568,
+        "narHash": "sha256-+wVdljYN0LXrmrDboN/2tQO3k9jK3AVtw51C5zapZqc=",
         "owner": "linuxdeepin",
         "repo": "dde-nixos",
-        "rev": "eac23b3826ae13db3065982e520f9d75bbbb4d86",
+        "rev": "707479458c940056504f78c9d3ee3f1b8c3e1ee1",
         "type": "github"
       },
       "original": {
         "owner": "linuxdeepin",
+        "ref": "v20",
         "repo": "dde-nixos",
-        "type": "github"
-      }
-    },
-    "emacs-overlay": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1673321657,
-        "narHash": "sha256-XAw+aEX6Q2ckm0ukoiBVBv2ShVv0bPc/SIh0SQiAk+g=",
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
-        "rev": "fc341b52fe5837ef313cfe79eea7e2a05b6efffa",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "emacs-overlay",
         "type": "github"
       }
     },
@@ -96,11 +74,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1672900393,
-        "narHash": "sha256-OZTRseA7tCniyae1kv+hkw1+6+i+EcKgN/4ukZXXO/Y=",
+        "lastModified": 1674015718,
+        "narHash": "sha256-cBgjWD/mR1tiPyVky9Bl5kUrDX6RnARJ+0cEJ4VhbRg=",
         "owner": "vinceliuice",
         "repo": "grub2-themes",
-        "rev": "8a5ebe97faae34b99e458cf209cebebdcc10ee44",
+        "rev": "7c0d8eb7849cd5a4cf6a26c8750dcf71c26f2b0f",
         "type": "github"
       },
       "original": {
@@ -117,11 +95,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1673306306,
-        "narHash": "sha256-wV99VV4kn0SIN1XeEIfnD0X7dZD9H5prk19XeFQKhso=",
+        "lastModified": 1675637696,
+        "narHash": "sha256-tilJS8zCS3PaDfVOfsBZ4zspuam8tc7IMZxtGa/K/uo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b0a3689878d4c2e8a1b02cecf8319ba8c53da519",
+        "rev": "c43d4a3d6d9ef8ddbe2438362f5c775b4186000b",
         "type": "github"
       },
       "original": {
@@ -139,11 +117,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1673315301,
-        "narHash": "sha256-DHPto8rBYRkE1aCsL8FGDUOhzmofSAGshN1VX5fZjlo=",
+        "lastModified": 1675734630,
+        "narHash": "sha256-hyIHT+JywBYJI1QcSiB0+d4iS1ZWoGJl2og6gd5VuOM=",
         "owner": "nixos-cn",
         "repo": "flakes",
-        "rev": "58e1fb8c144b23a98ec4025d7db7d230bae94238",
+        "rev": "b2e2144a54d0454dba67eac2b3bc6c79a698cac0",
         "type": "github"
       },
       "original": {
@@ -154,11 +132,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1673226411,
-        "narHash": "sha256-b6cGb5Ln7Zy80YO66+cbTyGdjZKtkoqB/iIIhDX9gRA=",
+        "lastModified": 1675545634,
+        "narHash": "sha256-TbQeQcM5TA/wIho6xtzG+inUfiGzUXi8ewwttiQWYJE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "aa1d74709f5dac623adb4d48fdfb27cc2c92a4d4",
+        "rev": "0591d6b57bfeb55dfeec99a671843337bc2c3323",
         "type": "github"
       },
       "original": {
@@ -169,11 +147,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1673332109,
-        "narHash": "sha256-hSEvUYWtLbMiRzwuIb6bCWLhzZVqV4L7GDXpAaBiSw8=",
+        "lastModified": 1675735674,
+        "narHash": "sha256-0okaObtd7ll0X5SdX25oAXfvncYi5guWnXd/8oWn448=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "6366f996e4f903a2b37148623155327a538e76e4",
+        "rev": "8858815c140bc26d50f6243817c9b13ae1347c92",
         "type": "github"
       },
       "original": {
@@ -189,11 +167,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1669819483,
-        "narHash": "sha256-X2bt7Le6uEoAPh3eu6arTxvt66HRIVz1xTB/Gs2WYY4=",
+        "lastModified": 1674891422,
+        "narHash": "sha256-zB0OgzK//94kQbpvZEDCbmpJkkjV/UdMyzJrX9X2lYk=",
         "owner": "wineee",
         "repo": "rew-flakes",
-        "rev": "ea10eb09fb2f576f3d3a035de524ccb1c3218ef8",
+        "rev": "1387dd12bdd5979dcaf6be9a931addaaf6f3a0be",
         "type": "github"
       },
       "original": {
@@ -205,7 +183,6 @@
     "root": {
       "inputs": {
         "dde-nixos": "dde-nixos",
-        "emacs-overlay": "emacs-overlay",
         "flake-utils": "flake-utils_2",
         "grub2-themes": "grub2-themes",
         "home-manager": "home-manager",
