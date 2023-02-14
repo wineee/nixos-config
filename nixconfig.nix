@@ -34,18 +34,4 @@
     #  keep-derivations = true
     #'';
   };
-
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowUnsupportedSystem = true;
-    allowBroken = true;
-    permittedInsecurePackages = [ 
-      "electron-9.4.4"
-      "qtwebkit-5.212.0-alpha4"
-    ]; #typora
-    vivaldi = {
-      proprietaryCodecs = true;
-      enableWideVine = true;
-    };
-  };
 }
