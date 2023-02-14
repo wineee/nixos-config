@@ -5,6 +5,7 @@ let
 
   sharedModules = [
     ../nixconfig.nix
+    ../nixpkgsconfig.nix
     ../users.nix
     {
       environment.systemPackages = [
@@ -12,7 +13,6 @@ let
         #inputs.dde-nixos.packages.${system}.qt5integration-styles
       ];
     }
-    { nixpkgs.overlays = [ nur.overlay ]; }
 
   ] ++ (with inputs; [
     # agenix.nixosModule

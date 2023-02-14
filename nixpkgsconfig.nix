@@ -1,8 +1,6 @@
 { inputs, config, pkgs, lib, ... }:
 let
-  my_overlay = [
-    (import ./nixpkgs-overlay)
-  ];
+  my_overlay = (import ./nixpkgs-overlay);
 in
 {
   nixpkgs = {

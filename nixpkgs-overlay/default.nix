@@ -1,5 +1,4 @@
 self: super:
-
 rec {
     wf-config = super.callPackage ./pkgs/applications/window-managers/wayfire/wf-config.nix { };
     
