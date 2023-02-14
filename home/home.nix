@@ -40,7 +40,6 @@ in
     yarn
     hugo
     cachix
-    (writeShellScriptBin "et" "${config.programs.emacs.package}/bin/emacs -nw $@")
 
     ffmpeg
     gnome.dconf-editor
@@ -110,13 +109,6 @@ in
     enable = true;
     enableAliases = true;
   };
-
-  # nixpkgs.overlays = [ (import inputs.emacs-overlay) ];
-  programs.emacs = {
-    enable = true;
-    #package = pkgs.emacsNativeComp;
-  };
-  home.sessionPath = [ "$HOME/.emacs.d/bin" ];
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;

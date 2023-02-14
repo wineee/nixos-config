@@ -15,4 +15,9 @@
   programs.nix-ld.enable = true;
 
   programs.xonsh.enable = true;
+
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs-gtk;
+  };
 }

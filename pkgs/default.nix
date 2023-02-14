@@ -30,6 +30,7 @@ let
     gwenview
     ark #latte-dock
     lightly
+    systemsettings
   ];
 
   gui-tools = with pkgs; [
