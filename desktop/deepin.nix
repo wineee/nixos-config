@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ inputs, system, pkgs, lib, ... }:
 
 {
   services = {
@@ -11,4 +11,18 @@
       };
     };
   };
+  environment.deepin.excludePackages = with inputs.dde-nixos.packages.${system}; [
+    deepin-image-viewer
+    deepin-draw
+    deepin-calculator
+    deepin-album
+    deepin-editor
+  ];
+  environment.systemPackages = with pkgs.deepin; [
+    deepin-image-viewer
+    deepin-draw
+    deepin-calculator
+    deepin-album
+    deepin-editor
+  ];
 }
