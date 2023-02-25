@@ -5,10 +5,10 @@ let
     linyinfeng.wemeet
     # xddxdd.bilibili
     rewine.electron-netease-cloud-music
-    rewine.landrop
+    # rewine.landrop
   ];
   nixcnpkgs = with nixos-cn; [
-    wechat-uos
+    # wechat-uos
   ];
 in
 nurpkgs ++ nixcnpkgs

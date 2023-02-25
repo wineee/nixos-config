@@ -4,6 +4,7 @@
   ../../pkgs
   ../../programs
   ../../desktop/deepin.nix
+  ../../desktop/wayfire.nix
   #../../home
 ]
 
