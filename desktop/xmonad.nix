@@ -5,7 +5,7 @@
       enable = true;
 
       displayManager = {
-        sddm.enable = true;
+        # sddm.enable = true;
         defaultSession = "none+xmonad";
       };
       ### xmonad
