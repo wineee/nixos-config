@@ -14,6 +14,7 @@ in
       # allowBroken = true;
       permittedInsecurePackages = [ 
         "electron-9.4.4"
+        "electron-19.0.7"
         "qtwebkit-5.212.0-alpha4"
       ]; #typora
       vivaldi = {

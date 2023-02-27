@@ -6,9 +6,9 @@ let
     # xddxdd.bilibili
     rewine.electron-netease-cloud-music
     # rewine.landrop
+    xddxdd.wechat-uos
   ];
   nixcnpkgs = with nixos-cn; [
-    # wechat-uos
   ];
 in
 nurpkgs ++ nixcnpkgs
