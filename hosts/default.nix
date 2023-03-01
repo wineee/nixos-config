@@ -10,7 +10,6 @@ let
     {
       environment.systemPackages = [
         #inputs.agenix.defaultPackage.x86_64-linux
-        #inputs.dde-nixos.packages.${system}.qt5integration-styles
       ];
     }
 

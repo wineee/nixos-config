@@ -68,10 +68,11 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
+      deepin.qt5platform-plugins
       home-manager
       proxychains
 
-      rofi
+      #rofi
       rofi-calc
       rofi-emoji
       rofi-systemd
