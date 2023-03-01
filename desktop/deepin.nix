@@ -7,7 +7,7 @@
       #displayManager.lightdm.enable = true;
       desktopManager.deepin = {
         enable = true;
-        full = true;
+        full = false;
       };
     };
   };

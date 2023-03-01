@@ -1,7 +1,8 @@
 { pkgs, lib, config, ... }:
 
 {
-  services.dbus.enable = true;
+  imports = [ ./common.nix ];
+
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -9,8 +10,6 @@
   };
 
   programs.xwayland.enable = true;
-
-  programs.nm-applet.enable = true;
 
   programs.waybar.enable = true;
 
@@ -29,13 +28,20 @@
     fluent-icon-theme
     wayfire
     wcm
+
     wlsunset
-    mako
+    mako # 通知
     kanshi
     swaybg
     swayidle
     swaylock
+    rofi-wayland
+
+    foot
+    networkmanagerapplet
+
     xrdp
+    slurp
     grim
     wmctrl
     wlogout

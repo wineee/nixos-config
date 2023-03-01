@@ -1,5 +1,7 @@
 { pkgs, lib, ... }:
 {
+  imports = [ ./commmon.nix ];
+
   services = {
     xserver = {
       enable = true;
@@ -25,23 +27,6 @@
       };
     };
   };
-  qt5 = {
-    enable = true;
-    style = "adwaita";
-    platformTheme = "gnome";
-  };
-  qt5.platformTheme = "qt5ct";
   
   services.betterlockscreen.enable = true;
-  services.notify-daemon.enable = true;
-
-   # a DBus service that provides power management support to applications
-  services.upower.enable = true;
-  systemd.services.upower.enable = true;
-
-  # use nmcil/nmtui to manager network 
-  programs.nm-applet.enable = true;
-
-  # enable blueman to manager bluetooth
-  services.blueman.enable = true;
 }
