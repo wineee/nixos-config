@@ -11,8 +11,7 @@ let
     binutils
     #pkgsCross.aarch64-embedded.stdenv.cc
     #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
-    #clang clang-tools ninja 
-    # qt5Full qtcreator 
+    clang clang-tools ninja qt5Full qtcreator 
   ];
 
   nixpkgs-tools = with pkgs; [
