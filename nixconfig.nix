@@ -3,6 +3,8 @@
   nix = {
     package = pkgs.nixUnstable;
 
+    nixPath = [ "nixpkgs=${pkgs.path}" ];
+
     settings = {
       experimental-features = [
         "nix-command"
