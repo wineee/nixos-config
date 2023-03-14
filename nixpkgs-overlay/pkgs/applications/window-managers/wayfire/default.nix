@@ -70,6 +70,10 @@ stdenv.mkDerivation rec {
     libxml2
   ];
 
+  patches = [
+    ./wayfire.diff
+  ];
+
   # CMake is just used for finding doctest.
   dontUseCmakeConfigure = true;
 
