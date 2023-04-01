@@ -44,6 +44,8 @@ in
     ffmpeg
     gnome.dconf-editor
     dfeet
+
+    python3Packages.osc
   ]);
 
   programs.git = {

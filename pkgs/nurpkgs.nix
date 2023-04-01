@@ -9,6 +9,7 @@ let
     xddxdd.wechat-uos
   ];
   nixcnpkgs = with nixos-cn; [
+    # netease-cloud-music
   ];
 in
 nurpkgs ++ nixcnpkgs

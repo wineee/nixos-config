@@ -11,8 +11,6 @@
 
   programs.xwayland.enable = true;
 
-  programs.waybar.enable = true;
-
   services = {
     xserver = {
       displayManager = {
@@ -28,6 +26,7 @@
     fluent-icon-theme
     wayfire
     wcm
+    waybar
 
     wlsunset
     mako # 通知
