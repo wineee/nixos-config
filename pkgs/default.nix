@@ -50,7 +50,7 @@ let
     # Browser
     firefox
     vivaldi
-    rustdesk
+    # rustdesk
   ];
 
   modern-unix = with pkgs; [

@@ -15,6 +15,7 @@
   programs.nix-ld.enable = true;
 
   programs.xonsh.enable = true;
+  programs.fish.enable = true;
 
   services.emacs = {
     enable = true;
