@@ -34,6 +34,8 @@ in
     # nix tools
     nix-index
     nix-update
+    nixfmt
+
     # other apps
     nodejs
     nodePackages.npm

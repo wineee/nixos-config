@@ -21,18 +21,9 @@
       url = github:vinceliuice/grub2-themes;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    #emacs-overlay = {
-    #  url = "github:nix-community/emacs-overlay";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #  inputs.flake-utils.follows = "flake-utils";
-    #};
-    dde-nixos = {
-      url = "github:linuxdeepin/dde-nixos/v20";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = {self, nixpkgs, home-manager, dde-nixos, ... } @ inputs:
+  outputs = {self, nixpkgs, home-manager, ... } @ inputs:
     let
       system = "x86_64-linux";
     in

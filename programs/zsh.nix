@@ -1,6 +1,17 @@
 { pkgs, config, ... }:
 {
-  #programs.fish.enable = true;  
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
+  environment.sessionVariables = {
+    PATH = [ 
+      "$HOME/.config/emacs/bin/"
+    ];
+  };
+
+  programs.fish.enable = true;  
+  
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -40,6 +51,4 @@
   environment.shells = [ pkgs.bashInteractive pkgs.zsh pkgs.fish ];
 
   programs.thefuck.enable = true;
-  # TODO  
-  # https://discourse.nixos.org/t/installing-home-manager-from-nixos/8248
 }
