@@ -17,14 +17,9 @@
       dockerCompat = true;
     };
 
-    virtualbox = {
-      host.enable = true;
-      #host.enableExtensionPack = true;
-    };
   };
 
-
-   environment.systemPackages = with pkgs; [
-      virt-manager
-   ];
+  environment.systemPackages = with pkgs; [
+    virt-manager
+  ];
 }
