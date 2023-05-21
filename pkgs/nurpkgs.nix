@@ -6,6 +6,7 @@ let
     # xddxdd.bilibili
     rewine.electron-netease-cloud-music
     # rewine.landrop
+    rewine.ttf-wps-fonts
     xddxdd.wechat-uos
   ];
   nixcnpkgs = with nixos-cn; [
