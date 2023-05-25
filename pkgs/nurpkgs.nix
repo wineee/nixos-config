@@ -7,7 +7,7 @@ let
     rewine.electron-netease-cloud-music
     # rewine.landrop
     rewine.ttf-wps-fonts
-    xddxdd.wechat-uos
+    # xddxdd.wechat-uos
   ];
   nixcnpkgs = with nixos-cn; [
     # netease-cloud-music
