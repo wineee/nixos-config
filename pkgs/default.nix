@@ -6,7 +6,6 @@ let
 
   build-tools = with pkgs; [
     xsettingsd
-    onboard
     cmake gcc gdb
     binutils
     #pkgsCross.aarch64-embedded.stdenv.cc
@@ -22,6 +21,12 @@ let
     nixpkgs-review
     nixpkgs-pytools
     nix-du
+    nix-tree
+    nix-update
+    nix-init
+    nixos-shell
+    nvd
+    comma
     manix
   ];
 
@@ -30,8 +35,6 @@ let
     # kdenlive
     gwenview
     ark #latte-dock
-    lightly
-    systemsettings
   ];
 
   gui-tools = with pkgs; [
@@ -43,14 +46,15 @@ let
 
     logseq
     ghostwriter
-    vlc  obs-studio 
+    vlc  
+    # obs-studio 
     simplescreenrecorder
     flameshot
     # Browser
     firefox
     vivaldi
     # rustdesk
-    libreoffice
+    # libreoffice
   ];
 
   modern-unix = with pkgs; [
