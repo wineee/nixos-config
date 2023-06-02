@@ -10,7 +10,7 @@
     };
     nur.url = "github:nix-community/NUR";
     rew = {
-      url = "github:wineee/rew-flakes";
+      url = "github:wineee/nur-package";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
