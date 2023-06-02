@@ -19,6 +19,7 @@ let
     home-manager.nixosModules.home-manager
     nixos-cn.nixosModules.nixos-cn-registries
     nixos-cn.nixosModules.nixos-cn
+    dde-nixos.nixosModules.${system}
   ]) ++ (import ../modules );
 
 in

@@ -5,7 +5,7 @@
     xserver = {
       enable = true;
       #displayManager.lightdm.enable = true;
-      desktopManager.deepin = {
+      desktopManager.deepin-unstable = {
         enable = true;
       };
     };

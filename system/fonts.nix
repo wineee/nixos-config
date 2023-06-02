@@ -33,7 +33,6 @@
     ] ++ ( with pkgs.nur.repos.rewine; [
       ttf-ms-win10
       ttf-wps-fonts
-    ]
-    );
+    ]);
   };
 }

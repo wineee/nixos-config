@@ -10,7 +10,7 @@
     };
     nur.url = "github:nix-community/NUR";
     rew = {
-      url = "github:wineee/nur-package";
+      url = "github:wineee/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
@@ -21,9 +21,13 @@
       url = github:vinceliuice/grub2-themes;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    dde-nixos = {
+      url = "github:linuxdeepin/dde-nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = {self, nixpkgs, home-manager, ... } @ inputs:
+  outputs = {self, nixpkgs, home-manager, rew, dde-nixos, ... } @ inputs:
     let
       system = "x86_64-linux";
     in
