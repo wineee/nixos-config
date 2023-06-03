@@ -55,6 +55,7 @@ let
     vivaldi
     # rustdesk
     # libreoffice
+    emacs
   ];
 
   modern-unix = with pkgs; [
@@ -95,7 +96,7 @@ in
       scrot
       
       xorg.xmodmap
-      termonad
+      # termonad
 
       wget
       tmux

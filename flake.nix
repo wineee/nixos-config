@@ -27,7 +27,7 @@
     };
   };
 
-  outputs = {self, nixpkgs, home-manager, rew, dde-nixos, ... } @ inputs:
+  outputs = {self, nixpkgs, home-manager, rew, dde-nixos, grub2-themes,... } @ inputs:
     let
       system = "x86_64-linux";
     in
