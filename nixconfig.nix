@@ -1,9 +1,10 @@
-{ config, pkgs, lib, ... }:
+{ inputs, config, pkgs, lib, ... }:
 {
   nix = {
     package = pkgs.nixUnstable;
 
     nixPath = [ "nixpkgs=${pkgs.path}" ];
+    registry.nixpkgs.flake = inputs.nixpkgs;
 
     settings = {
       experimental-features = [
@@ -26,8 +27,8 @@
 
     gc = {
       automatic = false;
-      #options = "--delete-older-than 5d";
-      #dates = "05:15";
+      options = "--delete-older-than 5d";
+      dates = "05:15";
     };
 
     #extraOptions = ''
