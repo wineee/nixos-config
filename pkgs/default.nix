@@ -102,7 +102,7 @@ in
       tmux
       man
       stow
-      neofetch
+      hyfetch
       onefetch
       ranger
 
