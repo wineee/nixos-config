@@ -18,6 +18,10 @@ let
     # eaf-system-monitor
     psutil
 
+    # lsp-bridge
+    # epc 
+    sexpdata six paramiko orjson
+    
     # other
     pip
     qtawesome

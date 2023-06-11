@@ -53,6 +53,7 @@ let
     # Browser
     firefox
     vivaldi
+    aria
     # rustdesk
     # libreoffice
     emacs
