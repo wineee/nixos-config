@@ -56,7 +56,7 @@ let
     aria
     # rustdesk
     # libreoffice
-    emacs
+    emacs-gtk
   ];
 
   modern-unix = with pkgs; [
