@@ -6,8 +6,8 @@
   #  style = "adwaita";
   #  platformTheme = "qt5ct";
   #};
-  #environment.variables.QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct";
-  
+  #environment.variables.QT_QPA_PLATFORMTHEME = lib.mkForce "qt5ct"; 
+  services.xserver.displayManager.lightdm.enable = true;  
   services.dbus.enable = true;
   services.notify-daemon.enable = true;
   # a DBus service that provides power management support to applications

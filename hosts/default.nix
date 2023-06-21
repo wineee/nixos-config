@@ -29,4 +29,9 @@ in
     specialArgs = { inherit inputs system; };
     modules = (import ./xiaomi) ++ sharedModules;
   };
+  e500 = nixosSystem {
+    inherit system;
+    specialArgs = { inherit inputs system; };
+    modules = (import ./e500) ++ sharedModules;
+  };
 }

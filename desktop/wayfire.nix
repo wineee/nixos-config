@@ -14,10 +14,7 @@
   services = {
     xserver = {
       displayManager = {
-        #lightdm.enable = true;
-        sddm.enable = true;
         sessionPackages = [ pkgs.wayfire ];
-        defaultSession = lib.mkForce "wayfire";
       };
     };
   };
