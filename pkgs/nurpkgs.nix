@@ -5,7 +5,7 @@ let
     linyinfeng.wemeet
     # xddxdd.bilibili
     rewine.electron-netease-cloud-music
-    # rewine.landrop
+    rewine.kylin-virtual-keyboard
     rewine.ttf-wps-fonts
     # xddxdd.wechat-uos
   ];
