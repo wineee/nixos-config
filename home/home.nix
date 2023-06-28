@@ -57,7 +57,7 @@ in
     delta.enable = true;
     lfs.enable = false;
     signing = {
-      key = "0xAABB329787290824";
+      key = null;
       signByDefault = true;
     };
     aliases = {

@@ -4,8 +4,7 @@
   ../../pkgs
   ../../programs
   ../../desktop/deepin.nix
-  ../../desktop/wayfire.nix
-  #../../desktop/kde.nix
+  ../../desktop/gnome.nix
   #../../home
 ]
 
