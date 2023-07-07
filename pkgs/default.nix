@@ -57,6 +57,7 @@ let
     # rustdesk
     # libreoffice
     emacs-gtk
+    blackbox-terminal
   ];
 
   modern-unix = with pkgs; [
@@ -75,9 +76,8 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
-      deepin.qt5platform-plugins
-      home-manager
       proxychains
+      act
 
       #rofi
       rofi-calc

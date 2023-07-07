@@ -12,11 +12,12 @@
       qemu.package = pkgs.qemu;
     };
 
-    podman = {
-      enable = true;
-      dockerCompat = true;
-    };
+    #podman = {
+    #  enable = true;
+    #  dockerCompat = true;
+    #};
 
+    docker.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
