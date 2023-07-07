@@ -4,7 +4,7 @@
   ../../pkgs
   ../../programs
   ../../desktop/deepin.nix
-  ../../desktop/gnome.nix
+  #../../desktop/gnome.nix
   #../../home
 ]
 
