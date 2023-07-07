@@ -10,7 +10,7 @@ let
     binutils
     #pkgsCross.aarch64-embedded.stdenv.cc
     #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
-    clang clang-tools ninja libsForQt5.full qtcreator-qt6
+    clang clang-tools ninja qtcreator-qt6
     cargo
     nodePackages.pnpm
   ];

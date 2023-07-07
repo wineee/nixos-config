@@ -48,6 +48,10 @@ in
     dfeet
 
     python3Packages.osc
+
+    # lsp
+    neocmakelsp
+    nil
   ]);
 
   programs.git = {
