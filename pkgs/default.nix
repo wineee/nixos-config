@@ -43,6 +43,7 @@ let
     tdesktop
     element-desktop
     qq
+    zeal
 
     logseq
     ghostwriter

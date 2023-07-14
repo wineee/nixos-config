@@ -1,5 +1,8 @@
 { lib, ... }:
-
+let 
+  netifname = "eno1";
+  # wlp2s0
+in
 {
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -8,7 +11,8 @@
 
   networking.networkmanager.enable = true;
 
-  networking.interfaces.wlp2s0.useDHCP = true;
+  networking.interfaces.netifname.useDHCP = true;
+  
   networking.iproute2.enable = true;
 
   services.v2raya.enable = true;
