@@ -1,23 +1,16 @@
 { inputs, system, config, pkgs, ... }:
-let
-  polybarPkgs = with pkgs; [
-    font-awesome          # awesome fonts
-    material-design-icons # fonts with glyphs
-    xfce.orage            # lightweight calendar
-  ];
-in
 {
   imports = [
-    ./polybar
+    # ./polybar
   ];
-  services.trayer.enable = true;
+  # services.trayer.enable = true;
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "rewine";
   home.homeDirectory = "/home/rewine";
 
-  home.packages =  polybarPkgs ++ (with pkgs; [
+  home.packages = with pkgs; [
     # unix tools
     htop
     ugrep
@@ -52,7 +45,7 @@ in
     # lsp
     neocmakelsp
     nil
-  ]);
+  ];
 
   programs.git = {
     enable = true;

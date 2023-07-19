@@ -1,13 +1,13 @@
-{ newScope, wayfire }:
-
+{ lib, pkgs }:
 let
-  self = with self; {
-    inherit wayfire;
-
-    callPackage = newScope self;
-
-    wf-shell = callPackage ./wf-shell.nix { };
-    wayfire-plugins-extra = callPackage ./wayfire-plugins-extra.nix { };
-  };
+  packages = self:
+    let
+      inherit (self) callPackage;
+    in
+    {
+      wcm = callPackage ./wcm.nix { };
+      wf-shell = callPackage ./wf-shell.nix { };
+      wayfire-plugins-extra = callPackage ./wayfire-plugins-extra.nix { };
+    };
 in
-self
+lib.makeScope pkgs.newScope packages

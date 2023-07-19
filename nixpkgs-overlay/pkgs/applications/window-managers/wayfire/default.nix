@@ -5,6 +5,7 @@
 , meson
 , ninja
 , pkg-config
+, wf-config
 , cairo
 , doctest
 , libdrm
@@ -14,73 +15,65 @@
 , libxkbcommon
 , wayland
 , wayland-protocols
+, wayland-scanner
 , wlroots
-, mesa
 , pango
 , xorg
-, libevdev
-, libxml2
-, glm
-, nlohmann_json
-, useSystemWlroots ? true
 }:
-let
-  mesonEnableFeature = b: if b then "enabled" else "disabled";
-in
+
 stdenv.mkDerivation rec {
   pname = "wayfire";
-  version = "unstable-2023-02-19";
+  version = "0.7.5";
 
   src = fetchFromGitHub {
     owner = "WayfireWM";
     repo = pname;
-    rev = "a1f575701ab3ba41006a38c0a01f39d31fdf2dbb";
+    rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "sha256-9FEHGlyUUPvikmxCRM7kjXtM4y5dYmqf/dw2jxD8RZo";
+    sha256 = "sha256-Z+rR9pY244I3i/++XZ4ROIkq3vtzMgcxxHvJNxFD9is=";
   };
 
-  nativeBuildInputs = [ 
-    cmake
+  nativeBuildInputs = [
     meson
     ninja
     pkg-config
-    wayland
+    wayland-scanner
   ];
 
+
   buildInputs = [
-    doctest
+    wf-config
     libdrm
     libexecinfo
     libinput
     libjpeg
     libxkbcommon
     wayland-protocols
-    mesa
     xorg.xcbutilwm
-    libevdev
-    nlohmann_json
-  ];
-
-  propagatedBuildInputs = [ 
+    wayland
     cairo
     pango
-    glm 
-    wlroots
-    wayland
-    libxml2
   ];
 
-  patches = [
-    ./wayfire.diff
+  propagatedBuildInputs = [
+    wlroots
+  ];
+
+  nativeCheckInputs = [
+    cmake
+    doctest
   ];
 
   # CMake is just used for finding doctest.
   dontUseCmakeConfigure = true;
 
+  doCheck = true;
+
   mesonFlags = [
     "--sysconfdir /etc"
-    "-Duse_system_wlroots=${mesonEnableFeature useSystemWlroots}"
-    "-Duse_system_wfconfig=disabled"
+    "-Duse_system_wlroots=enabled"
+    "-Duse_system_wfconfig=enabled"
+    (lib.mesonEnable "wf-touch:tests" (stdenv.buildPlatform.canExecute stdenv.hostPlatform))
   ];
 
   passthru.providedSessions = [ "wayfire" ];
@@ -89,7 +82,7 @@ stdenv.mkDerivation rec {
     homepage = "https://wayfire.org/";
     description = "3D Wayland compositor";
     license = licenses.mit;
-    maintainers = with maintainers; [ qyliss wucke13 ];
+    maintainers = with maintainers; [ qyliss wucke13 rewine ];
     platforms = platforms.unix;
   };
 }

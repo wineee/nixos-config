@@ -4,61 +4,58 @@
 , meson
 , ninja
 , pkg-config
-, cmake
 , wayland
 , wrapGAppsHook
+, wayfire
+, wf-shell
+, wf-config
+, wayland-scanner
+, wayland-protocols
 , gtk3
-, gtkmm3
 , libevdev
 , libxml2
-, libdrm
-, libinput
-, wayfire
-, wayland-protocols
-, wf-shell
-, scour
-, libepoxy
 }:
 
 stdenv.mkDerivation rec {
   pname = "wcm";
-  version = "unstable-2023-02-19";
+  version = "0.7.5";
 
   src = fetchFromGitHub {
     owner = "WayfireWM";
     repo = pname;
-    rev = "09511f10020c9d7ea5a50d1dd2927c6669595a9c";
+    rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "sha256-ZFOf6e7tYmcezeYDhLPibHKTPZRxNBV4QUw+fNQeWBU=";
+    sha256 = "sha256-LJR9JGl49o4O6LARofz3jOeAqseGcmzVhMnhk/aobUU=";
   };
 
   nativeBuildInputs = [
     meson
     ninja
     pkg-config
-    cmake
-    wayland
+    wayland-scanner
     wrapGAppsHook
   ];
 
   buildInputs = [
-    gtk3
-    gtkmm3
-    libevdev
-    libxml2
     wayfire
+    wf-config
+    wf-shell
     wayland
     wayland-protocols
-    wf-shell
-    scour
-    libepoxy
+    gtk3
+    libevdev
+    libxml2
+  ];
+
+  mesonFlags = [
+    "-Denable_wdisplays=false"
   ];
 
   meta = with lib; {
     homepage = "https://github.com/WayfireWM/wcm";
     description = "Wayfire Config Manager";
     license = licenses.mit;
-    maintainers = with maintainers; [ qyliss wucke13 ];
+    maintainers = with maintainers; [ qyliss wucke13 rewine ];
     platforms = platforms.unix;
   };
 }

@@ -4,27 +4,24 @@
 , meson
 , ninja
 , pkg-config
-, cmake
-, wayland-protocols
-, alsa-lib
-, gtkmm3
-, libxkbcommon
-, gtk-layer-shell
-, pulseaudio
 , wayfire
+, wf-config
+, gtkmm3
+, gtk-layer-shell
+, libxkbcommon
 , xorg
 }:
 
 stdenv.mkDerivation rec {
   pname = "wayfire-plugins-extra";
-  version = "unstable-2023-02-19";
+  version = "0.7.5";
 
   src = fetchFromGitHub {
     owner = "WayfireWM";
     repo = pname;
-    rev = "dc39702661adf005c9c30e6b83729550fadb49d7";
+    rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "sha256-bY8vjkytqO0vWaY2CJXxY+EEUUSiq744x029WWGbnIk=";
+    sha256 = "sha256-hnsRwIrl0+pRKhRlrF/Wdlu6HkzLfYukGk4Hzx3wNeo=";
   };
 
   postPatch = ''
@@ -32,32 +29,28 @@ stdenv.mkDerivation rec {
       --replace "wayfire.get_variable(pkgconfig: 'metadatadir')" "join_paths(get_option('prefix'), 'share/wayfire/metadata')"
   '';
 
-  nativeBuildInputs = [ 
+  nativeBuildInputs = [
     meson
     ninja
     pkg-config
-    cmake
-    #wayland
   ];
 
   buildInputs = [
-    #alsa-lib
-    gtkmm3
-    libxkbcommon
-    #gtk-layer-shell
-    #pulseaudio
-    wayland-protocols
     wayfire
+    wf-config
+    libxkbcommon
     xorg.xcbutilwm
+    gtkmm3
+    gtk-layer-shell
   ];
 
   mesonFlags = [ "--sysconfdir /etc" ];
 
   meta = with lib; {
-    homepage = "https://github.com/WayfireWM/wf-shell";
-    description = "GTK3-based panel for Wayfire";
+    homepage = "https://github.com/WayfireWM/wayfire-plugins-extra";
+    description = "Additional plugins for Wayfire";
     license = licenses.mit;
-    maintainers = with maintainers; [ qyliss wucke13 ];
+    maintainers = with maintainers; [ rewine ];
     platforms = platforms.unix;
   };
 }

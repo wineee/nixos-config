@@ -44,7 +44,7 @@
         ];
         extraSpecialArgs = { inherit inputs system; };
       };
-      apps.${system}.update-home = {
+      apps.${system}.default = {
         type = "app";
         program = (nixpkgs.legacyPackages.${system}.writeScript "update-home" ''
           set -eu pipefail
