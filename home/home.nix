@@ -45,12 +45,17 @@
     # lsp
     neocmakelsp
     nil
+
+    # wayland
+    weston
+    foot
+    wbg
   ];
 
   programs.git = {
     enable = true;
     userName = "rewine";
-    userEmail = "lhongxu@outlook.com";
+    userEmail = "luhongxu@deepin.org";
     delta.enable = true;
     lfs.enable = false;
     signing = {
