@@ -2,18 +2,18 @@
 
 {
   fonts = {
-    enableDefaultFonts = true;
+    #enableDefaultFonts = true;
     fontconfig = {
       enable = true;
       hinting = {
         enable = true;
-        autohint = false;
+        # autohint = false;
         # hintstyle = "hintslight(10px,12px)";
       };
       defaultFonts.emoji = [ "Noto Color Emoji" ];
-      defaultFonts.monospace = [ "Hack" "Sarasa Mono SC" ];
-      defaultFonts.sansSerif = [ "DejaVu Sans" ];
-      defaultFonts.serif = [ "DejaVu Serif" "Source Han Serif SC" ];
+      #defaultFonts.monospace = [ "Hack" "Sarasa Mono SC" ];
+      #defaultFonts.sansSerif = [ "DejaVu Sans" ];
+      #defaultFonts.serif = [ "DejaVu Serif" "Source Han Serif SC" ];
     };
 
     fontDir.enable = true;

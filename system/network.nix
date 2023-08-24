@@ -11,7 +11,7 @@ in
 
   networking.networkmanager.enable = true;
 
-  networking.interfaces.${netifname}.useDHCP = true;
+  #networking.interfaces.${netifname}.useDHCP = true;
   
   networking.iproute2.enable = true;
 

@@ -23,6 +23,7 @@
     pstree
     cloc
     colorpicker
+    gh
 
     # nix tools
     nix-index

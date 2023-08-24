@@ -16,7 +16,7 @@
     plymouth.enable = false;
 
     #kernelPackages = pkgs.linuxPackages_xanmod;
-    #kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
 
     extraModprobeConfig = ''
       options kvm_intel nested=1
