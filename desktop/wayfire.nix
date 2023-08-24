@@ -3,26 +3,11 @@
 {
   imports = [ ./common.nix ];
 
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
-    # gtk portal needed to make gtk apps happy
-  };
-
   programs.xwayland.enable = true;
-
-  services = {
-    xserver = {
-      displayManager = {
-        sessionPackages = [ pkgs.wayfire ];
-      };
-    };
-  };
+  programs.wayfire.enable = true;
 
   environment.systemPackages = with pkgs; [
     fluent-icon-theme
-    wayfire
-    wcm
     waybar
 
     wlsunset

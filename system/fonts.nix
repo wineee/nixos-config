@@ -18,7 +18,7 @@
 
     fontDir.enable = true;
     enableGhostscriptFonts = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       sarasa-gothic
       noto-fonts
       noto-fonts-cjk
