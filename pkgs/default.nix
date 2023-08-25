@@ -57,7 +57,6 @@ let
     aria
     # rustdesk
     # libreoffice
-    emacs-gtk
     blackbox-terminal
   ];
 

@@ -14,8 +14,8 @@
 
   programs.nix-ld.enable = true;
 
-  #services.emacs = {
-  #  enable = true;
-    # package = pkgs.emacs-gtk;
-  #};
+  services.emacs = {
+    enable = true;
+    package = pkgs.emacs29-pgtk;
+  };
 }
