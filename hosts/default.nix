@@ -10,6 +10,12 @@ let
     {
       environment.systemPackages = [
         #inputs.agenix.defaultPackage.x86_64-linux
+        inputs.dde-nixos.packages.${system}.dde-am
+        inputs.dde-nixos.packages.${system}.dde-session
+      ];
+      systemd.packages = [
+        inputs.dde-nixos.packages.${system}.dde-am
+        inputs.dde-nixos.packages.${system}.dde-session
       ];
     }
 

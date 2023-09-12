@@ -9,8 +9,8 @@ let
     cmake gcc gdb
     binutils
     #pkgsCross.aarch64-embedded.stdenv.cc
-    #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils
-    clang clang-tools ninja qtcreator
+    #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils 
+    clang-tools ninja qtcreator
     cargo
     nodePackages.pnpm
   ];
