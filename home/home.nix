@@ -51,6 +51,14 @@
     weston
     foot
     wbg
+    wlrctl
+    wlr-randr
+    wl-mirror
+    wl-color-picker
+    wl-clipboard
+    wayout
+    wayland-utils
+    way-displays
   ];
 
   programs.git = {
