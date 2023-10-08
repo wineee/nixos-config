@@ -53,11 +53,13 @@ let
     flameshot
     # Browser
     firefox
-    #vivaldi
+    vivaldi
     aria
     # rustdesk
     # libreoffice
     blackbox-terminal
+    jamesdsp
+    gammaray
   ];
 
   modern-unix = with pkgs; [
