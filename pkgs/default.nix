@@ -53,7 +53,7 @@ let
     flameshot
     # Browser
     firefox
-    vivaldi
+    #vivaldi
     aria
     # rustdesk
     # libreoffice

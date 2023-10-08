@@ -1,8 +1,4 @@
 { lib, ... }:
-let 
-  netifname = "eno1";
-  # wlp2s0
-in
 {
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -10,8 +6,6 @@ in
   # networking.wireless.enable = true; 
 
   networking.networkmanager.enable = true;
-
-  #networking.interfaces.${netifname}.useDHCP = true;
   
   networking.iproute2.enable = true;
 

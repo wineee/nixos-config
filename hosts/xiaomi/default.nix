@@ -3,7 +3,7 @@
   ../../system
   ../../pkgs
   ../../programs
-  ../../desktop/deepin.nix
+  ../../desktop/budgie.nix
   ../../desktop/wayfire.nix
   #../../desktop/kde.nix
   #../../home
