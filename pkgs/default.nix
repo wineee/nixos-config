@@ -60,6 +60,8 @@ let
     blackbox-terminal
     jamesdsp
     gammaray
+    hotspot
+    localsend
   ];
 
   modern-unix = with pkgs; [
