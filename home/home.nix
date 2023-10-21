@@ -69,7 +69,7 @@
     lfs.enable = false;
     signing = {
       key = null;
-      signByDefault = true;
+      #signByDefault = true;
     };
     aliases = {
       co = "checkout";
