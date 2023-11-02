@@ -17,7 +17,7 @@ let
 
   ] ++ (with inputs; [
     # agenix.nixosModule
-    # grub2-themes.nixosModules
+    grub2-themes.nixosModules.default
     home-manager.nixosModules.home-manager
     nixos-cn.nixosModules.nixos-cn-registries
     nixos-cn.nixosModules.nixos-cn

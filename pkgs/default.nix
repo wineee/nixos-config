@@ -88,7 +88,8 @@ in
       rofi-emoji
       rofi-systemd
       alacritty
-      dmenu
+      dmenu-wayland
+
 ##    picom
       nitrogen
       betterlockscreen

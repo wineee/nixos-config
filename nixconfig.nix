@@ -14,7 +14,8 @@
       auto-optimise-store = true;
 
       substituters = [
-        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+        "https://mirrors.bfsu.edu.cn/nix-channels/store"
+        #"https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://rewine.cachix.org"
         "https://cache.garnix.io"
       ];
