@@ -59,6 +59,9 @@
     wayout
     wayland-utils
     way-displays
+    wl-gammactl
+    gammastep
+    wdisplays
   ];
 
   programs.git = {
@@ -120,7 +123,7 @@
     enableFishIntegration = true;
   };
 
-  programs.exa = {
+  programs.eza = {
     enable = true;
     enableAliases = true;
   };

@@ -7,10 +7,7 @@ let
     rewine.electron-netease-cloud-music
     rewine.kylin-virtual-keyboard
     rewine.ttf-wps-fonts
-    # xddxdd.wechat-uos
-  ];
-  nixcnpkgs = with nixos-cn; [
-    #netease-cloud-music
+    #xddxdd.wechat-uos
   ];
 in
-nurpkgs ++ nixcnpkgs
+nurpkgs

@@ -31,7 +31,6 @@
       vistafonts
       #material-design-icons font-awesome # polybar
     ] ++ ( with pkgs.nur.repos.rewine; [
-      ttf-ms-win10
       ttf-wps-fonts
     ]);
   };

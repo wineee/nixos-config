@@ -11,9 +11,12 @@ in
     config = {
       allowUnfree = true;
       # allowUnsupportedSystem = true;
-      # allowBroken = true;
+      allowBroken = true;
       permittedInsecurePackages = [ 
         "electron-24.8.6"
+        "openssl-1.1.1w"
+        "electron-19.1.9"
+        "electron-25.9.0"
       ]; #typora
       vivaldi = {
         proprietaryCodecs = true;
