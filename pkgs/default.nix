@@ -39,7 +39,7 @@ let
 
   gui-tools = with pkgs; [
     okular
-    wpsoffice-cn
+    # wpsoffice-cn
     tdesktop
     element-desktop
     qq
@@ -48,7 +48,7 @@ let
     logseq
     ghostwriter
     vlc  
-    # obs-studio 
+    obs-studio 
     simplescreenrecorder
     flameshot
     # Browser

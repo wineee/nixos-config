@@ -1,9 +1,8 @@
 { ... }:
 {
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbOptions = "caps:swapescape"; #"eurosign:e";
-
+    options = "caps:swapescape"; #"eurosign:e";
   };
 }

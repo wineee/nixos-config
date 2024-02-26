@@ -3,7 +3,7 @@
   imports =
     [
       ./alias.nix
-      ./npm.nix
+      # ./npm.nix
       ./zsh.nix
     ];
 

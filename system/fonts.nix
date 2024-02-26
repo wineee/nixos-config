@@ -20,9 +20,9 @@
     enableGhostscriptFonts = true;
     packages = with pkgs; [
       sarasa-gothic
-      noto-fonts
-      noto-fonts-cjk
-      noto-fonts-emoji
+      #noto-fonts
+      #noto-fonts-cjk
+      #noto-fonts-emoji
       wqy_microhei
       wqy_zenhei
       #nerdfonts # 图标字体

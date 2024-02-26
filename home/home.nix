@@ -25,6 +25,8 @@
     colorpicker
     gh
 
+    vala-language-server
+
     # nix tools
     nix-index
     nix-update
@@ -37,7 +39,7 @@
     hugo
     cachix
 
-    ffmpeg
+    #ffmpeg
     gnome.dconf-editor
     dfeet
 
