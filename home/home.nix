@@ -35,6 +35,10 @@
     # other apps
     nodejs
     nodePackages.npm
+    stack
+    haskell-language-server
+    haskellPackages.ghcup
+
     yarn
     hugo
     cachix
