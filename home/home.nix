@@ -25,6 +25,8 @@
     colorpicker
     gh
 
+    d-spy
+
     vala-language-server
 
     # nix tools
@@ -37,7 +39,7 @@
     nodePackages.npm
     stack
     haskell-language-server
-    haskellPackages.ghcup
+    #haskellPackages.ghcup
 
     yarn
     hugo
@@ -45,7 +47,6 @@
 
     #ffmpeg
     gnome.dconf-editor
-    dfeet
 
     python3Packages.osc
 
@@ -129,10 +130,9 @@
     enableFishIntegration = true;
   };
 
-  programs.eza = {
-    enable = true;
-    enableAliases = true;
-  };
+  #programs.eza = {
+  #  enable = true;
+  #};
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
