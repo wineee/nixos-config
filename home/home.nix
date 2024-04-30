@@ -24,10 +24,11 @@
     cloc
     colorpicker
     gh
+    eza
 
     d-spy
 
-    vala-language-server
+    # vala-language-server
 
     # nix tools
     nix-index

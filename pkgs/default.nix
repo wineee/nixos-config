@@ -39,7 +39,7 @@ let
 
   gui-tools = with pkgs; [
     okular
-    # wpsoffice-cn
+    wpsoffice-cn
     tdesktop
     element-desktop
     qq
