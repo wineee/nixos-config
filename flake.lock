@@ -64,11 +64,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1712885371,
-        "narHash": "sha256-8efXbfV/Ri86vqtGRBJbcaFSQFigFp4/edImnR9aWTc=",
+        "lastModified": 1715837353,
+        "narHash": "sha256-UWm9hWXnr/P99e5LWbpnL99Qav3c1MNTiFcD7d/oU1I=",
         "owner": "vinceliuice",
         "repo": "grub2-themes",
-        "rev": "b732fe3fad5b30dd55b108826943285656e5921c",
+        "rev": "ce56cfb5c6b0650830e6f7732187673add7c9e96",
         "type": "github"
       },
       "original": {
@@ -84,11 +84,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714430505,
-        "narHash": "sha256-SSJQ/KOy8uISnoZgqDoRha7g7PFLSFP/BtMWm0wUz8Q=",
+        "lastModified": 1715930644,
+        "narHash": "sha256-W9pyM3/vePxrffHtzlJI6lDS3seANQ+Nqp+i58O46LI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f8e6694edabe4aaa7a85aac47b43ea5d978b116d",
+        "rev": "e3ad5108f54177e6520535768ddbf1e6af54b59d",
         "type": "github"
       },
       "original": {
@@ -100,11 +100,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1714253743,
-        "narHash": "sha256-mdTQw2XlariysyScCv2tTE45QSU9v/ezLcHJ22f0Nxc=",
+        "lastModified": 1715961556,
+        "narHash": "sha256-+NpbZRCRisUHKQJZF3CT+xn14ZZQO+KjxIIanH3Pvn4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "58a1abdbae3217ca6b702f03d3b35125d88a2994",
+        "rev": "4a6b83b05df1a8bd7d99095ec4b4d271f2956b64",
         "type": "github"
       },
       "original": {
@@ -115,11 +115,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1714484243,
-        "narHash": "sha256-724nAabUL8ysxNtJwBvXuwjMYgaEGw5iiecYtg897ys=",
+        "lastModified": 1716140745,
+        "narHash": "sha256-ybXfvdAggMnp/X+pj8jT7C5aQ6AtL/pA9sJA/ZzAg7E=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "fe76fa0f1a7e8c57bca76d0b4d523d0fd8022f3e",
+        "rev": "49682cc18a65cd7a7e0081e9a1464b11655d4d15",
         "type": "github"
       },
       "original": {
@@ -135,11 +135,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1714355825,
-        "narHash": "sha256-KxTerxSc0IZeyvGgeSTaKG03lwjyiyZXaT6XtAI0mbQ=",
+        "lastModified": 1715821300,
+        "narHash": "sha256-USt/VMFOrvqKBKSTdPB7C1o4NILrWUK3wZcSlCQ6UKo=",
         "owner": "wineee",
         "repo": "nur-packages",
-        "rev": "b8ff8154152388bb2570d54f1ffdd829e2fe0189",
+        "rev": "e503817eaaa3cfa4a7e00f3551c88f735c10f3f7",
         "type": "github"
       },
       "original": {

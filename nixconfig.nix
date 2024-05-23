@@ -1,7 +1,7 @@
 { inputs, config, pkgs, lib, ... }:
 {
   nix = {
-    package = pkgs.nixUnstable;
+    #package = pkgs.nixUnstable;
 
     nixPath = [ "nixpkgs=${pkgs.path}" ];
     registry.nixpkgs.flake = inputs.nixpkgs;
