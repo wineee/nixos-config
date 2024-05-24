@@ -39,10 +39,9 @@ let
 
   gui-tools = with pkgs; [
     okular
-    wpsoffice-cn
     tdesktop
     element-desktop
-    qq
+    # qq
     zeal
 
     logseq
