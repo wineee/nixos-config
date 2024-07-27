@@ -44,7 +44,7 @@ let
     # qq
     zeal
 
-    logseq
+    #logseq
     ghostwriter
     vlc  
     obs-studio 

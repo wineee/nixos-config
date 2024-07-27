@@ -33,7 +33,7 @@
     # nix tools
     nix-index
     nix-update
-    nixfmt
+    nixfmt-rfc-style
 
     # other apps
     nodejs
@@ -47,7 +47,7 @@
     cachix
 
     #ffmpeg
-    gnome.dconf-editor
+    dconf-editor
 
     python3Packages.osc
 

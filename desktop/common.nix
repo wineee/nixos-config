@@ -1,6 +1,8 @@
 { pkgs, lib, ... }:
 
 {
+  services.displayManager.sddm.enable = true;
+
   #qt = {
   #  enable = true;
   #  style = "adwaita";
