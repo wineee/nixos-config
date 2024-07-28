@@ -8,8 +8,6 @@ let
     xsettingsd
     cmake gcc gdb
     binutils
-    #pkgsCross.aarch64-embedded.stdenv.cc
-    #pkgsCross.riscv64.stdenv.cc pkgsCross.riscv64.binutils 
     clang-tools ninja qtcreator
     cargo
     nodePackages.pnpm
@@ -34,7 +32,7 @@ let
     yakuake
     # kdenlive
     gwenview
-    ark #latte-dock
+    ark
   ];
 
   gui-tools = with pkgs; [
@@ -61,6 +59,7 @@ let
     gammaray
     hotspot
     localsend
+    moonlight-qt
   ];
 
   modern-unix = with pkgs; [
