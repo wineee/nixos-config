@@ -70,6 +70,9 @@
     wl-gammactl
     gammastep
     wdisplays
+
+    # app
+    qcm
   ];
 
   programs.git = {
@@ -130,10 +133,6 @@
     enable = true;
     enableFishIntegration = true;
   };
-
-  #programs.eza = {
-  #  enable = true;
-  #};
 
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;

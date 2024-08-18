@@ -19,7 +19,6 @@ let
     # agenix.nixosModule
     grub2-themes.nixosModules.default
     home-manager.nixosModules.home-manager
-    dde-nixos.nixosModules.${system}
   ]) ++ (import ../modules );
 
 in
