@@ -13,10 +13,8 @@ in
       # allowUnsupportedSystem = true;
       allowBroken = true;
       permittedInsecurePackages = [ 
-        "electron-24.8.6"
-        "openssl-1.1.1w"
-        "electron-19.1.9"
         "electron-25.9.0"
+        "jitsi-meet-1.0.8043"
       ]; #typora
       vivaldi = {
         proprietaryCodecs = true;
