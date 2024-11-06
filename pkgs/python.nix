@@ -4,9 +4,9 @@ let
   my-python-packages = python3Packages: with python3Packages; [
     tkinter
     # for eaf
-    pyqt6
-    pyqt6-webengine
-    pyqt6-sip
+    #pyqt6
+    #pyqt6-webengine
+    #pyqt6-sip
     tld
     #qtconsole
     sip

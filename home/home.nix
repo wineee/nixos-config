@@ -22,7 +22,6 @@
     ncdu
     pstree
     cloc
-    colorpicker
     gh
     eza
 

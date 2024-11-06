@@ -7,4 +7,5 @@
       desktopManager.deepin.enable = true;
     };
   };
+  environment.deepin.excludePackages = [ pkgs.deepin.deepin-music ];
 }
