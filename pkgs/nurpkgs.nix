@@ -5,9 +5,7 @@ let
     linyinfeng.wemeet
     # xddxdd.bilibili
     rewine.electron-netease-cloud-music
-    #rewine.wps
     rewine.ttf-wps-fonts
-    #xddxdd.wechat-uos
   ];
 in
 nurpkgs

@@ -2,7 +2,7 @@
   description = "nixos-config";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     nur.url = "github:nix-community/NUR";
     rew = {

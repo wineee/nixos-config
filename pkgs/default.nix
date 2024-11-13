@@ -39,7 +39,8 @@ let
     okular
     tdesktop
     element-desktop
-    # qq
+    qq
+    wechat-uos
     zeal
 
     #logseq
@@ -50,7 +51,7 @@ let
     flameshot
     # Browser
     firefox
-    # vivaldi
+    vivaldi
     aria
     # rustdesk
     # libreoffice

@@ -1,13 +1,13 @@
 { inputs, system, pkgs, lib, ... }:
 
 {
+  programs.labwc.enable = true;
   services = {
     xserver = {
-    displayManager.sddm.enable = true;
       enable = true;
-      desktopManager.mate = {
+      desktopManager.lxqt = {
         enable = true;
-        enableWaylandSession = true;
+        # enableWaylandSession = true;
       };
     };
   };
