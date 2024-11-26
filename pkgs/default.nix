@@ -61,6 +61,7 @@ let
     hotspot
     localsend
     moonlight-qt
+    remmina
   ];
 
   modern-unix = with pkgs; [

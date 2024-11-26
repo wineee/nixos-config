@@ -6,7 +6,7 @@
       ./base.nix
       ./boot.nix
       ./fonts.nix
-      #./gpu.nix
+      ./gpu.nix
       ./keyboard.nix
       ./i18n.nix
       ./network.nix
