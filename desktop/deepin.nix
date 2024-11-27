@@ -8,4 +8,7 @@
     };
   };
   environment.deepin.excludePackages = [ pkgs.deepin.deepin-music ];
+
+  programs.gnupg.agent.pinentryPackage = pkgs.pinentry-qt;
+  services.displayManager.defaultSession = "dde-x11";
 }

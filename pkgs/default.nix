@@ -9,6 +9,7 @@ let
     cmake gcc gdb
     binutils
     clang-tools ninja qtcreator
+    clang
     cargo
     nodePackages.pnpm
   ];
@@ -62,6 +63,7 @@ let
     localsend
     moonlight-qt
     remmina
+    wpsoffice-cn
   ];
 
   modern-unix = with pkgs; [
