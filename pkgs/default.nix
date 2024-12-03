@@ -11,6 +11,8 @@ let
     clang-tools ninja qtcreator
     clang
     cargo
+    cppcheck
+    clazy
     nodePackages.pnpm
   ];
 
@@ -114,6 +116,7 @@ in
       onefetch
       ranger
 
+      emacs
       # for emacs
       nodejs
       wmctrl
