@@ -4,11 +4,11 @@ let
   my-python-packages = python3Packages: with python3Packages; [
     tkinter
     # for eaf
-    #pyqt6
-    #pyqt6-webengine
-    #pyqt6-sip
+    pyqt6
+    pyqt6-webengine
+    pyqt6-sip
     tld
-    #qtconsole
+    qtconsole
     sip
     qrcode
     epc
@@ -21,7 +21,7 @@ let
     psutil
 
     # lsp-bridge
-    # epc 
+    epc 
     sexpdata six paramiko orjson
     
     # other

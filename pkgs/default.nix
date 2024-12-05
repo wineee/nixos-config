@@ -49,7 +49,7 @@ let
     #logseq
     ghostwriter
     vlc  
-    obs-studio 
+    #obs-studio 
     simplescreenrecorder
     flameshot
     # Browser
@@ -116,7 +116,7 @@ in
       onefetch
       ranger
 
-      emacs
+      emacs30
       # for emacs
       nodejs
       wmctrl
