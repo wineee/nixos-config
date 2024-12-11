@@ -21,11 +21,11 @@
     packages = with pkgs; [
       sarasa-gothic
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       wqy_microhei
       wqy_zenhei
-      nerdfonts # 图标字体
+      nerd-fonts.symbols-only # 图标字体
       symbola # 特殊字符
       jetbrains-mono
       vistafonts

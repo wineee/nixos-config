@@ -40,7 +40,7 @@
   };
 
   # Enable Flatpak
-  services.flatpak.enable = true;
+  # services.flatpak.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -54,6 +54,9 @@
   };
 
   services.gnome.gnome-keyring.enable = true;
-  
+
+  environment.enableDebugInfo = true;
+  services.nixseparatedebuginfod.enable = true;
+
   system.stateVersion = "22.11";
 }

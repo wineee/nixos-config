@@ -10,12 +10,7 @@ in
     ];
     config = {
       allowUnfree = true;
-      # allowUnsupportedSystem = true;
       allowBroken = true;
-      permittedInsecurePackages = [ 
-        "electron-25.9.0"
-        "jitsi-meet-1.0.8043"
-      ]; #typora
       vivaldi = {
         proprietaryCodecs = true;
         enableWideVine = true;

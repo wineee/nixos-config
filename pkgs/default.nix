@@ -10,7 +10,7 @@ let
     binutils
     clang-tools ninja qtcreator
     clang
-    cargo
+    cargo rustfmt clippy
     cppcheck
     clazy
     nodePackages.pnpm
