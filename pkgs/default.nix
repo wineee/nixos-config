@@ -13,6 +13,8 @@ let
     cargo rustfmt clippy
     cppcheck
     clazy
+    go
+    #lua5_3 ghc
     nodePackages.pnpm
   ];
 
@@ -124,7 +126,6 @@ in
       xdotool
 
       vscode
-      #lua5_3  go cargo ghc
       #jdk jetbrains.idea-community
       python-with-my-packages
 
