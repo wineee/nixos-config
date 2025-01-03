@@ -6,7 +6,7 @@ in
   nixpkgs = {
     overlays = [
       my_overlay
-      inputs.nur.overlay
+      inputs.nur.overlays.default
     ];
     config = {
       allowUnfree = true;

@@ -8,12 +8,14 @@ let
     xsettingsd
     cmake gcc gdb
     binutils
-    clang-tools ninja qtcreator
+    clang-tools
+    ninja
+    # qtcreator
     clang
     cargo rustfmt clippy
     cppcheck
-    clazy
-    go
+    # clazy
+    go gopls
     #lua5_3 ghc
     nodePackages.pnpm
   ];
@@ -61,13 +63,13 @@ let
     # rustdesk
     # libreoffice
     blackbox-terminal
-    jamesdsp
+    # jamesdsp
     gammaray
     hotspot
     localsend
     moonlight-qt
     remmina
-    wpsoffice-cn
+    # wpsoffice-cn
   ];
 
   modern-unix = with pkgs; [
