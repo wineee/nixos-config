@@ -11,67 +11,26 @@
   home.homeDirectory = "/home/rewine";
 
   home.packages = with pkgs; [
-    # unix tools
-    htop
-    ugrep
-    ripgrep
-    fd
-    libtree # ldd as a tree
-    tldr
-    duf
-    ncdu
-    pstree
-    cloc
-    gh
-    eza
-
-    d-spy
-
-    # vala-language-server
-
-    # nix tools
-    nix-index
-    nix-update
-    nixfmt-rfc-style
-
-    # other apps
-    nodejs
-    nodePackages.npm
-    stack
-    haskell-language-server
-    #haskellPackages.ghcup
-
     yarn
     hugo
     cachix
 
-    #ffmpeg
     dconf-editor
 
     python3Packages.osc
 
-    # lsp
-    neocmakelsp
-    nil
-
     # wayland
     weston
     foot
-    wbg
+    # wbg
     wlrctl
-    wlr-randr
     wl-mirror
-    wl-color-picker
-    wl-clipboard
     wayout
     wayland-utils
     way-displays
     wl-gammactl
     gammastep
     wdisplays
-
-    # app
-    qcm
   ];
 
   programs.git = {
@@ -126,8 +85,6 @@
     };
   };
 
-  programs.bat.enable = true;
-
   programs.fzf = {
     enable = true;
     enableFishIntegration = true;
@@ -152,7 +109,7 @@
     "..." = "cd ../..";
   };
 
-  home.stateVersion = "22.05";
+  home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

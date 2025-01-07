@@ -18,6 +18,8 @@ let
     go gopls
     #lua5_3 ghc
     nodePackages.pnpm
+    nil
+    neocmakelsp
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -30,9 +32,12 @@ let
     nix-update
     nix-init
     nixos-shell
+    nix-index
+    nixfmt-rfc-style
     nvd
     comma
     manix
+
   ];
 
   qt5-libs = with pkgs.libsForQt5; [
@@ -70,6 +75,7 @@ let
     moonlight-qt
     remmina
     wpsoffice-cn
+    d-spy
   ];
 
   modern-unix = with pkgs; [
@@ -77,6 +83,21 @@ let
     coreutils
     topgrade
     miller
+    fd
+    htop
+    ripgrep
+    ugrep
+    eza
+    bat
+    wl-clipboard
+    wlr-randr
+    duf
+    tldr
+    ncdu
+    libtree
+    pstree
+    cloc
+    gh
   ];
 in
 {
