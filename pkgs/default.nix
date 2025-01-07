@@ -69,7 +69,7 @@ let
     localsend
     moonlight-qt
     remmina
-    # wpsoffice-cn
+    wpsoffice-cn
   ];
 
   modern-unix = with pkgs; [
