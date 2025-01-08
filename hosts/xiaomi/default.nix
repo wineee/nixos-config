@@ -6,7 +6,7 @@
   ../../desktop/deepin.nix
   #../../desktop/lxqt.nix
   #../../desktop/mate.nix
-  ../../desktop/kde.nix
+  #../../desktop/kde.nix
   #../../home
 ]
 

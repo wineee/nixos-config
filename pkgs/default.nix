@@ -139,7 +139,8 @@ in
       stow
       hyfetch
       onefetch
-      ranger
+      #ranger
+      yazi
 
       emacs30
       # for emacs
