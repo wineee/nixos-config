@@ -10,11 +10,14 @@ in
     ];
     config = {
       allowUnfree = true;
-      allowBroken = true;
+      # allowBroken = true;
       vivaldi = {
         proprietaryCodecs = true;
         enableWideVine = true;
       };
+      permittedInsecurePackages = [
+        "electron-27.3.11" # logseq
+      ];
     };
   };
 }

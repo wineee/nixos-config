@@ -6,11 +6,11 @@
   home.homeDirectory = "/home/rewine";
 
   home.packages = with pkgs; [
-    yarn
     hugo
     cachix
 
     dconf-editor
+    typora
 
     python3Packages.osc
 

@@ -16,10 +16,14 @@ let
     cppcheck
     # clazy
     go gopls
+    goreleaser
     #lua5_3 ghc
     nodePackages.pnpm
     nil
     neocmakelsp
+    vala-language-server
+    uncrustify
+    vala-lint
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -55,7 +59,7 @@ let
     wechat-uos
     zeal
 
-    #logseq
+    logseq
     ghostwriter
     vlc  
     #obs-studio 
@@ -98,6 +102,7 @@ let
     pstree
     cloc
     gh
+    axel
   ];
 in
 {
@@ -109,6 +114,7 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
+      greetd.regreet
       proxychains
       act
 
@@ -137,7 +143,7 @@ in
       tmux
       man
       stow
-      hyfetch
+      fastfetch
       onefetch
       #ranger
       yazi
