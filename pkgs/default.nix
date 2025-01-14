@@ -103,6 +103,12 @@ let
     cloc
     gh
     axel
+    nvtop
+    atuin
+    mise
+    gping
+    procs
+    zellij
   ];
 in
 {
@@ -137,10 +143,8 @@ in
       scrot
       
       xorg.xmodmap
-      # termonad
 
       wget
-      tmux
       man
       stow
       fastfetch
