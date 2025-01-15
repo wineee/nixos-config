@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 let
   python-with-my-packages = pkgs.callPackage ./python.nix { };
-  vscodium-with-extensions = pkgs.callPackage ./vscodium.nix { };
   mynurpkgs = import ./nurpkgs.nix  { inherit pkgs; };
 
   build-tools = with pkgs; [
@@ -10,7 +9,7 @@ let
     binutils
     clang-tools
     ninja
-    # qtcreator
+    qtcreator
     clang
     cargo rustfmt clippy
     cppcheck
