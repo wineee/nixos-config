@@ -61,9 +61,8 @@ let
     vivaldi
     aria
     # rustdesk
-    # libreoffice
     blackbox-terminal
-    # jamesdsp
+    jamesdsp
     gammaray
     hotspot
     localsend
@@ -120,18 +119,11 @@ in
       rofi-emoji
       rofi-systemd
       alacritty
-      dmenu-wayland
 
-##    picom
-      nitrogen
-      betterlockscreen
-      xclip
       pineapple-pictures
       copyq #albert
       unrar
-      pamixer # 音量控制
       brightnessctl # 屏幕亮度 
-      scrot
       
       xorg.xmodmap
 
@@ -139,7 +131,6 @@ in
       man
       stow
       fastfetch
-      onefetch
       #ranger
       yazi
 
@@ -151,7 +142,6 @@ in
       xdotool
 
       vscode
-      #jdk jetbrains.idea-community
       python-with-my-packages
 
       # AppImage  

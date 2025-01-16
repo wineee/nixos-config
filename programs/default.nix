@@ -2,9 +2,7 @@
 {
   imports =
     [
-      ./alias.nix
-      # ./npm.nix
-      ./zsh.nix
+      ./shell.nix
     ];
 
   programs.kdeconnect = {
