@@ -95,7 +95,7 @@ let
     cloc
     gh
     axel
-    nvtop
+    nvtopPackages.full
     atuin
     mise
     gping
