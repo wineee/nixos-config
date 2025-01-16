@@ -1,7 +1,6 @@
 { lib, config, pkgs, ... }:
 {
-  # services.xserver.videoDrivers = [ "modesetting" "nvidia" "vesa" ]; 
-  # hardware.bumblebee.enable = true;
+  services.xserver.videoDrivers = [ "modesetting" "fbdev" ]; # "vesa" 
 
   # Enable OpenCL support for Intel Gen8 and later GPUs
   nixpkgs.config.packageOverrides = pkgs: {
@@ -16,5 +15,4 @@
       libvdpau-va-gl
     ];
   };
-
 }

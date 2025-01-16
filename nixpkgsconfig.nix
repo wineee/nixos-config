@@ -10,7 +10,9 @@ in
     ];
     config = {
       allowUnfree = true;
-      # allowBroken = true;
+      allowBroken = false;
+      nvidia.acceptLicense = true;
+
       vivaldi = {
         proprietaryCodecs = true;
         enableWideVine = true;
