@@ -10,7 +10,6 @@
     cachix
 
     dconf-editor
-    typora
 
     python3Packages.osc
 

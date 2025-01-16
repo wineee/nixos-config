@@ -40,14 +40,6 @@ let
     nvd
     comma
     manix
-
-  ];
-
-  qt5-libs = with pkgs.libsForQt5; [
-    yakuake
-    # kdenlive
-    gwenview
-    ark
   ];
 
   gui-tools = with pkgs; [
@@ -59,7 +51,7 @@ let
     zeal
 
     logseq
-    ghostwriter
+    typora
     vlc  
     #obs-studio 
     simplescreenrecorder
@@ -79,6 +71,7 @@ let
     remmina
     wpsoffice-cn
     d-spy
+    thunderbird
   ];
 
   modern-unix = with pkgs; [
@@ -114,7 +107,6 @@ in
   environment.systemPackages =
     mynurpkgs
     ++ nixpkgs-tools
-    ++ qt5-libs
     ++ gui-tools
     ++ modern-unix
     ++ build-tools
