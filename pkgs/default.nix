@@ -11,7 +11,7 @@ let
     ninja
     qtcreator
     clang
-    cargo rustfmt clippy
+    cargo rustfmt clippy rust-analyzer
     cppcheck
     # clazy
     go gopls
