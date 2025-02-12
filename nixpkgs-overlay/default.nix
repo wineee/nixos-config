@@ -1,5 +1,6 @@
 self: super:
 rec {
+  /*
   lucenepp = (super.lucenepp.override {
     boost = super.boost186;
   }).overrideAttrs ( old : {
@@ -17,5 +18,6 @@ rec {
   };
   dde-file-manager = super.dde-file-manager.override {
     boost = super.boost186;
-  };
+    };
+   */
 }
