@@ -2,7 +2,7 @@
 with pkgs;
 let
   nurpkgs = with pkgs.nur.repos; [
-    linyinfeng.wemeet
+    #linyinfeng.wemeet
     rewine.ttf-wps-fonts
     rewine.wlhax
     rewine.wldbg

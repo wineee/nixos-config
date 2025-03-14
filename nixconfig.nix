@@ -14,10 +14,9 @@
       auto-optimise-store = true;
 
       substituters = [
-        "https://mirrors.bfsu.edu.cn/nix-channels/store"
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://rewine.cachix.org"
-        "https://cache.garnix.io"
+        #"https://cache.garnix.io"
       ];
       trusted-public-keys = [
         "rewine.cachix.org-1:aOIg9PvwuSefg59gVXXxGIInHQI9fMpskdyya2xO+7I="

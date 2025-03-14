@@ -38,20 +38,18 @@ let
     nix-index
     nixfmt-rfc-style
     nvd
+    nh
     comma
     manix
   ];
 
   gui-tools = with pkgs; [
-    okular
+    kdePackages.okular
     tdesktop
     element-desktop
-    qq
-    wechat-uos
+    # qq
+    # wechat-uos
     zeal
-
-    logseq
-    typora
     vlc  
     #obs-studio 
     simplescreenrecorder
@@ -62,13 +60,14 @@ let
     aria
     # rustdesk
     blackbox-terminal
-    jamesdsp
+    # jamesdsp
     gammaray
     hotspot
-    localsend
+    # localsend
     moonlight-qt
     remmina
-    wpsoffice-cn
+    # wpsoffice-cn
+    libreoffice-qt6
     d-spy
     thunderbird
   ];
@@ -94,7 +93,7 @@ let
     cloc
     gh
     axel
-    nvtopPackages.full
+    # nvtopPackages.full
     atuin
     mise
     gping

@@ -7,8 +7,9 @@
       desktopManager.deepin.enable = true;
     };
   };
-  environment.deepin.excludePackages = [ pkgs.deepin.deepin-music ];
+  environment.deepin.excludePackages = [ 
+    # pkgs.deepin.deepin-music
+  ];
 
   programs.gnupg.agent.pinentryPackage = pkgs.pinentry-qt;
-  services.displayManager.defaultSession = "dde-x11";
 }
