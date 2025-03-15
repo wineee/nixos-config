@@ -69,7 +69,7 @@ let
     # wpsoffice-cn
     libreoffice-qt6
     d-spy
-    thunderbird
+    nomacs-qt6
   ];
 
   modern-unix = with pkgs; [
