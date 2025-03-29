@@ -18,6 +18,9 @@
   # enable blueman to manager bluetooth
   # services.blueman.enable = true;
 
+  programs.sway.enable = true;
+  programs.wayfire.enable = true;
+
   services.greetd = {
     #enable = true;
     #settings.default_session.command = "${pkgs.cage}/bin/cage -s -mlast -- regreet";
