@@ -4,10 +4,10 @@
   ../../system
   ../../pkgs
   ../../programs
-  ../../desktop/deepin.nix
+  #../../desktop/deepin.nix
   ../../desktop/common.nix
-  #../../desktop/lxqt.nix
-  #../../desktop/kde.nix
+  ../../desktop/kde.nix
+  ../../desktop/hyprland.nix
   #../../home
 ]
 

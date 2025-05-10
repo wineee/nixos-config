@@ -4,7 +4,6 @@ let
   mynurpkgs = import ./nurpkgs.nix  { inherit pkgs; };
 
   build-tools = with pkgs; [
-    xsettingsd
     cmake gcc gdb
     binutils
     clang-tools
@@ -41,6 +40,7 @@ let
     nh
     comma
     manix
+    devenv
   ];
 
   gui-tools = with pkgs; [
@@ -61,7 +61,7 @@ let
     # rustdesk
     blackbox-terminal
     # jamesdsp
-    gammaray
+    # gammaray
     hotspot
     # localsend
     moonlight-qt
@@ -109,6 +109,8 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
+      sway
+      wayfire
       greetd.regreet
       proxychains
       act
@@ -130,10 +132,9 @@ in
       man
       stow
       fastfetch
-      #ranger
       yazi
 
-      emacs30
+      emacs
       # for emacs
       nodejs
       wmctrl
@@ -146,7 +147,6 @@ in
       # AppImage  
       appimage-run
       #lutris winePackages.unstable winetricks
-
       distrobox
     ]);
 }
