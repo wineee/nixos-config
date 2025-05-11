@@ -112,6 +112,8 @@ in
       sway
       wayfire
       greetd.regreet
+      cage
+
       proxychains
       act
 
