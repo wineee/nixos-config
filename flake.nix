@@ -16,13 +16,9 @@
       url = github:nix-community/home-manager/master;
       inputs.nixpkgs.follows = "nixpkgs";
     };    
-    grub2-themes = {
-      url = github:vinceliuice/grub2-themes;
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = {self, nixpkgs, home-manager, rew, grub2-themes,... } @ inputs:
+  outputs = {self, nixpkgs, home-manager, rew, ... } @ inputs:
     let
       system = "x86_64-linux";
     in

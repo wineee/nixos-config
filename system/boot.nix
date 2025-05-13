@@ -2,15 +2,15 @@
 
 {
   boot = {
-    loader.systemd-boot.enable = false;
     loader = {
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      grub = {
-        enable = true;
-        device = "nodev";
-        useOSProber = true;
-        efiSupport = true;
-      };
+      #grub = {
+      #  enable = true;
+      #  device = "nodev";
+      #  useOSProber = true;
+      #  efiSupport = true;
+      #};
     };
 
     plymouth.enable = false;
@@ -23,6 +23,6 @@
       options kvm ignore_msrs=1
     '';
 
-    binfmt.emulatedSystems = [ "riscv64-linux" "aarch64-linux" ];
+    # binfmt.emulatedSystems = [ "riscv64-linux" "aarch64-linux" ];
   };
 }

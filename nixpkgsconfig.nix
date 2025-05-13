@@ -17,9 +17,6 @@ in
         proprietaryCodecs = true;
         enableWideVine = true;
       };
-      permittedInsecurePackages = [
-        "electron-27.3.11" # logseq
-      ];
     };
   };
 }
