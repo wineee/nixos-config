@@ -56,10 +56,15 @@ let
     flameshot
     # Browser
     firefox
-    vivaldi
+    (vivaldi.overrideAttrs
+      (oldAttrs: {
+        dontWrapQtApps = false;
+        dontPatchELF = true;
+        nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [pkgs.qt5.wrapQtAppsHook];
+        buildInputs = oldAttrs.buildInputs ++ [pkgs.qt5.qtwayland];
+    }))
     aria
     # rustdesk
-    blackbox-terminal
     # jamesdsp
     # gammaray
     hotspot
@@ -70,6 +75,7 @@ let
     libreoffice-qt6
     d-spy
     nomacs-qt6
+    warp-terminal
   ];
 
   modern-unix = with pkgs; [
