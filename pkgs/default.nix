@@ -47,8 +47,8 @@ let
     kdePackages.okular
     tdesktop
     element-desktop
-    # qq
-    # wechat-uos
+    qq
+    wechat-uos
     zeal
     vlc  
     #obs-studio 
@@ -76,6 +76,7 @@ let
     d-spy
     nomacs-qt6
     warp-terminal
+    kdePackages.kdialog
   ];
 
   modern-unix = with pkgs; [
