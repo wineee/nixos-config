@@ -56,23 +56,17 @@ let
     flameshot
     # Browser
     firefox
-    (vivaldi.overrideAttrs
-      (oldAttrs: {
-        dontWrapQtApps = false;
-        dontPatchELF = true;
-        nativeBuildInputs = oldAttrs.nativeBuildInputs ++ [pkgs.qt5.wrapQtAppsHook];
-        buildInputs = oldAttrs.buildInputs ++ [pkgs.qt5.qtwayland];
-    }))
+    vivaldi
     aria
     # rustdesk
     # jamesdsp
-    # gammaray
+    gammaray
     hotspot
     # localsend
     moonlight-qt
     remmina
-    # wpsoffice-cn
-    libreoffice-qt6
+    wpsoffice-cn
+    #libreoffice-qt6
     d-spy
     nomacs-qt6
     warp-terminal
