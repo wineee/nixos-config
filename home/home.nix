@@ -8,6 +8,7 @@
   home.packages = with pkgs; [
     hugo
     cachix
+    just
 
     dconf-editor
 

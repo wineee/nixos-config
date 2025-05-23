@@ -32,6 +32,7 @@
       #material-design-icons font-awesome # polybar
     ] ++ ( with pkgs.nur.repos.rewine; [
       ttf-wps-fonts
+      ttf-ms-win10
     ]);
   };
 }
