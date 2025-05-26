@@ -137,7 +137,9 @@ in
       fastfetch
       yazi
 
-      emacs
+
+      zed-editor
+      emacs-pgtk
       # for emacs
       nodejs
       wmctrl
