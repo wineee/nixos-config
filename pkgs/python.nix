@@ -28,7 +28,6 @@ let
     # other
     pip
     qtawesome
-    percol
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
 in

@@ -6,7 +6,6 @@
   };
 
   programs.fish.enable = true;  
-  programs.thefuck.enable = true;
   
   programs.zsh = {
     enable = true;

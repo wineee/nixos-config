@@ -9,6 +9,8 @@ let
     clang-tools
     ninja
     qtcreator
+    code-cursor
+
     clang
     cargo rustfmt clippy rust-analyzer
     cppcheck
