@@ -4,13 +4,14 @@ let
   mynurpkgs = import ./nurpkgs.nix  { inherit pkgs; };
 
   build-tools = with pkgs; [
-    cmake gcc gdb
-    binutils
-    clang-tools
-    ninja
     qtcreator
     code-cursor
+    emacs-pgtk
+    vscode
 
+    clang-tools
+    cmake gcc gdb
+    binutils
     clang
     cargo rustfmt clippy rust-analyzer
     cppcheck
@@ -21,9 +22,8 @@ let
     nodePackages.pnpm
     nil
     neocmakelsp
-    vala-language-server
+    #vala-language-server
     uncrustify
-    vala-lint
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -65,7 +65,6 @@ let
     gammaray
     hotspot
     # localsend
-    moonlight-qt
     remmina
     wpsoffice-cn
     d-spy
@@ -139,16 +138,6 @@ in
       fastfetch
       yazi
 
-
-      zed-editor
-      emacs-pgtk
-      # for emacs
-      nodejs
-      wmctrl
-      aria
-      xdotool
-
-      vscode
       python-with-my-packages
 
       # AppImage  

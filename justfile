@@ -1,8 +1,8 @@
-all: update home system
+all: up h s
 
-update:
+up:
     nix flake update
-home:
+h:
     home-manager switch --flake . -I .
-system:
+s:
     sudo nixos-rebuild switch --flake .#xiaomi -v -L

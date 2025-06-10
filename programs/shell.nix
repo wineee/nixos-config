@@ -8,7 +8,7 @@
   programs.fish.enable = true;  
   
   programs.zsh = {
-    enable = true;
+    enable = false;
     enableCompletion = true;
     autosuggestions = {
       enable = true;
@@ -17,7 +17,7 @@
     zsh-autoenv.enable = true;
   };
 
-  environment.shells = [ pkgs.fish pkgs.bashInteractive pkgs.zsh ];
+  environment.shells = [ pkgs.fish pkgs.bashInteractive ];
 
   environment.shellAliases = {
     ls = "exa --icons";
