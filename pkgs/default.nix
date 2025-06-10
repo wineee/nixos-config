@@ -68,7 +68,6 @@ let
     moonlight-qt
     remmina
     wpsoffice-cn
-    #libreoffice-qt6
     d-spy
     nomacs-qt6
     warp-terminal
@@ -102,6 +101,7 @@ let
     gping
     procs
     zellij
+    aider-chat
   ];
 in
 {
