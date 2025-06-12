@@ -6,6 +6,7 @@ let
     rewine.wlhax
     rewine.wldbg
     rewine.xcursor-viewer
+    rewine.wayland-debug
   ];
 in
 nurpkgs
