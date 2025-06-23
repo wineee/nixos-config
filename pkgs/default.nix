@@ -123,7 +123,7 @@ in
       rofi-calc
       rofi-emoji
       rofi-systemd
-      alacritty
+      ghostty
 
       pineapple-pictures
       copyq #albert
