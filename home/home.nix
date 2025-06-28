@@ -9,22 +9,18 @@
     hugo
     cachix
     just
+    xmake
 
     dconf-editor
 
     python3Packages.osc
 
     # wayland
-    weston
     foot
-    # wbg
     wlrctl
-    wl-mirror
     wayout
     wayland-utils
     way-displays
-    wl-gammactl
-    gammastep
     wdisplays
   ];
 
