@@ -22,8 +22,6 @@ let
     nodePackages.pnpm
     nil
     neocmakelsp
-    #vala-language-server
-    uncrustify
   ];
 
   nixpkgs-tools = with pkgs; [
@@ -46,7 +44,7 @@ let
   ];
 
   gui-tools = with pkgs; [
-    kdePackages.okular
+    # kdePackages.okular
     tdesktop
     element-desktop
     qq
@@ -100,7 +98,10 @@ let
     gping
     procs
     zellij
+    # ai
     aider-chat
+    gemini-cli
+    claude-code
   ];
 in
 {
