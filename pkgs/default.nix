@@ -17,7 +17,6 @@ let
     cppcheck
     # clazy
     go gopls
-    goreleaser
     #lua5_3 ghc
     nodePackages.pnpm
     nil
@@ -26,14 +25,14 @@ let
 
   nixpkgs-tools = with pkgs; [
     nixpkgs-fmt
-    nixpkgs-lint
+    # nixpkgs-lint
     nixpkgs-review
     nixpkgs-pytools
     nix-du
     nix-tree
     nix-update
     nix-init
-    nixos-shell
+    # nixos-shell
     nix-index
     nixfmt-rfc-style
     nvd
@@ -52,12 +51,12 @@ let
     zeal
     vlc  
     #obs-studio 
-    simplescreenrecorder
-    flameshot
+    #simplescreenrecorder
+    #flameshot
     # Browser
     firefox
     vivaldi
-    aria
+    # aria
     # rustdesk
     # jamesdsp
     gammaray
@@ -67,8 +66,11 @@ let
     wpsoffice-cn
     d-spy
     nomacs-qt6
-    warp-terminal
     kdePackages.kdialog
+
+    contour
+    waveterm
+    #warp-terminal
   ];
 
   modern-unix = with pkgs; [
@@ -92,6 +94,7 @@ let
     cloc
     gh
     axel
+    goreleaser
     # nvtopPackages.full
     atuin
     mise
@@ -124,7 +127,6 @@ in
       rofi-calc
       rofi-emoji
       rofi-systemd
-      ghostty
 
       pineapple-pictures
       copyq #albert
