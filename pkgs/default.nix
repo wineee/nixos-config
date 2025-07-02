@@ -37,7 +37,6 @@ let
     nixfmt-rfc-style
     nvd
     nh
-    comma
     manix
     devenv
   ];
@@ -68,9 +67,10 @@ let
     nomacs-qt6
     kdePackages.kdialog
 
+    deskflow
+
     contour
-    waveterm
-    #warp-terminal
+    warp-terminal
   ];
 
   modern-unix = with pkgs; [
