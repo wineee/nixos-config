@@ -22,6 +22,10 @@
     wayland-utils
     way-displays
     wdisplays
+    jay
+
+    # ai
+    goose
   ];
 
   programs.git = {

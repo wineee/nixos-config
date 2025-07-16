@@ -49,7 +49,7 @@ let
     wechat-uos
     zeal
     vlc  
-    #obs-studio 
+    obs-studio 
     #simplescreenrecorder
     #flameshot
     # Browser
@@ -104,7 +104,6 @@ let
     # ai
     aider-chat
     gemini-cli
-    claude-code
   ];
 in
 {
