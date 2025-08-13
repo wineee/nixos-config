@@ -18,9 +18,10 @@
     };
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+    linglong-flake.url = "github:wineee/linglong-flake";
   };
 
-  outputs = {self, nixpkgs, home-manager, rew, nix-index-database, ... } @ inputs:
+  outputs = {self, nixpkgs, home-manager, rew, nix-index-database, linglong-flake, ... } @ inputs:
     let
       system = "x86_64-linux";
     in
