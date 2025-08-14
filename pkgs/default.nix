@@ -116,7 +116,7 @@ in
     ++ (with pkgs; [
       sway
       wayfire
-      greetd.regreet
+      regreet
       cage
 
       proxychains
