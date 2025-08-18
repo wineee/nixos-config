@@ -15,7 +15,7 @@
 
     plymouth.enable = false;
 
-    kernelPackages = pkgs.linuxPackages_latest;  # 保持最新内核版本
+    kernelPackages = pkgs.linuxPackages_latest;
 
     extraModprobeConfig = ''
       options kvm_intel nested=1

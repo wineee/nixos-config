@@ -58,22 +58,5 @@
   environment.enableDebugInfo = true;
   services.nixseparatedebuginfod.enable = true;
 
-  # 自动清理旧世代和未使用的包
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
-  };
-
-  # 优化存储设置
-  nix.settings = {
-    auto-optimise-store = true;
-    experimental-features = [ "nix-command" "flakes" ];
-    substituters = [
-      "https://mirrors.ustc.edu.cn/nix-channels/store"
-      "https://cache.nixos.org"
-    ];
-  };
-
   system.stateVersion = "22.11";
 }
