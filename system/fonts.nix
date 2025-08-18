@@ -28,8 +28,9 @@
       nerd-fonts.symbols-only # 图标字体
       symbola # 特殊字符
       jetbrains-mono
-      vistafonts
-      #material-design-icons font-awesome # polybar
+      #vistafonts
+      #material-design-icons 
+      #font-awesome
     ] ++ ( with pkgs.nur.repos.rewine; [
       ttf-wps-fonts
       ttf-ms-win10

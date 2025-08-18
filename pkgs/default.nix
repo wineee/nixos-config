@@ -13,7 +13,7 @@ let
     cmake gcc gdb
     binutils
     clang
-    cargo rustfmt clippy rust-analyzer
+    cargo #rustfmt clippy rust-analyzer
     cppcheck
     # clazy
     go gopls

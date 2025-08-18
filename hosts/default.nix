@@ -19,11 +19,11 @@ let
     # agenix.nixosModule
     home-manager.nixosModules.home-manager
     linglong-flake.nixosModules.linyaps
-    inputs.nix-index-database.nixosModules.nix-index
+    #inputs.nix-index-database.nixosModules.nix-index
     { 
-      programs.nix-index-database.comma.enable = true;
-      programs.nix-index.enableBashIntegration = false;
-      programs.nix-index.enableZshIntegration = false;
+      #programs.nix-index-database.comma.enable = true;
+      #programs.nix-index.enableBashIntegration = false;
+      #programs.nix-index.enableZshIntegration = false;
 
       services.linyaps.enable = true;
     }
