@@ -25,7 +25,9 @@
     jay
 
     # ai
-    goose
+    goose-cli
+    qwen-code
+    cherry-studio
   ];
 
   programs.git = {

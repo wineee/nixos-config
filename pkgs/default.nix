@@ -122,7 +122,7 @@ in
       proxychains
       act
 
-      #rofi
+      rofi
       rofi-calc
       rofi-emoji
       rofi-systemd
@@ -130,7 +130,6 @@ in
       pineapple-pictures
       copyq #albert
       unrar
-      brightnessctl # 屏幕亮度 
       
       xorg.xmodmap
 
