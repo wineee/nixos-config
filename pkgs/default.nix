@@ -46,7 +46,7 @@ let
     tdesktop
     element-desktop
     qq
-    wechat-uos
+    # wechat-uos
     zeal
     vlc  
     obs-studio 

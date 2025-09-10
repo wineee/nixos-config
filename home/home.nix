@@ -21,8 +21,10 @@
     wayout
     wayland-utils
     way-displays
-    wdisplays
-    jay
+    waypipe
+
+    # tool
+    trzsz-ssh
 
     # ai
     goose-cli

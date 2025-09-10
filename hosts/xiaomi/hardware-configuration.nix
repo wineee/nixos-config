@@ -28,9 +28,12 @@
  #     fsType = "ext4";
  #   };
 
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/dbcd3cc5-846e-41c7-8620-2282a97f7d74"; }
-    ];
+  swapDevices = [
+    # 现有的交换分区 (8.8GB)
+    { device = "/dev/disk/by-uuid/dbcd3cc5-846e-41c7-8620-2282a97f7d74"; }
+    # 额外的交换文件 (16GB) - 用于支持休眠功能
+    { device = "/swapfile"; size = 16384; }
+  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

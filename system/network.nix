@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs,  ... }:
 {
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -9,7 +9,11 @@
   
   networking.iproute2.enable = true;
 
-  services.v2raya.enable = true;
+  #services.v2raya.enable = true;
+  programs.clash-verge.enable = true;
+  programs.clash-verge.serviceMode = true;
+  programs.clash-verge.autoStart = true;
+
 
   # Configure network proxy
   # networking.proxy.default = "http://127.0.0.1:8889";
@@ -17,9 +21,9 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Open ports in the firewall.
-  #networking.firewall.enable = true;
-  #networking.firewall.allowedTCPPorts = [ 22 80 ];
-  #networking.firewall.allowedUDPPorts = [ ];
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 22 80 7890 7897 ];
+  networking.firewall.allowedUDPPorts = [ ];
 
   #services.zerotierone = {
   #  enable = true;
