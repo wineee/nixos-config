@@ -24,6 +24,7 @@
     # tool
     trzsz-ssh
     pipx
+    bun
 
     # ai
     qwen-code

@@ -15,9 +15,7 @@ let
     clang
     cargo #rustfmt clippy rust-analyzer
     cppcheck
-    # clazy
     go gopls
-    #lua5_3 ghc
     nil
     neocmakelsp
   ];
@@ -47,7 +45,6 @@ let
     zeal
     vlc  
     obs-studio 
-    #simplescreenrecorder
     #flameshot
     # Browser
     firefox
@@ -92,7 +89,6 @@ let
     gh
     axel
     goreleaser
-    # nvtopPackages.full
     atuin
     mise
     gping
