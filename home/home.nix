@@ -13,8 +13,6 @@
 
     dconf-editor
 
-    python3Packages.osc
-
     # wayland
     foot
     wlrctl
@@ -27,7 +25,6 @@
     trzsz-ssh
 
     # ai
-    goose-cli
     qwen-code
     cherry-studio
   ];

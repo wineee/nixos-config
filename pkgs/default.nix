@@ -18,14 +18,11 @@ let
     # clazy
     go gopls
     #lua5_3 ghc
-    nodePackages.pnpm
     nil
     neocmakelsp
   ];
 
   nixpkgs-tools = with pkgs; [
-    nixpkgs-fmt
-    # nixpkgs-lint
     nixpkgs-review
     nixpkgs-pytools
     nix-du
@@ -143,7 +140,6 @@ in
 
       # AppImage  
       appimage-run
-      #lutris winePackages.unstable winetricks
       distrobox
     ]);
 }
