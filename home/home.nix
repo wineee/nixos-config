@@ -23,6 +23,7 @@
 
     # tool
     trzsz-ssh
+    pipx
 
     # ai
     qwen-code
