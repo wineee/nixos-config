@@ -7,16 +7,6 @@
 
   programs.fish.enable = true;  
   
-  programs.zsh = {
-    enable = false;
-    enableCompletion = true;
-    autosuggestions = {
-      enable = true;
-      strategy = [ "match_prev_cmd" ]; # one of "history", "match_prev_cmd"
-    };
-    zsh-autoenv.enable = true;
-  };
-
   environment.shells = [ pkgs.fish pkgs.bashInteractive ];
 
   environment.shellAliases = {

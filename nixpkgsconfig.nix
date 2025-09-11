@@ -17,10 +17,6 @@ in
         proprietaryCodecs = true;
         enableWideVine = true;
       };
-
-      warp-terminal = {
-        waylandSupport = true;
-      };
     };
   };
 }
