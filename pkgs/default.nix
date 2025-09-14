@@ -6,7 +6,6 @@ let
   build-tools = with pkgs; [
     qtcreator
     code-cursor
-    emacs-pgtk
     vscode
 
     clang-tools
@@ -65,6 +64,7 @@ let
 
     contour
     warp-terminal
+    typora
   ];
 
   modern-unix = with pkgs; [

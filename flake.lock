@@ -86,11 +86,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1755491892,
-        "narHash": "sha256-PjWKNj6DNmfnpxVswu2kRMRHkMTT3zvCz6uRJXUVKzk=",
+        "lastModified": 1757573639,
+        "narHash": "sha256-6K1/5tNyvb3+Csnd/2JHZiOJABNDlIC8xnyHHBo7rm4=",
         "owner": "wineee",
         "repo": "linyaps-flake",
-        "rev": "1ac21f9bfe95dde114fe74fcb37ab8b4534c9fb6",
+        "rev": "a67ad98705a788a26f2d2c44da24a07aedb69b06",
         "type": "github"
       },
       "original": {
