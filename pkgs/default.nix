@@ -1,7 +1,6 @@
 { config, lib, pkgs, ... }:
 let
   python-with-my-packages = pkgs.callPackage ./python.nix { };
-  mynurpkgs = import ./nurpkgs.nix  { inherit pkgs; };
 
   build-tools = with pkgs; [
     qtcreator
@@ -101,8 +100,7 @@ let
 in
 {
   environment.systemPackages =
-    mynurpkgs
-    ++ nixpkgs-tools
+    nixpkgs-tools
     ++ gui-tools
     ++ modern-unix
     ++ build-tools
@@ -132,5 +130,13 @@ in
       # AppImage  
       appimage-run
       distrobox
-    ]);
+    ])
+    ++( with pkgs.nur.repos; [
+      #linyinfeng.wemeet
+      rewine.wlhax
+      rewine.wldbg
+      rewine.xcursor-viewer
+      rewine.wayland-debug
+      rewine.git-commit-helper
+  ]);
 }

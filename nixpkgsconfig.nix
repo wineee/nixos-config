@@ -11,7 +11,6 @@ in
     config = {
       allowUnfree = true;
       allowBroken = false;
-      nvidia.acceptLicense = true;
 
       vivaldi = {
         proprietaryCodecs = true;
