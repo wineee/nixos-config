@@ -18,9 +18,9 @@
   # enable blueman to manager bluetooth
   # services.blueman.enable = true;
 
-  services.greetd = {
+  #services.greetd = {
   #  enable = true;
-    settings.default_session.command = "${pkgs.cage}/bin/cage -s -mlast -- regreet";
-  };
+  #  settings.default_session.command = "${pkgs.cage}/bin/cage -s -mlast -- regreet";
+  #};
   #programs.regreet.enable = true;
 }

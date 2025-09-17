@@ -107,11 +107,6 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
-      sway
-      wayfire
-      regreet
-      cage
-
       proxychains
       act
 
