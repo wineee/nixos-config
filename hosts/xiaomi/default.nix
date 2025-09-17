@@ -7,7 +7,6 @@
   ../../desktop/common.nix
   ../../desktop/kde.nix
   ../../desktop/hyprland.nix
-  #../../desktop/cosmic.nix
   #../../home
 ]
 
