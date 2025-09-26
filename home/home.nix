@@ -29,6 +29,9 @@
     # ai
     qwen-code
     cherry-studio
+
+    #gui
+    mission-center
   ];
 
   programs.git = {

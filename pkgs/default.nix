@@ -105,19 +105,11 @@ in
     ++ modern-unix
     ++ build-tools
     ++ (with pkgs; [
-      proxychains
       act
-
-      rofi
-      rofi-calc
-      rofi-emoji
-      rofi-systemd
 
       pineapple-pictures
       copyq #albert
       unrar
-      
-      xorg.xmodmap
 
       wget
       man
@@ -130,9 +122,11 @@ in
       # AppImage  
       appimage-run
       distrobox
+
+      pandoc
+      rofi
     ])
     ++( with pkgs.nur.repos; [
-      #linyinfeng.wemeet
       rewine.wlhax
       rewine.wldbg
       rewine.xcursor-viewer

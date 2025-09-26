@@ -39,8 +39,8 @@
     keyMap = "us";
   };
 
-  # Enable Flatpak
   # services.flatpak.enable = true;
+  services.linyaps.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
