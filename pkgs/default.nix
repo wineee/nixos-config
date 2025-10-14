@@ -35,11 +35,9 @@ let
   ];
 
   gui-tools = with pkgs; [
-    # kdePackages.okular
     tdesktop
     element-desktop
     qq
-    # wechat-uos
     zeal
     vlc  
     obs-studio 
@@ -129,7 +127,7 @@ in
     ++( with pkgs.nur.repos; [
       rewine.wlhax
       rewine.wldbg
-      rewine.xcursor-viewer
+      #rewine.xcursor-viewer
       rewine.wayland-debug
       rewine.git-commit-helper
   ]);
