@@ -13,6 +13,7 @@
         fcitx5-chinese-addons
         kdePackages.fcitx5-qt
       ];
+      fcitx5.waylandFrontend = true;
       ibus.engines = with pkgs.ibus-engines; [ libpinyin ];
     };
   };
