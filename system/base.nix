@@ -41,7 +41,6 @@
 
   # services.flatpak.enable = true;
   services.linyaps.enable = true;
-  services.linyaps.webStoreInstallerPackage = pkgs.hello;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
