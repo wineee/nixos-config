@@ -55,8 +55,8 @@
 
   services.gnome.gnome-keyring.enable = true;
 
-  environment.enableDebugInfo = true;
-  services.nixseparatedebuginfod.enable = true;
+  # environment.enableDebugInfo = true;
+  # services.nixseparatedebuginfod2.enable = true;
 
   system.stateVersion = "22.11";
 }

@@ -38,7 +38,7 @@ let
     tdesktop
     element-desktop
     qq
-    zeal
+    # zeal
     vlc  
     obs-studio 
     #flameshot
