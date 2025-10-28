@@ -36,26 +36,27 @@
 
   programs.git = {
     enable = true;
-    userName = "rewine";
-    userEmail = "luhongxu@deepin.org";
-    delta.enable = true;
     lfs.enable = false;
     signing = {
       key = null;
       #signByDefault = true;
     };
-    aliases = {
-      co = "checkout";
-      ci = "commit";
-      cia = "commit --amend";
-      s = "status";
-      st = "status";
-      b = "branch";
-      p = "pull --rebase";
-      pu = "push";
-      d = "diff";
-    };
-    extraConfig = {
+    settings = {
+      user = {
+        name = "rewine";
+        email = "luhongxu@deepin.org";
+      };
+      alias = {
+        co = "checkout";
+        ci = "commit";
+        cia = "commit --amend";
+        s = "status";
+        st = "status";
+        b = "branch";
+        p = "pull --rebase";
+        pu = "push";
+        d = "diff";
+      };
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       core.compression = 0;
@@ -63,6 +64,11 @@
       protocol."https".allow = "always";
       url."https://github.com/".insteadOf = [ "gh:" "github:" ];
     };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 
   programs = {
