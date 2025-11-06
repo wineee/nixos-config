@@ -35,8 +35,9 @@ let
   ];
 
   gui-tools = with pkgs; [
-    tdesktop
-    element-desktop
+    telegram-desktop
+    # cinny-desktop
+
     qq
     # zeal
     vlc  

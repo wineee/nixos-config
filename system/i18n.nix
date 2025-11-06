@@ -7,11 +7,10 @@
     inputMethod = {
       enable = true;
       type = "fcitx5";
-      fcitx5.addons = with pkgs; [
-        fcitx5-rime
+      fcitx5.addons = with pkgs.qt6Packages; [
         fcitx5-configtool
         fcitx5-chinese-addons
-        kdePackages.fcitx5-qt
+        fcitx5-qt
       ];
       #fcitx5.waylandFrontend = true;
       ibus.engines = with pkgs.ibus-engines; [ libpinyin ];

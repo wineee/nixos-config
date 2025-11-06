@@ -9,10 +9,10 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver # LIBVA_DRIVER_NAME=iHD
-      vaapiVdpau
+    #extraPackages = with pkgs; [
+      # intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      # vaapiVdpau
       # libvdpau-va-gl
-    ];
+    #];
   };
 }

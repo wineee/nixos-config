@@ -22,7 +22,7 @@
       sarasa-gothic
       noto-fonts
       noto-fonts-cjk-sans
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       wqy_microhei
       wqy_zenhei
       nerd-fonts.symbols-only # 图标字体
