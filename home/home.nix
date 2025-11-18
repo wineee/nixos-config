@@ -25,6 +25,7 @@
     trzsz-ssh
     pipx
     bun
+    yadm
 
     # ai
     qwen-code
