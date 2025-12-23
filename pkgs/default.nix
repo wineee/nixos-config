@@ -104,7 +104,6 @@ in
       hotspot
       # localsend
       remmina
-      wpsoffice-cn
       d-spy
       nomacs-qt6
       kdePackages.kdialog
