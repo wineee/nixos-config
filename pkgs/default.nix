@@ -13,7 +13,6 @@ in
     [
       ## for develop
       #qtcreator
-      code-cursor
       vscode
 
       clang-tools
@@ -46,15 +45,14 @@ in
       devenv
 
       # ai
-      aider-chat
+      #aider-chat
       gemini-cli
 
-      # cli tools
-      act
+      ## cli tools
+      #act
       unrar
       wget
       man
-      stow
       fastfetch
       yazi
       file

@@ -33,6 +33,8 @@
 
     #gui
     mission-center
+    vlc
+    xorg.xprop
   ];
 
   programs.git = {
