@@ -5,7 +5,6 @@
   ../../pkgs
   ../../programs
   ../../desktop/common.nix
-  ../../desktop/kde.nix
   #../../home
 ]
 
