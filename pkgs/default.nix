@@ -110,7 +110,6 @@ in
       # deskflow
       contour
       warp-terminal
-      typora
       vicinae
       rofi
     ]
