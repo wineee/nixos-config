@@ -93,7 +93,6 @@ in
       snapshot
       showtime
       # obs-studio
-      flameshot
       # Browser
       firefox
       vivaldi
