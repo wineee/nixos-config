@@ -22,9 +22,7 @@ in
       binutils
       clang
       cargo # rustfmt clippy rust-analyzer
-      cppcheck
       go
-      gopls
       nil
       neocmakelsp
       python-with-my-packages
@@ -45,7 +43,6 @@ in
       devenv
 
       # ai
-      #aider-chat
       gemini-cli
 
       ## cli tools
@@ -79,7 +76,6 @@ in
       mise
       gping
       procs
-      zellij
       appimage-run
       distrobox
 
@@ -108,14 +104,12 @@ in
       kdePackages.kdialog
       # deskflow
       contour
-      warp-terminal
       vicinae
       rofi
     ]
     ++ (with pkgs.nur.repos; [
       rewine.wlhax
       rewine.wldbg
-      #rewine.xcursor-viewer
       rewine.wayland-debug
       rewine.git-commit-helper
     ]);

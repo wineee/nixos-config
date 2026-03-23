@@ -28,11 +28,9 @@
     yadm
 
     # ai
-    qwen-code
     cherry-studio
 
     #gui
-    mission-center
     vlc
     xorg.xprop
   ];
