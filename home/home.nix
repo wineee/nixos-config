@@ -29,6 +29,7 @@
 
     # ai
     cherry-studio
+    codex
 
     #gui
     vlc

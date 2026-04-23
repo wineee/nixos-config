@@ -11,7 +11,7 @@
         # hintstyle = "hintslight(10px,12px)";
       };
       defaultFonts.emoji = [ "Noto Color Emoji" ];
-      #defaultFonts.monospace = [ "Hack" "Sarasa Mono SC" ];
+      defaultFonts.monospace = [ "Hack" "Sarasa Mono SC" ];
       #defaultFonts.sansSerif = [ "DejaVu Sans" ];
       #defaultFonts.serif = [ "DejaVu Serif" "Source Han Serif SC" ];
     };
@@ -29,11 +29,10 @@
       symbola # 特殊字符
       jetbrains-mono
       #vistafonts
-      #material-design-icons 
-      #font-awesome
+      material-design-icons 
+      font-awesome
     ] ++ ( with pkgs.nur.repos.rewine; [
       ttf-wps-fonts
-      ttf-ms-win10
     ]);
   };
 }

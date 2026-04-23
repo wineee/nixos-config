@@ -11,8 +11,12 @@ in
   environment.systemPackages =
     with pkgs;
     [
+      bibata-cursors
+      capitaine-cursors
+      papirus-nord
+      
+      gnome-tweaks
       ## for develop
-      #qtcreator
       vscode
 
       clang-tools
@@ -82,7 +86,6 @@ in
       pineapple-pictures
       copyq
       telegram-desktop
-      # cinny-desktop
       qq
       # zeal
       # vlc
@@ -93,7 +96,6 @@ in
       firefox
       vivaldi
       # aria
-      # rustdesk
       # jamesdsp
       gammaray
       hotspot
