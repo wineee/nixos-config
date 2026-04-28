@@ -1,6 +1,10 @@
 { pkgs, lib, ... }:
 
 {
+  # Keep classic dbus for live `nixos-rebuild switch`.
+  # Moving from `dbus` -> `broker` should be done via `boot` + reboot.
+  services.dbus.implementation = "dbus";
+
   # services.dbus.enable = true;
   # services.notify-daemon.enable = true;
   # a DBus service that provides power management support to applications
