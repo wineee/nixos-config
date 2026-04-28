@@ -12,15 +12,11 @@
     xmake
 
     dconf-editor
+    pciutils
 
     # wayland
     foot
-    wlrctl
-    wayout
     wayland-utils
-    way-displays
-    waypipe
-
     # tool
     trzsz-ssh
     pipx
@@ -33,7 +29,7 @@
 
     #gui
     vlc
-    xorg.xprop
+    xprop
   ];
 
   programs.git = {
@@ -41,6 +37,7 @@
     lfs.enable = false;
     signing = {
       key = null;
+      format = "openpgp";
       #signByDefault = true;
     };
     settings = {
@@ -80,11 +77,14 @@
       vimAlias = true;
       vimdiffAlias = true;
       coc.enable = true;
+      withRuby = true;
+      withPython3 = true;
       plugins = with pkgs.vimPlugins; [
-        fugitive
+        vim-fugitive
         vim-nix
         {
           plugin = vim-startify;
+          type = "viml";
           config = "let g:startify_change_to_vcs_root = 0";
         }
       ];

@@ -15,7 +15,6 @@ in
       capitaine-cursors
       papirus-nord
       
-      gnome-tweaks
       ## for develop
       vscode
 
