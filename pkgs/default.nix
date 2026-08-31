@@ -96,7 +96,7 @@ in
       # jamesdsp
       gammaray
       # hotspot
-      # localsend
+      localsend
       remmina
       d-spy
       nomacs-qt6

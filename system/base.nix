@@ -22,8 +22,6 @@
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
-
-
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
@@ -35,8 +33,6 @@
     font = "Lat2-Terminus16";
     keyMap = "us";
   };
-
-  services.linyaps.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -50,7 +46,7 @@
   };
 
   services.gnome.gnome-keyring.enable = true;
-
+  services.linyaps.enable = true;
   # environment.enableDebugInfo = true;
   # services.nixseparatedebuginfod2.enable = true;
 
