@@ -1,11 +1,5 @@
 self: super:
 rec {
-  linyaps = super.linyaps.overrideAttrs (old: {
-    patches = [
-      ./patches/linyaps-fix-host-path.patch
-    ];
-  });
-
   /*
   lucenepp = (super.lucenepp.override {
     boost = super.boost186;

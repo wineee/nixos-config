@@ -3,7 +3,7 @@
 {
   # Keep classic dbus for live `nixos-rebuild switch`.
   # Moving from `dbus` -> `broker` should be done via `boot` + reboot.
-  services.dbus.implementation = "dbus";
+  #services.dbus.implementation = "dbus";
 
   # services.dbus.enable = true;
   # services.notify-daemon.enable = true;
@@ -15,18 +15,16 @@
   # enable blueman to manager bluetooth
   # services.blueman.enable = true;
 
-  #services.greetd = {
-  #  enable = true;
+  services.greetd = {
+    enable = true;
   #  settings.default_session.command = "${pkgs.cage}/bin/cage -s -mlast -- regreet";
-  #};
-  #services.displayManager.cosmic-greeter.enable = true;
-
-  #services.desktopManager.pantheon.enable = true;
-  
-  #services.xserver.enable = true;
-
-  services = {
-    displayManager.sddm.enable = true;
-    desktopManager.plasma6.enable = true;
   };
+  services.displayManager.cosmic-greeter.enable = true;
+  services.desktopManager.cosmic.enable = true;
+  
+
+  #services = {
+  #  displayManager.sddm.enable = true;
+  #  desktopManager.plasma6.enable = true;
+  #};
 }

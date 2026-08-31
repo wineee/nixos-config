@@ -20,7 +20,6 @@ in
 
       clang-tools
       cmake
-      gcc
       gdb
       binutils
       clang
@@ -37,7 +36,6 @@ in
       nix-tree
       nix-update
       nix-init
-      # nixos-shell
       nix-index
       nixfmt-rfc-style
       nvd
@@ -97,7 +95,7 @@ in
       # aria
       # jamesdsp
       gammaray
-      hotspot
+      # hotspot
       # localsend
       remmina
       d-spy
@@ -107,11 +105,11 @@ in
       contour
       vicinae
       rofi
+      obs-studio
     ]
     ++ (with pkgs.nur.repos; [
       rewine.wlhax
       rewine.wldbg
       rewine.wayland-debug
-      rewine.git-commit-helper
     ]);
 }

@@ -6,7 +6,7 @@ let
     # other
     pip
     uv
-    qtawesome
+    #qtawesome
   ];
   python-with-my-packages = python3.withPackages my-python-packages;
 in
